@@ -1,0 +1,74 @@
+---
+title: "Biases"
+description: "Systematic deviations from rational judgment and how they show up in financial decisions."
+---
+
+## Introduction
+
+- A **bias** is a systematic and predictable deviation from rational judgment that comes from cognitive, emotional or social factors. It is **not** a theory of *why* people behave the way they do. It is just a systematic average error.
+- Biases are the building blocks of behavioral finance. They come from psychology (Kahneman and Tversky, 1970s) and explain why real investors deviate from the fully rational agent of standard finance theory.
+
+## Concept
+
+### Default Bias
+
+- People tend to stick with the pre-set option, even when switching is cheap (e.g. automatic enrollment into a retirement plan strongly raises participation).
+
+### Framing
+
+- Decisions depend on how options are presented (e.g. as a gain or as a loss), even if the outcomes are identical.
+
+### Overconfidence
+
+- **Miscalibration / over-precision:** Belief that you know more than you actually do
+- **Better-than-average effect:** Belief that you are better than the median person
+
+### Overreaction
+
+- Investors put too much weight on new information, so prices move too far and later reverse.
+
+### Recency Bias
+
+- Recent events get more weight than older ones when forming expectations (e.g. expecting high returns to continue after a bull market).
+
+### Home Bias
+
+- Investors prefer local and familiar stocks $\to$ people invest too much in the home country
+- Makes people feel safe but in reality exposes them to idiosyncratic risk
+- Example: Enron employees had 62% of their retirement plan assets in company stock $\to$ Enron went bankrupt, employees lost their job and retirement income.
+
+### Familiarity Bias
+
+- People tend to prefer things they are already familiar with
+
+### Herd Behavior
+
+- Even if fake news is false, investors may follow the crowd, assuming that others have more accurate information.
+
+### Social Proof
+
+- Social proof is the tendency to conform to the behavior of others
+
+### Experience
+
+- Personally lived experiences shape beliefs and risk taking more than other available information (e.g. people who lived through low stock returns invest less in stocks).
+
+### Culture
+
+- Cultural background (e.g. trust, individualism) systematically shapes financial decisions (e.g. people with low trust are less likely to hold stocks).
+
+### Hindsight Bias
+
+- Tendency to believe that past events were predicted better than they actually were ("I knew it all along")
+
+### Confirmation Bias
+
+- Interpret, recall, search for information in a way that confirms prior beliefs or values
+
+### Self-attribution Bias
+
+- Attributing success to own abilities/effort, while ascribing failure to external factors
+
+### Present Bias
+
+- Preferring a smaller immediate reward over a larger later reward, in a way that does not only represent the time difference.
