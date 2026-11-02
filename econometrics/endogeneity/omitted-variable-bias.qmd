@@ -1,11 +1,3 @@
 ---
 title: "Omitted Variable Bias (OVB)"
 ---
-
-## Introduction
-
-## Concept
-
-## Examples
-
-**References:** 

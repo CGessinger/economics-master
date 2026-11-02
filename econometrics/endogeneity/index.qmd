@@ -1,11 +1,3 @@
 ---
 title: "Endogeneity"
 ---
-
-## Introduction
-
-## Concept
-
-## Examples
-
-**References:** 

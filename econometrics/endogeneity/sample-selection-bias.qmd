@@ -1,11 +1,3 @@
 ---
 title: "Sample Selection Bias"
 ---
-
-## Introduction
-
-## Concept
-
-## Examples
-
-**References:** 

@@ -1,11 +1,3 @@
 ---
 title: "Measurement Error"
 ---
-
-## Introduction
-
-## Concept
-
-## Examples
-
-**References:** 

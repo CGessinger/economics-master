@@ -1,11 +1,3 @@
 ---
 title: "First-Difference Regression"
 ---
-
-## Introduction
-
-## Concept
-
-## Examples
-
-**References:** 

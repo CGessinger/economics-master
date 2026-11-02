@@ -1,11 +1,3 @@
 ---
 title: "Logistic Regression"
 ---
-
-## Introduction
-
-## Concept
-
-## Examples
-
-**References:** 
