@@ -6,8 +6,10 @@ website:
   title: "Economic Studies"
   description: "A compact reference of economic theory and empirical methods from the M.Sc. Economics."
   page-navigation: true
-  search: true
+  search:
+    location: sidebar
   navbar:
+    search: false
     left:
       - href: index.qmd
         text: Home
@@ -19,7 +21,7 @@ website:
     center: "Christian Gessinger · [GitHub](https://github.com/CGessinger)"
   sidebar:
     style: docked
-    search: false
+    search: true
     # Built automatically from the folders: each folder's index.qmd is the
     # section page; any new .qmd in a folder is added to its section.
     contents: auto
