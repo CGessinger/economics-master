@@ -1,0 +1,17 @@
+---
+title: "Regression Models"
+---
+
+## Continuous Dependent Variables
+
+### Simple Linear Regression
+
+### Multiple Linear Regression
+
+### Polynomial Regression
+
+## Categorical Dependent Variables
+
+### Binary Logistic Regression
+
+### Ordinal Logistic Regression
