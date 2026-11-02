@@ -3,12 +3,9 @@ title: "Biases"
 description: "Systematic deviations from rational judgment and how they show up in financial decisions."
 ---
 
-## Introduction
+A **bias** is a systematic and predictable deviation from rational judgment that comes from cognitive, emotional or social factors. It is **not** a theory of *why* people behave the way they do. It is just a systematic average error.
 
-- A **bias** is a systematic and predictable deviation from rational judgment that comes from cognitive, emotional or social factors. It is **not** a theory of *why* people behave the way they do. It is just a systematic average error.
-- Biases are the building blocks of behavioral finance. They come from psychology (Kahneman and Tversky, 1970s) and explain why real investors deviate from the fully rational agent of standard finance theory.
-
-## Concept
+## Established Biases
 
 ### Default Bias
 

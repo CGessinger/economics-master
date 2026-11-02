@@ -1,0 +1,45 @@
+---
+title: "Heuristics"
+description: "Mental shortcuts that simplify decision-making and the systematic errors they can cause."
+---
+
+**Heuristics** are mental shortcuts or rules of thumb used to simplify decision-making.
+
+## Established Heuristics
+
+### Representativeness
+
+- People judge how likely something is based on how representative it is
+- Example: In Ireland only 10% of the population have red hair. In other parts around the world only 1% $\to$ People connect red hair to Ireland
+- **Law of Small Numbers:** People tend to think that a small sample must be representative for the whole population
+- **Gambler's Fallacy:** Consider a series of 10 tosses of a fair coin that have all landed "heads". Many believe the next coin toss is more likely to result in "tails". Tversky and Kahneman (1974): Chance is commonly viewed as a self-correcting process in which a deviation in one direction induces a deviation in the opposite direction to restore equilibrium.
+
+### Availability
+
+- Judging probability based on how easily examples come to mind (e.g. fear of flying after hearing about plane crashes).
+
+### Attention
+
+- People have limited attention and focus on salient information, so they buy assets that grab their attention (e.g. stocks in the news or with extreme returns).
+
+### Anchoring
+
+- Relying heavily on an initial piece of information (e.g. adjusting estimates based on irrelevant anchors like random numbers).
+- In many situations, people make estimates by starting from an initial value that is adjusted to yield the final answer.
+- Adjustment from the anchor is usually insufficient.
+- Example: "Suggested retail price" influences perceived value
+
+### Adjustment
+
+- People start from a known value and adjust it step by step, but stop too early, so the final estimate stays biased towards the starting point.
+
+### Menu Dependence / The Decoy Effect
+
+- Choice between A and B. Some people choose A, some choose B
+- Add decoy option C that is strictly dominated by one of the other two options.
+- Fractions of people who choose A and B should stay the same. BUT they actually change
+- Example: The Economist subscription model. Added decoy option $\to$ More people choose the dominating option.
+
+### Trend Extrapolation
+
+- Forming forecasts, beliefs and expectations by extrapolating past trends
