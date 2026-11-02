@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Economic Studies"
+  description: "A compact reference of economic theory and empirical methods from the M.Sc. Economics."
+  page-navigation: true
+  search: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+    right:
+      - icon: github
+        href: https://github.com/CGessinger
+        aria-label: GitHub profile of Christian Gessinger
+  page-footer:
+    center: "Christian Gessinger · [GitHub](https://github.com/CGessinger)"
+  sidebar:
+    style: docked
+    search: false
+    # Built automatically from the folders: each folder's index.qmd is the
+    # section page; any new .qmd in a folder is added to its section.
+    contents: auto
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    html-math-method: mathjax
+    code-fold: false
+    code-copy: true
+    code-tools: false
+    highlight-style: github
+
+execute:
+  freeze: auto      # re-run R code only when a page changes
+  echo: true
+  warning: false
+  message: false
+
+lang: en

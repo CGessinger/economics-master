@@ -1,0 +1,28 @@
+---
+title: "Concept name"
+# Files starting with "_" are not rendered by Quarto.
+# Copy this file into a topic folder (e.g. econometrics/ols.qmd) to start a new page.
+---
+
+## Introduction
+
+- Intuition in 1–2 sentences.
+- Relevance and origin in 1–2 sentences.
+
+## Concept
+
+- Setup / model
+- Key assumptions
+- Estimator or equilibrium condition
+- Main result and interpretation
+
+## Examples
+
+```{r}
+# minimal, reproducible R example
+set.seed(1)
+```
+
+- Explanation of the core output values.
+
+**References:** 

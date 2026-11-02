@@ -1,0 +1,10 @@
+---
+title: "Microeconomics"
+listing:
+  contents: "*.qmd"
+  type: table
+  fields: [title, description]
+  sort: title
+  sort-ui: false
+  filter-ui: false
+---

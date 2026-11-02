@@ -1,0 +1,41 @@
+---
+title: "Economic Studies"
+subtitle: "A compact reference for economic theory and empirical methods"
+author:
+  - name: Christian Gessinger
+    url: https://github.com/CGessinger
+    affiliations:
+      - ref: bonn
+      - ref: bcn
+affiliations:
+  - id: bonn
+    name: University of Bonn
+    department: B.Sc. Economics (10/2021 – 03/2025)
+    city: Bonn
+    country: Germany
+  - id: bcn
+    name: University of Barcelona
+    department: M.Sc. Economics (09/2025 – 09/2027)
+    city: Barcelona
+    country: Spain
+toc: true
+---
+
+## Introduction
+
+This site collects the core models, estimators and identification strategies from the M.Sc. Economics in one place, one concept per page. The aim is not to replace textbooks or lecture slides, but to give a **clear, technically correct overview** that can be looked up quickly and applied directly.
+
+Each page deliberately contains *less* rather than more: the key assumptions, the formal setup, and one short example in R. Further detail belongs in the original sources.
+
+## Using the R examples
+
+All examples are written in R and can be run as-is. Packages are loaded at the top of each example; install any that are missing with `install.packages("<name>")`. Examples use simulated or built-in data so the output can be reproduced exactly.
+
+## About the author
+
+Christian Gessinger completed a B.Sc. in Economics at the University of Bonn (10/2021 – 03/2025) and is pursuing an M.Sc. in Economics in Barcelona (09/2025 – 09/2027).
+
+::: {.callout-note}
+## Sources
+Content is based on the lecture slides, textbooks and notes from the programme. Where a page follows a specific textbook, the reference is given at the end of that page.
+:::
