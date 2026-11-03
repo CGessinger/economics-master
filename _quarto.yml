@@ -17,8 +17,13 @@ website:
       - icon: github
         href: https://github.com/CGessinger
         aria-label: GitHub profile of Christian Gessinger
+        target: _blank
+      - icon: linkedin
+        href: https://www.linkedin.com/in/christian-gessinger-bb560a17a/
+        aria-label: LinkedIn profile of Christian Gessinger
+        target: _blank
   page-footer:
-    center: "Christian Gessinger · [GitHub](https://github.com/CGessinger)"
+    center: 'Christian Gessinger · [GitHub](https://github.com/CGessinger){target="_blank"} · [LinkedIn](https://www.linkedin.com/in/christian-gessinger-bb560a17a/){target="_blank"}'
   sidebar:
     style: docked
     search: true
