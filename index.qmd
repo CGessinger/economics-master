@@ -23,13 +23,13 @@ toc: true
 
 ## Introduction
 
-This site collects the core models, estimators and identification strategies from the M.Sc. Economics in one place, one concept per page. The aim is not to replace textbooks or lecture slides, but to give a **clear, technically correct overview** that can be looked up quickly and applied directly.
-
-Each page deliberately contains *less* rather than more: the key assumptions, the formal setup, and one short example in R. Further detail belongs in the original sources.
+This site collects the core models, estimators and identification strategies from the M.Sc. Economics in one place.
+It is a resource to quickly recall past learnings but is in no way exhaustive. You will, for example, find only 
+very basic Game Theory as I chose to specialize in Public Economics (PE) and Growth & Trade (GT).
 
 ## Using the R examples
 
-All examples are written in R and can be run as-is. Packages are loaded at the top of each example; install any that are missing with `install.packages("<name>")`. Examples use simulated or built-in data so the output can be reproduced exactly.
+All examples are written in R and can be run as-is. Packages are loaded at the top of each example. Install any that are missing with `install.packages("<name>")`. Examples use simulated or built-in data so the output can be reproduced exactly.
 
 ## About the author
 
