@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Economic Studies"
+  title: "Economics Master"
   description: "A compact reference of economic theory and empirical methods from the M.Sc. Economics."
   page-navigation: true
   search:

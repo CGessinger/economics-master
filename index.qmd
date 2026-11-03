@@ -1,5 +1,5 @@
 ---
-title: "Economic Studies"
+title: "Economics Master"
 subtitle: "A compact reference for economic theory and empirical methods"
 author:
   - name: Christian Gessinger
