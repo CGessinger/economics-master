@@ -1,0 +1,55 @@
+---
+title: "Learning Resources"
+description: "Learning material on econometrics and causal inference."
+---
+
++------------------------------------------+------------------------------------------+----------------------------------+
+| **Causal Inference: The Remix**          | Scott Cunningham                         | [mixtape.scunning.com][mixtape]  |
++------------------------------------------+------------------------------------------+----------------------------------+
+| Introduces the main causal inference designs such as matching, instrumental variables, regression discontinuity and    |
+| difference-in-differences with worked examples in R and Stata.                                                         |
++------------------------------------------+------------------------------------------+----------------------------------+
+| **The Effect**                           | Nick Huntington-Klein                    | [theeffectbook.net][effect]      |
++------------------------------------------+------------------------------------------+----------------------------------+
+| Explains research design and causal identification with an intuitive focus and fewer formulas, using causal diagrams   |
+| to build up each method.                                                                                               |
++------------------------------------------+------------------------------------------+----------------------------------+
+| **Mastering Econometrics**               | Joshua D. Angrist                        | [learn.mru.org][mru]             |
++------------------------------------------+------------------------------------------+----------------------------------+
+| A free video course on Marginal Revolution University that teaches the five core tools of causal inference in short,   |
+| humorous lessons with a kung fu theme.                                                                                 |
++------------------------------------------+------------------------------------------+----------------------------------+
+| **Mostly Harmless Econometrics** (2009)  | Joshua D. Angrist, Jörn-Steffen Pischke  | Book                             |
++------------------------------------------+------------------------------------------+----------------------------------+
+| A more technical graduate text that treats regression, instrumental variables, difference-in-differences and           |
+| regression discontinuity from the design-based perspective.                                                            |
++------------------------------------------+------------------------------------------+----------------------------------+
+| **Mastering ’Metrics: The Path from      | Joshua D. Angrist, Jörn-Steffen Pischke  | Book                             |
+| Cause to Effect** (2014)                 |                                          |                                  |
++------------------------------------------+------------------------------------------+----------------------------------+
+| An accessible introduction by the same authors to the five core tools of applied econometrics: randomized trials,      |
+| regression, instrumental variables, regression discontinuity and difference-in-differences.                            |
++------------------------------------------+------------------------------------------+----------------------------------+
+| **Introductory Econometrics: A Modern    | Jeffrey M. Wooldridge                    | Book                             |
+| Approach** (2008)                        |                                          |                                  |
++------------------------------------------+------------------------------------------+----------------------------------+
+| A standard introductory textbook that develops linear regression and inference step by step and extends them to time   |
+| series and panel data with many applied examples.                                                                      |
++------------------------------------------+------------------------------------------+----------------------------------+
+| **Econometric Analysis of Cross Section  | Jeffrey M. Wooldridge                    | Book                             |
+| and Panel Data** (2010, 2nd edition)     |                                          |                                  |
++------------------------------------------+------------------------------------------+----------------------------------+
+| A rigorous graduate text on estimation and inference with cross section and panel data, covering instrumental          |
+| variables, GMM, fixed and random effects and nonlinear models.                                                         |
++------------------------------------------+------------------------------------------+----------------------------------+
+| **Freakonomics: A Rogue Economist        | Steven D. Levitt, Stephen J. Dubner      | Book                             |
+| Explores the Hidden Side of Everything** |                                          |                                  |
+| (2005)                                   |                                          |                                  |
++------------------------------------------+------------------------------------------+----------------------------------+
+| A popular science book that uses economic reasoning and data to separate correlation from causation in everyday        |
+| questions such as cheating, crime and parenting.                                                                       |
++------------------------------------------------------------------------------------------------------------------------+
+
+[mixtape]: https://mixtape.scunning.com {target="_blank"}
+[effect]: https://theeffectbook.net {target="_blank"}
+[mru]: https://learn.mru.org/courses/mastering-econometrics {target="_blank"}
