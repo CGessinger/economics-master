@@ -2,8 +2,12 @@
 title: "Potential Outcomes Framework"
 ---
 
+## Stable Unit Treatment Value Assumption (SUTVA)
+
 ## Average Treatment Effect (ATE)
 
-## Average Treatment Effect on the Treated (ATT)
+## Average Treatment Effect on the Treated (ATT, ATET)
+
+## Simple Difference in Outcomes (SDO)
 
 ## Local Average Treatment Effect (LATE)
