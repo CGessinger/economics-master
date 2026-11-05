@@ -6,9 +6,11 @@ website:
   title: "Economics Master"
   description: "A compact reference of economic theory and empirical methods from the M.Sc. Economics."
   page-navigation: true
+  favicon: images/econ-math-icon.svg
   search:
     location: sidebar
   navbar:
+    logo: images/econ-math-icon.svg
     search: false
     left:
       - href: index.qmd
