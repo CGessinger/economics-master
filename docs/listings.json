@@ -1,0 +1,88 @@
+[
+  {
+    "listing": "/behavioral-finance/index.html",
+    "items": [
+      "/behavioral-finance/biases.html",
+      "/behavioral-finance/heuristics.html"
+    ]
+  },
+  {
+    "listing": "/political-economy/index.html",
+    "items": []
+  },
+  {
+    "listing": "/econometrics/index.html",
+    "items": [
+      "/econometrics/identification-strategies/difference-in-differences.html",
+      "/econometrics/endogeneity/index.html",
+      "/econometrics/panel-data/first-difference-regression.html",
+      "/econometrics/panel-data/fixed-effects.html",
+      "/econometrics/generalized-method-of-moments/index.html",
+      "/econometrics/identification-strategies/index.html",
+      "/econometrics/identification-strategies/instrumental-variables.html",
+      "/econometrics/learning-resources.html",
+      "/econometrics/endogeneity/measurement-error.html",
+      "/econometrics/generalized-method-of-moments/nonlinear-least-squares.html",
+      "/econometrics/endogeneity/omitted-variable-bias.html",
+      "/econometrics/generalized-method-of-moments/ordinary-least-squares.html",
+      "/econometrics/panel-data/index.html",
+      "/econometrics/potential-outcomes-framework.html",
+      "/econometrics/panel-data/random-effects.html",
+      "/econometrics/identification-strategies/randomized-controlled-trial.html",
+      "/econometrics/regression-models.html",
+      "/econometrics/endogeneity/sample-selection-bias.html",
+      "/econometrics/endogeneity/simultaneity-reverse-causality.html",
+      "/econometrics/endogeneity/treatment-selection.html",
+      "/econometrics/generalized-method-of-moments/two-stage-least-squares.html"
+    ]
+  },
+  {
+    "listing": "/mathematics/index.html",
+    "items": [
+      "/mathematics/differential-equations/autonomous-equations-stability.html",
+      "/mathematics/calculus-of-variations.html",
+      "/mathematics/optimal-control/control-constraints.html",
+      "/mathematics/optimal-control/current-value-hamiltonian.html",
+      "/mathematics/differential-equations/index.html",
+      "/mathematics/differential-equations/first-order-differential-equations.html",
+      "/mathematics/optimal-control/infinite-horizon.html",
+      "/mathematics/integration.html",
+      "/mathematics/optimal-control/index.html",
+      "/mathematics/optimal-control/scrap-values.html",
+      "/mathematics/differential-equations/second-order-differential-equations.html",
+      "/mathematics/differential-equations/systems-of-differential-equations.html",
+      "/mathematics/taylor-expansion.html",
+      "/mathematics/optimal-control/variable-final-time.html"
+    ]
+  },
+  {
+    "listing": "/microeconomics/index.html",
+    "items": [
+      "/microeconomics/perfect-vs-imperfect-markets.html"
+    ]
+  },
+  {
+    "listing": "/regional-urban/index.html",
+    "items": []
+  },
+  {
+    "listing": "/governments-markets/index.html",
+    "items": []
+  },
+  {
+    "listing": "/growth-trade/index.html",
+    "items": []
+  },
+  {
+    "listing": "/public-economics/index.html",
+    "items": []
+  },
+  {
+    "listing": "/macroeconomics/index.html",
+    "items": [
+      "/macroeconomics/dynamic-optimization/bellman-equation.html",
+      "/macroeconomics/dynamic-optimization/index.html",
+      "/macroeconomics/dynamic-optimization/euler-equation.html"
+    ]
+  }
+]

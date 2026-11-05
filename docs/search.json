@@ -1,0 +1,284 @@
+[
+  {
+    "objectID": "behavioral-finance/biases.html",
+    "href": "behavioral-finance/biases.html",
+    "title": "Biases",
+    "section": "",
+    "text": "A bias is a systematic and predictable deviation from rational judgment that comes from cognitive, emotional or social factors. It is not a theory of why people behave the way they do. It is just a systematic average error.",
+    "crumbs": [
+      "Home",
+      "Behavioral Finance",
+      "Biases"
+    ]
+  },
+  {
+    "objectID": "behavioral-finance/biases.html#established-biases",
+    "href": "behavioral-finance/biases.html#established-biases",
+    "title": "Biases",
+    "section": "Established Biases",
+    "text": "Established Biases\n\nDefault Bias\n\nPeople tend to stick with the pre-set option, even when switching is cheap (e.g. automatic enrollment into a retirement plan strongly raises participation).\n\n\n\nFraming\n\nDecisions depend on how options are presented (e.g. as a gain or as a loss), even if the outcomes are identical.\n\n\n\nOverconfidence\n\nMiscalibration / over-precision: Belief that you know more than you actually do\nBetter-than-average effect: Belief that you are better than the median person\n\n\n\nOverreaction\n\nInvestors put too much weight on new information, so prices move too far and later reverse.\n\n\n\nRecency Bias\n\nRecent events get more weight than older ones when forming expectations (e.g. expecting high returns to continue after a bull market).\n\n\n\nHome Bias\n\nInvestors prefer local and familiar stocks \\(\\to\\) people invest too much in the home country\nMakes people feel safe but in reality exposes them to idiosyncratic risk\nExample: Enron employees had 62% of their retirement plan assets in company stock \\(\\to\\) Enron went bankrupt, employees lost their job and retirement income.\n\n\n\nFamiliarity Bias\n\nPeople tend to prefer things they are already familiar with\n\n\n\nHerd Behavior\n\nEven if fake news is false, investors may follow the crowd, assuming that others have more accurate information.\n\n\n\nSocial Proof\n\nSocial proof is the tendency to conform to the behavior of others\n\n\n\nExperience\n\nPersonally lived experiences shape beliefs and risk taking more than other available information (e.g. people who lived through low stock returns invest less in stocks).\n\n\n\nCulture\n\nCultural background (e.g. trust, individualism) systematically shapes financial decisions (e.g. people with low trust are less likely to hold stocks).\n\n\n\nHindsight Bias\n\nTendency to believe that past events were predicted better than they actually were (“I knew it all along”)\n\n\n\nConfirmation Bias\n\nInterpret, recall, search for information in a way that confirms prior beliefs or values\n\n\n\nSelf-attribution Bias\n\nAttributing success to own abilities/effort, while ascribing failure to external factors\n\n\n\nPresent Bias\n\nPreferring a smaller immediate reward over a larger later reward, in a way that does not only represent the time difference.",
+    "crumbs": [
+      "Home",
+      "Behavioral Finance",
+      "Biases"
+    ]
+  },
+  {
+    "objectID": "behavioral-finance/index.html",
+    "href": "behavioral-finance/index.html",
+    "title": "Behavioral Finance",
+    "section": "",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nBiases\n\n\nSystematic deviations from rational judgment and how they show up in financial decisions.\n\n\n\n\n\n\nHeuristics\n\n\nMental shortcuts that simplify decision-making and the systematic errors they can cause.\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Behavioral Finance"
+    ]
+  },
+  {
+    "objectID": "political-economy/index.html",
+    "href": "political-economy/index.html",
+    "title": "Political Economy",
+    "section": "",
+    "text": "Title\nDescription\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Political Economy"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Economics Master",
+    "section": "",
+    "text": "This site collects the core models, estimators and identification strategies from the M.Sc. Economics in one place. It is a resource to quickly recall past learnings but is in no way exhaustive. You will, for example, find only very basic Game Theory as I chose to specialize in Public Economics (PE) and Growth & Trade (GT)."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Economics Master",
+    "section": "",
+    "text": "This site collects the core models, estimators and identification strategies from the M.Sc. Economics in one place. It is a resource to quickly recall past learnings but is in no way exhaustive. You will, for example, find only very basic Game Theory as I chose to specialize in Public Economics (PE) and Growth & Trade (GT)."
+  },
+  {
+    "objectID": "index.html#using-the-r-examples",
+    "href": "index.html#using-the-r-examples",
+    "title": "Economics Master",
+    "section": "Using the R examples",
+    "text": "Using the R examples\nAll examples are written in R and can be run as-is. Packages are loaded at the top of each example. Install any that are missing with install.packages(\"&lt;name&gt;\"). Examples use simulated or built-in data so the output can be reproduced exactly."
+  },
+  {
+    "objectID": "index.html#about-the-author",
+    "href": "index.html#about-the-author",
+    "title": "Economics Master",
+    "section": "About the author",
+    "text": "About the author\nChristian Gessinger completed a B.Sc. in Economics at the University of Bonn (10/2021 – 03/2025) and is pursuing an M.Sc. in Economics in Barcelona (09/2025 – 09/2027).\n\n\n\n\n\n\nNoteSources\n\n\n\nContent is based on the lecture slides, textbooks and notes from the programme. Where a page follows a specific textbook, the reference is given at the end of that page."
+  },
+  {
+    "objectID": "econometrics/learning-resources.html",
+    "href": "econometrics/learning-resources.html",
+    "title": "Learning Resources",
+    "section": "",
+    "text": "Causal Inference: The Remix\nScott Cunningham\nmixtape.scunning.com\n\n\nIntroduces the main causal inference designs such as matching, instrumental variables, regression discontinuity and difference-in-differences with worked examples in R and Stata.\n\n\nThe Effect\nNick Huntington-Klein\ntheeffectbook.net\n\n\nExplains research design and causal identification with an intuitive focus and fewer formulas, using causal diagrams to build up each method.\n\n\nMastering Econometrics\nJoshua D. Angrist\nlearn.mru.org\n\n\nA free video course on Marginal Revolution University that teaches the five core tools of causal inference in short, humorous lessons with a kung fu theme.\n\n\nMostly Harmless Econometrics (2009)\nJoshua D. Angrist, Jörn-Steffen Pischke\nBook\n\n\nA more technical graduate text that treats regression, instrumental variables, difference-in-differences and regression discontinuity from the design-based perspective.\n\n\nMastering ’Metrics: The Path from Cause to Effect (2014)\nJoshua D. Angrist, Jörn-Steffen Pischke\nBook\n\n\nAn accessible introduction by the same authors to the five core tools of applied econometrics: randomized trials, regression, instrumental variables, regression discontinuity and difference-in-differences.\n\n\nIntroductory Econometrics: A Modern Approach (2008)\nJeffrey M. Wooldridge\nBook\n\n\nA standard introductory textbook that develops linear regression and inference step by step and extends them to time series and panel data with many applied examples.\n\n\nEconometric Analysis of Cross Section and Panel Data (2010, 2nd edition)\nJeffrey M. Wooldridge\nBook\n\n\nA rigorous graduate text on estimation and inference with cross section and panel data, covering instrumental variables, GMM, fixed and random effects and nonlinear models.\n\n\nFreakonomics: A Rogue Economist Explores the Hidden Side of Everything (2005)\nSteven D. Levitt, Stephen J. Dubner\nBook\n\n\nA popular science book that uses economic reasoning and data to separate correlation from causation in everyday questions such as cheating, crime and parenting.",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Learning Resources"
+    ]
+  },
+  {
+    "objectID": "econometrics/index.html",
+    "href": "econometrics/index.html",
+    "title": "Econometrics",
+    "section": "",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nDifference-in-Differences (DiD)\n\n\n\n\n\n\n\n\n\nEndogeneity\n\n\n\n\n\n\n\n\n\nFirst-Difference Regression\n\n\n\n\n\n\n\n\n\nFixed Effects\n\n\n\n\n\n\n\n\n\nGeneralized Method of Moments (GMM)\n\n\n\n\n\n\n\n\n\nIdentification Strategies\n\n\n\n\n\n\n\n\n\nInstrumental Variables (IV)\n\n\n\n\n\n\n\n\n\nLearning Resources\n\n\nLearning material on econometrics and causal inference.\n\n\n\n\n\n\nMeasurement Error\n\n\n\n\n\n\n\n\n\nNonlinear Least Squares (NLS)\n\n\n\n\n\n\n\n\n\nOmitted Variable Bias (OVB)\n\n\n\n\n\n\n\n\n\nOrdinary Least Squares (OLS)\n\n\n\n\n\n\n\n\n\nPanel Data\n\n\n\n\n\n\n\n\n\nPotential Outcomes Framework\n\n\n\n\n\n\n\n\n\nRandom Effects\n\n\n\n\n\n\n\n\n\nRandomized Controlled Trial (RCT)\n\n\n\n\n\n\n\n\n\nRegression Models\n\n\n\n\n\n\n\n\n\nSample Selection Bias\n\n\n\n\n\n\n\n\n\nSimultaneity and Reverse Causality\n\n\n\n\n\n\n\n\n\nTreatment Selection\n\n\n\n\n\n\n\n\n\nTwo-Stage Least Squares (2SLS)\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Econometrics"
+    ]
+  },
+  {
+    "objectID": "mathematics/integration.html#integration-methods",
+    "href": "mathematics/integration.html#integration-methods",
+    "title": "Integration",
+    "section": "Integration Methods",
+    "text": "Integration Methods\n\nIntegration by Parts\n\n\nIntegration by Substitution",
+    "crumbs": [
+      "Home",
+      "Mathematics",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "mathematics/integration.html#definite-integrals",
+    "href": "mathematics/integration.html#definite-integrals",
+    "title": "Integration",
+    "section": "Definite Integrals",
+    "text": "Definite Integrals\n\nProperties\n\n\nIntegral Function\n\n\nBarrow’s Rule",
+    "crumbs": [
+      "Home",
+      "Mathematics",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "mathematics/index.html",
+    "href": "mathematics/index.html",
+    "title": "Mathematics",
+    "section": "",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nAutonomous Equations and Stability\n\n\n\n\n\n\n\n\n\nCalculus of Variations\n\n\n\n\n\n\n\n\n\nConstraints on the Control\n\n\n\n\n\n\n\n\n\nCurrent Value Hamiltonian\n\n\n\n\n\n\n\n\n\nDifferential Equations\n\n\n\n\n\n\n\n\n\nFirst-Order Differential Equations\n\n\n\n\n\n\n\n\n\nInfinite Horizon\n\n\n\n\n\n\n\n\n\nIntegration\n\n\n\n\n\n\n\n\n\nOptimal Control\n\n\n\n\n\n\n\n\n\nScrap Values\n\n\n\n\n\n\n\n\n\nSecond-Order Differential Equations\n\n\n\n\n\n\n\n\n\nSystems of Differential Equations\n\n\n\n\n\n\n\n\n\nTaylor Expansion\n\n\n\n\n\n\n\n\n\nVariable Final Time\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Mathematics"
+    ]
+  },
+  {
+    "objectID": "microeconomics/index.html",
+    "href": "microeconomics/index.html",
+    "title": "Microeconomics",
+    "section": "",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nPerfect vs Imperfect Markets\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Microeconomics"
+    ]
+  },
+  {
+    "objectID": "regional-urban/index.html",
+    "href": "regional-urban/index.html",
+    "title": "Regional and Urban Economics",
+    "section": "",
+    "text": "Title\nDescription\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Regional and Urban Economics"
+    ]
+  },
+  {
+    "objectID": "econometrics/regression-models.html#categorical-dependent-variables",
+    "href": "econometrics/regression-models.html#categorical-dependent-variables",
+    "title": "Regression Models",
+    "section": "Categorical Dependent Variables",
+    "text": "Categorical Dependent Variables\n\nBinary Logistic Regression\n\n\nOrdinal Logistic Regression",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Regression Models"
+    ]
+  },
+  {
+    "objectID": "econometrics/potential-outcomes-framework.html#average-treatment-effect-ate",
+    "href": "econometrics/potential-outcomes-framework.html#average-treatment-effect-ate",
+    "title": "Potential Outcomes Framework",
+    "section": "Average Treatment Effect (ATE)",
+    "text": "Average Treatment Effect (ATE)",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Potential Outcomes Framework"
+    ]
+  },
+  {
+    "objectID": "econometrics/potential-outcomes-framework.html#average-treatment-effect-on-the-treated-att-atet",
+    "href": "econometrics/potential-outcomes-framework.html#average-treatment-effect-on-the-treated-att-atet",
+    "title": "Potential Outcomes Framework",
+    "section": "Average Treatment Effect on the Treated (ATT, ATET)",
+    "text": "Average Treatment Effect on the Treated (ATT, ATET)",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Potential Outcomes Framework"
+    ]
+  },
+  {
+    "objectID": "econometrics/potential-outcomes-framework.html#simple-difference-in-outcomes-sdo",
+    "href": "econometrics/potential-outcomes-framework.html#simple-difference-in-outcomes-sdo",
+    "title": "Potential Outcomes Framework",
+    "section": "Simple Difference in Outcomes (SDO)",
+    "text": "Simple Difference in Outcomes (SDO)",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Potential Outcomes Framework"
+    ]
+  },
+  {
+    "objectID": "econometrics/potential-outcomes-framework.html#local-average-treatment-effect-late",
+    "href": "econometrics/potential-outcomes-framework.html#local-average-treatment-effect-late",
+    "title": "Potential Outcomes Framework",
+    "section": "Local Average Treatment Effect (LATE)",
+    "text": "Local Average Treatment Effect (LATE)",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Potential Outcomes Framework"
+    ]
+  },
+  {
+    "objectID": "governments-markets/index.html",
+    "href": "governments-markets/index.html",
+    "title": "Governments and Markets",
+    "section": "",
+    "text": "Title\nDescription\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Governments and Markets"
+    ]
+  },
+  {
+    "objectID": "growth-trade/index.html",
+    "href": "growth-trade/index.html",
+    "title": "Growth and Trade",
+    "section": "",
+    "text": "Title\nDescription\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Growth and Trade"
+    ]
+  },
+  {
+    "objectID": "public-economics/index.html",
+    "href": "public-economics/index.html",
+    "title": "Public Economics",
+    "section": "",
+    "text": "Title\nDescription\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Public Economics"
+    ]
+  },
+  {
+    "objectID": "macroeconomics/index.html",
+    "href": "macroeconomics/index.html",
+    "title": "Macroeconomics",
+    "section": "",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nBellman Equation\n\n\n\n\n\n\n\n\n\nDynamic Optimization\n\n\n\n\n\n\n\n\n\nEuler Equation\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Macroeconomics"
+    ]
+  },
+  {
+    "objectID": "behavioral-finance/heuristics.html",
+    "href": "behavioral-finance/heuristics.html",
+    "title": "Heuristics",
+    "section": "",
+    "text": "Heuristics are mental shortcuts or rules of thumb used to simplify decision-making.",
+    "crumbs": [
+      "Home",
+      "Behavioral Finance",
+      "Heuristics"
+    ]
+  },
+  {
+    "objectID": "behavioral-finance/heuristics.html#established-heuristics",
+    "href": "behavioral-finance/heuristics.html#established-heuristics",
+    "title": "Heuristics",
+    "section": "Established Heuristics",
+    "text": "Established Heuristics\n\nRepresentativeness\n\nPeople judge how likely something is based on how representative it is\nExample: In Ireland only 10% of the population have red hair. In other parts around the world only 1% \\(\\to\\) People connect red hair to Ireland\nLaw of Small Numbers: People tend to think that a small sample must be representative for the whole population\nGambler’s Fallacy: Consider a series of 10 tosses of a fair coin that have all landed “heads”. Many believe the next coin toss is more likely to result in “tails”. Tversky and Kahneman (1974): Chance is commonly viewed as a self-correcting process in which a deviation in one direction induces a deviation in the opposite direction to restore equilibrium.\n\n\n\nAvailability\n\nJudging probability based on how easily examples come to mind (e.g. fear of flying after hearing about plane crashes).\n\n\n\nAttention\n\nPeople have limited attention and focus on salient information, so they buy assets that grab their attention (e.g. stocks in the news or with extreme returns).\n\n\n\nAnchoring\n\nRelying heavily on an initial piece of information (e.g. adjusting estimates based on irrelevant anchors like random numbers).\nIn many situations, people make estimates by starting from an initial value that is adjusted to yield the final answer.\nAdjustment from the anchor is usually insufficient.\nExample: “Suggested retail price” influences perceived value\n\n\n\nAdjustment\n\nPeople start from a known value and adjust it step by step, but stop too early, so the final estimate stays biased towards the starting point.\n\n\n\nMenu Dependence / The Decoy Effect\n\nChoice between A and B. Some people choose A, some choose B\nAdd decoy option C that is strictly dominated by one of the other two options.\nFractions of people who choose A and B should stay the same. BUT they actually change\nExample: The Economist subscription model. Added decoy option \\(\\to\\) More people choose the dominating option.\n\n\n\nTrend Extrapolation\n\nForming forecasts, beliefs and expectations by extrapolating past trends",
+    "crumbs": [
+      "Home",
+      "Behavioral Finance",
+      "Heuristics"
+    ]
+  }
+]

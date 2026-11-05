@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Economics and mathematics sun icon">
+  <path d="M55.5 32.0 L61.0 32.0 M52.4 43.8 L57.1 46.5 M43.8 52.4 L46.5 57.1 M32.0 55.5 L32.0 61.0 M20.3 52.4 L17.5 57.1 M11.6 43.8 L6.9 46.5 M8.5 32.0 L3.0 32.0 M11.6 20.2 L6.9 17.5 M20.2 11.6 L17.5 6.9 M32.0 8.5 L32.0 3.0 M43.8 11.6 L46.5 6.9 M52.4 20.2 L57.1 17.5" fill="none" stroke="#F39C12" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="19.5" fill="#F7C04A"/>
+  <path d="M23 21 V41 H43" fill="none" stroke="#2C3E50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 26.9 L38 40" fill="none" stroke="#2C3E50" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+  <path d="M26 23 Q27.5 36 41 37" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="30.5" cy="33" r="2.6" fill="#2C3E50"/>
+</svg>
