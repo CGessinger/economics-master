@@ -90,7 +90,7 @@
     "href": "econometrics/index.html",
     "title": "Econometrics",
     "section": "",
-    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nDifference-in-Differences (DiD)\n\n\n\n\n\n\n\n\n\nEndogeneity\n\n\n\n\n\n\n\n\n\nFirst-Difference Regression\n\n\n\n\n\n\n\n\n\nFixed Effects\n\n\n\n\n\n\n\n\n\nGeneralized Method of Moments (GMM)\n\n\n\n\n\n\n\n\n\nIdentification Strategies\n\n\n\n\n\n\n\n\n\nInstrumental Variables (IV)\n\n\n\n\n\n\n\n\n\nLearning Resources\n\n\nLearning material on econometrics and causal inference.\n\n\n\n\n\n\nMeasurement Error\n\n\n\n\n\n\n\n\n\nNonlinear Least Squares (NLS)\n\n\n\n\n\n\n\n\n\nOmitted Variable Bias (OVB)\n\n\n\n\n\n\n\n\n\nOrdinary Least Squares (OLS)\n\n\n\n\n\n\n\n\n\nPanel Data\n\n\n\n\n\n\n\n\n\nPotential Outcomes Framework\n\n\n\n\n\n\n\n\n\nRandom Effects\n\n\n\n\n\n\n\n\n\nRandomized Controlled Trial (RCT)\n\n\n\n\n\n\n\n\n\nRegression Models\n\n\n\n\n\n\n\n\n\nSample Selection Bias\n\n\n\n\n\n\n\n\n\nSimultaneity and Reverse Causality\n\n\n\n\n\n\n\n\n\nTreatment Selection\n\n\n\n\n\n\n\n\n\nTwo-Stage Least Squares (2SLS)\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nDifference-in-Differences (DiD)\n\n\n\n\n\n\n\n\n\nEndogeneity\n\n\n\n\n\n\n\n\n\nFirst-Difference Regression\n\n\n\n\n\n\n\n\n\nFixed Effects\n\n\n\n\n\n\n\n\n\nGeneralized Method of Moments (GMM)\n\n\n\n\n\n\n\n\n\nIdentification Strategies\n\n\n\n\n\n\n\n\n\nInstrumental Variables (IV)\n\n\n\n\n\n\n\n\n\nLearning Resources\n\n\nLearning material on econometrics and causal inference.\n\n\n\n\n\n\nMeasurement Error\n\n\n\n\n\n\n\n\n\nNonlinear Least Squares (NLS)\n\n\n\n\n\n\n\n\n\nOmitted Variable Bias (OVB)\n\n\n\n\n\n\n\n\n\nOrdinary Least Squares (OLS)\n\n\n\n\n\n\n\n\n\nPanel Data\n\n\n\n\n\n\n\n\n\nPotential Outcomes Framework\n\n\n\n\n\n\n\n\n\nRandom Effects\n\n\n\n\n\n\n\n\n\nRandomized Controlled Trial (RCT)\n\n\n\n\n\n\n\n\n\nRegression Discontinuity Design (RDD)\n\n\n\n\n\n\n\n\n\nRegression Models\n\n\n\n\n\n\n\n\n\nSample Selection Bias\n\n\n\n\n\n\n\n\n\nSimultaneity and Reverse Causality\n\n\n\n\n\n\n\n\n\nSynthetic Control Method (SCM)\n\n\n\n\n\n\n\n\n\nTreatment Selection\n\n\n\n\n\n\n\n\n\nTwo-Stage Least Squares (2SLS)\n\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Econometrics"
@@ -229,7 +229,7 @@
     "href": "growth-trade/index.html",
     "title": "Growth and Trade",
     "section": "",
-    "text": "Title\nDescription\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nThe Overlapping Generations Model\n\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Growth and Trade"

@@ -29,9 +29,11 @@
       "/econometrics/potential-outcomes-framework.html",
       "/econometrics/panel-data/random-effects.html",
       "/econometrics/identification-strategies/randomized-controlled-trial.html",
+      "/econometrics/identification-strategies/regression-discontinuity-design.html",
       "/econometrics/regression-models.html",
       "/econometrics/endogeneity/sample-selection-bias.html",
       "/econometrics/endogeneity/simultaneity-reverse-causality.html",
+      "/econometrics/identification-strategies/synthetic-control-method.html",
       "/econometrics/endogeneity/treatment-selection.html",
       "/econometrics/generalized-method-of-moments/two-stage-least-squares.html"
     ]
@@ -71,7 +73,9 @@
   },
   {
     "listing": "/growth-trade/index.html",
-    "items": []
+    "items": [
+      "/growth-trade/overlapping-generations-model.html"
+    ]
   },
   {
     "listing": "/public-economics/index.html",

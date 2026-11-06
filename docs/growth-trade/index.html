@@ -36,8 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../political-economy/index.html" rel="next">
-<link href="../governments-markets/index.html" rel="prev">
+<link href="../growth-trade/overlapping-generations-model.html" rel="next">
+<link href="../econometrics/generalized-method-of-moments/two-stage-least-squares.html" rel="prev">
 <link href="../images/econ-math-icon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
@@ -91,9 +91,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -384,12 +384,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../governments-markets/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Governments and Markets</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../growth-trade/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Growth and Trade</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -685,22 +679,39 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../macroeconomics/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Macroeconomics</span></a>
+            <a href="../growth-trade/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Growth and Trade</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../growth-trade/overlapping-generations-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Overlapping Generations Model</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Dynamic Optimization</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a href="../macroeconomics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Macroeconomics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">Dynamic Optimization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../macroeconomics/dynamic-optimization/bellman-equation.html" class="sidebar-item-text sidebar-link">
@@ -721,11 +732,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../behavioral-finance/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral Finance</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../behavioral-finance/biases.html" class="sidebar-item-text sidebar-link">
@@ -776,14 +787,32 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table caption-top">
+<table class="quarto-listing-table table">
 <thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Title</th>
-<th data-quarto-table-cell-role="th">Description</th>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Description
+</th>
+
 </tr>
 </thead>
 <tbody class="list">
+
+<tr data-index="0" data-listing-file-modified-sort="1793889820756" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="The Overlapping Generations Model" data-listing-filename-sort="overlapping-generations-model.qmd">
+<td>
+<a href="../growth-trade/overlapping-generations-model.html" class="title listing-title">The Overlapping Generations Model</a>
+</td>
+<td>
+<span class="listing-description"></span>
+</td>
+
+</tr>
+
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
@@ -1203,13 +1232,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../governments-markets/index.html" class="pagination-link" aria-label="Governments and Markets">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Governments and Markets</span>
+      <a href="../econometrics/generalized-method-of-moments/two-stage-least-squares.html" class="pagination-link" aria-label="Two-Stage Least Squares (2SLS)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Two-Stage Least Squares (2SLS)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../political-economy/index.html" class="pagination-link" aria-label="Political Economy">
-        <span class="nav-page-text">Political Economy</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../growth-trade/overlapping-generations-model.html" class="pagination-link" aria-label="The Overlapping Generations Model">
+        <span class="nav-page-text">The Overlapping Generations Model</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
