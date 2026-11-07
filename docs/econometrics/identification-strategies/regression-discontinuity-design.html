@@ -835,6 +835,7 @@ window.Quarto = {
 </header>
 
 
+<p>A regression discontinuity design (RDD) uses one or more jumps in how a policy is assigned to estimate a causal effect <span class="citation" data-cites="wooldridge_introductory_2025">(<a href="#ref-wooldridge_introductory_2025" role="doc-biblioref">Wooldridge 2025</a>)</span>. It cannot answer every causal question, but where it applies, its results are almost as convincing as those of a randomized trial <span class="citation" data-cites="angrist_mastering_2015">(<a href="#ref-angrist_mastering_2015" role="doc-biblioref">Angrist and Pischke 2015, 166–67</a>)</span>.</p>
 <section id="concept" class="level1">
 <h1>Concept</h1>
 <ul>
@@ -1085,7 +1086,7 @@ Table&nbsp;2: The coefficient on D (39.07) estimates the treatment effect we wan
 </section>
 <section id="non-parametric" class="level1">
 <h1>Polynomial Non-parametric Approach</h1>
-<p>In case never observe the control outcome to the left or right of <span class="math inline">\(c\)</span>, we cannot check whether the fitted lines have the right functional form there. For this reason, the sharp RDD literature recommends local linear regression (LLR), which only uses observations close to the cutoff on both sides. The bandwidth <span class="math inline">\(h &gt; 0\)</span> sets how close is close enough, and all observations outside the window are dropped <span class="citation" data-cites="wooldridge_introductory_2025">(<a href="#ref-wooldridge_introductory_2025" role="doc-biblioref">Wooldridge 2025</a>)</span>: <span class="math display">\[
+<p>In case we never observe the control outcome to the left or right of <span class="math inline">\(c\)</span>, we cannot check whether the fitted lines have the right functional form there. For this reason, the sharp RDD literature recommends local linear regression (LLR), which only uses observations close to the cutoff on both sides. The bandwidth <span class="math inline">\(h &gt; 0\)</span> sets how close is close enough, and all observations outside the window are dropped <span class="citation" data-cites="wooldridge_introductory_2025">(<a href="#ref-wooldridge_introductory_2025" role="doc-biblioref">Wooldridge 2025, 708</a>)</span>: <span class="math display">\[
 Y_i = \beta_0 + \beta_1 (X_i - c) + {\color{red}\beta_2} D_i + \beta_3 (X_i - c) \times D_i + \varepsilon_i \quad \text{for } c - h \leq X_i \leq c + h
 \]</span></p>
 <details class="code-fold">

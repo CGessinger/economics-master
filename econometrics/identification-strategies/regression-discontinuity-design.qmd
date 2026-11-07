@@ -3,6 +3,8 @@ title: "Regression Discontinuity Design (RDD)"
 categories: ["Public Policy Analysis (M.Sc. UB)"]
 ---
 
+A regression discontinuity design (RDD) uses one or more jumps in how a policy is assigned to estimate a causal effect [@wooldridge_introductory_2025]. It cannot answer every causal question, but where it applies, its results are almost as convincing as those of a randomized trial [@angrist_mastering_2015, pp. 166-167].
+
 # Concept
 
 - **Running Variable ($X_i$):** The variable that determines treatment [@angrist_mastering_2015]. Also called the forcing or assignment variable.
@@ -184,7 +186,7 @@ summary(reg)$coefficients
 
 # Polynomial Non-parametric Approach {#non-parametric}
 
-In case never observe the control outcome to the left or right of $c$, we cannot check whether the fitted lines have the right functional form there. For this reason, the sharp RDD literature recommends local linear regression (LLR), which only uses observations close to the cutoff on both sides. The bandwidth $h > 0$ sets how close is close enough, and all observations outside the window are dropped [@wooldridge_introductory_2025]:
+In case we never observe the control outcome to the left or right of $c$, we cannot check whether the fitted lines have the right functional form there. For this reason, the sharp RDD literature recommends local linear regression (LLR), which only uses observations close to the cutoff on both sides. The bandwidth $h > 0$ sets how close is close enough, and all observations outside the window are dropped [@wooldridge_introductory_2025, p. 708]:
 $$
 Y_i = \beta_0 + \beta_1 (X_i - c) + {\color{red}\beta_2} D_i + \beta_3 (X_i - c) \times D_i + \varepsilon_i \quad \text{for } c - h \leq X_i \leq c + h
 $$

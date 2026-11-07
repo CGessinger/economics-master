@@ -286,7 +286,7 @@
     "href": "econometrics/identification-strategies/regression-discontinuity-design.html",
     "title": "Regression Discontinuity Design (RDD)",
     "section": "",
-    "text": "Running Variable (\\(X_i\\)): The variable that determines treatment (Angrist and Pischke 2015). Also called the forcing or assignment variable.\nCutoff (\\(c\\)): the known value of \\(X_i\\) at which treatment switches on. Units just below and just above \\(c\\) are assumed to be similar, so comparing them works like a local experiment.\nTreatment (\\(D_i\\)): a binary indicator that equals 1 if unit \\(i\\) is treated and 0 otherwise.\nBandwidth (\\(h\\)): the range of the running variable around the cutoff used to estimate the local treatment effect (see the non-parametric example).\n\n\n\nTreatment is fully determined by \\(X_i\\) and \\(c\\), so the probability of treatment jumps from 0 to 1 at the cutoff: \\[\nD_i = \\begin{cases} 1 & \\text{if } X_i \\geq c \\\\ 0 & \\text{if } X_i &lt; c \\end{cases}\n\\] The treatment effect is the ATE at the cutoff, \\(E[Y_i(1) - Y_i(0) \\mid X_i = c]\\).\n\n\n\nCrossing the cutoff only changes the probability of treatment, so some units below \\(c\\) are treated or some units above \\(c\\) are not: \\[\n\\lim_{x \\downarrow c} P(D_i = 1 \\mid X_i = x) \\neq \\lim_{x \\uparrow c} P(D_i = 1 \\mid X_i = x)\n\\] The treatment effect is the jump in the outcome divided by the jump in the treatment probability at \\(c\\). This ratio is the LATE for compliers at the cutoff.",
+    "text": "A regression discontinuity design (RDD) uses one or more jumps in how a policy is assigned to estimate a causal effect (Wooldridge 2025). It cannot answer every causal question, but where it applies, its results are almost as convincing as those of a randomized trial (Angrist and Pischke 2015, 166–67).",
     "crumbs": [
       "Home",
       "Econometrics",
@@ -311,8 +311,8 @@
     "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#sharp-rdd",
     "href": "econometrics/identification-strategies/regression-discontinuity-design.html#sharp-rdd",
     "title": "Regression Discontinuity Design (RDD)",
-    "section": "",
-    "text": "Treatment is fully determined by \\(X_i\\) and \\(c\\), so the probability of treatment jumps from 0 to 1 at the cutoff: \\[\nD_i = \\begin{cases} 1 & \\text{if } X_i \\geq c \\\\ 0 & \\text{if } X_i &lt; c \\end{cases}\n\\] The treatment effect is the ATE at the cutoff, \\(E[Y_i(1) - Y_i(0) \\mid X_i = c]\\).",
+    "section": "Sharp RDD",
+    "text": "Sharp RDD\nTreatment is fully determined by \\(X_i\\) and \\(c\\), so the probability of treatment jumps from 0 to 1 at the cutoff: \\[\nD_i = \\begin{cases} 1 & \\text{if } X_i \\geq c \\\\ 0 & \\text{if } X_i &lt; c \\end{cases}\n\\] The treatment effect is the ATE at the cutoff, \\(E[Y_i(1) - Y_i(0) \\mid X_i = c]\\).",
     "crumbs": [
       "Home",
       "Econometrics",
@@ -324,8 +324,8 @@
     "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#fuzzy-rdd",
     "href": "econometrics/identification-strategies/regression-discontinuity-design.html#fuzzy-rdd",
     "title": "Regression Discontinuity Design (RDD)",
-    "section": "",
-    "text": "Crossing the cutoff only changes the probability of treatment, so some units below \\(c\\) are treated or some units above \\(c\\) are not: \\[\n\\lim_{x \\downarrow c} P(D_i = 1 \\mid X_i = x) \\neq \\lim_{x \\uparrow c} P(D_i = 1 \\mid X_i = x)\n\\] The treatment effect is the jump in the outcome divided by the jump in the treatment probability at \\(c\\). This ratio is the LATE for compliers at the cutoff.",
+    "section": "Fuzzy RDD",
+    "text": "Fuzzy RDD\nCrossing the cutoff only changes the probability of treatment, so some units below \\(c\\) are treated or some units above \\(c\\) are not: \\[\n\\lim_{x \\downarrow c} P(D_i = 1 \\mid X_i = x) \\neq \\lim_{x \\uparrow c} P(D_i = 1 \\mid X_i = x)\n\\] The treatment effect is the jump in the outcome divided by the jump in the treatment probability at \\(c\\). This ratio is the LATE for compliers at the cutoff.",
     "crumbs": [
       "Home",
       "Econometrics",
@@ -355,6 +355,19 @@
       "Home",
       "Econometrics",
       "Potential Outcomes Framework"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/randomized-controlled-trial.html",
+    "href": "econometrics/identification-strategies/randomized-controlled-trial.html",
+    "title": "Randomized Controlled Trial (RCT)",
+    "section": "",
+    "text": "In a randomized controlled trial (RCT), treatment is assigned at random, and this design has long been seen as the gold standard for testing whether medical interventions have causal effects (Wooldridge 2025, 54).\n\n\n\n\nReferences\n\nWooldridge, Jeffrey M. 2025. Introductory Econometrics: A Modern Approach. 8th edition. Cengage.",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Randomized Controlled Trial (RCT)"
     ]
   }
 ]

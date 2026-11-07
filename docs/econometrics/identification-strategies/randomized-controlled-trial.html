@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -36,7 +55,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../econometrics/endogeneity/measurement-error.html" rel="next">
+<link href="../../econometrics/identification-strategies/regression-discontinuity-design.html" rel="next">
 <link href="../../econometrics/identification-strategies/instrumental-variables.html" rel="prev">
 <link href="../../images/econ-math-icon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -328,12 +347,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../growth-trade/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Growth and Trade</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../political-economy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Political Economy</span></a>
   </div>
@@ -549,6 +562,18 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Randomized Controlled Trial (RCT)</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../econometrics/identification-strategies/regression-discontinuity-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regression Discontinuity Design (RDD)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../econometrics/identification-strategies/synthetic-control-method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synthetic Control Method (SCM)</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -625,22 +650,39 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../macroeconomics/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Macroeconomics</span></a>
+            <a href="../../growth-trade/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Growth and Trade</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../growth-trade/overlapping-generations-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Overlapping Generations Model</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Dynamic Optimization</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a href="../../macroeconomics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Macroeconomics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">Dynamic Optimization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../macroeconomics/dynamic-optimization/bellman-equation.html" class="sidebar-item-text sidebar-link">
@@ -661,11 +703,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../behavioral-finance/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral Finance</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../behavioral-finance/biases.html" class="sidebar-item-text sidebar-link">
@@ -711,10 +753,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>In a randomized controlled trial (RCT), treatment is assigned at random, and this design has long been seen as the gold standard for testing whether medical interventions have causal effects <span class="citation" data-cites="wooldridge_introductory_2025">(<a href="#ref-wooldridge_introductory_2025" role="doc-biblioref">Wooldridge 2025, 54</a>)</span>.</p>
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-wooldridge_introductory_2025" class="csl-entry" role="listitem">
+Wooldridge, Jeffrey M. 2025. <em>Introductory Econometrics: A Modern Approach</em>. 8th edition. Cengage.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1135,8 +1183,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../econometrics/endogeneity/measurement-error.html" class="pagination-link" aria-label="Measurement Error">
-        <span class="nav-page-text">Measurement Error</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../econometrics/identification-strategies/regression-discontinuity-design.html" class="pagination-link" aria-label="Regression Discontinuity Design (RDD)">
+        <span class="nav-page-text">Regression Discontinuity Design (RDD)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

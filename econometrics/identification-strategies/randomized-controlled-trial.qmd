@@ -1,3 +1,5 @@
 ---
 title: "Randomized Controlled Trial (RCT)"
 ---
+
+In a randomized controlled trial (RCT), treatment is assigned at random, and this design has long been seen as the gold standard for testing whether medical interventions have causal effects [@wooldridge_introductory_2025, p. 54].
