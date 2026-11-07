@@ -33,7 +33,7 @@ All examples are written in R and can be run as-is. Packages are loaded at the t
 
 ## About the author
 
-Christian Gessinger completed a B.Sc. in Economics at the University of Bonn (10/2021 – 03/2025) and is pursuing an M.Sc. in Economics in Barcelona (09/2025 – 09/2027).
+Christian Gessinger completed a B.Sc. in Economics at the University of Bonn (10/2021 – 03/2025) and is pursuing an M.Sc. in Economics at the School of Economics of the Universitat de Barcelona (UB) (09/2025 – 09/2027).
 
 ::: {.callout-note}
 ## Sources
