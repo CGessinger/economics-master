@@ -77,7 +77,7 @@ plot(df$x, df$y1,
      col  = ifelse(df$D == 1, "blue", "gray50"),
      pch  = 1, cex = 0.5,
      ylim = c(-50, 250),
-     xlab = "Test Score (X)", ylab = "Outcome (Y)")
+     xlab = "Running Variable (X)", ylab = "Outcome (Y)")
 lines(x0,   predict(fit0,   newdata = data.frame(x = x0)),   col = "red",     lwd = 1.5)
 lines(xall, predict(fitall, newdata = data.frame(x = xall)), col = "black", lwd = 1.5)
 abline(v = c)
@@ -98,7 +98,7 @@ plot(df$x, df$y1,
      col  = ifelse(df$D == 1, "blue", "gray50"),
      pch  = 1, cex = 0.5,
      ylim = c(-50, 250),
-     xlab = "Test Score (X)", ylab = "Outcome (Y)")
+     xlab = "Running Variable (X)", ylab = "Outcome (Y)")
 lines(x0,   predict(fit0,   newdata = data.frame(x = x0)),   col = "red",     lwd = 1.5)
 lines(x1,   predict(fit1,   newdata = data.frame(x = x1)),   col = "red",     lwd = 1.5)
 
@@ -152,7 +152,7 @@ plot(df$x, df$y1,
      col  = ifelse(df$D == 1, "blue", "gray50"),
      pch  = 1, cex = 0.5,
      ylim = c(-50, 250),
-     xlab = "Test Score (X)", ylab = "Outcome (Y)")
+     xlab = "Running Variable (X)", ylab = "Outcome (Y)")
 abline(v = c)
 
 # Panel (b): quadratic fits on each side of the cutoff
@@ -166,7 +166,7 @@ plot(df$x, df$y1,
      col  = ifelse(df$D == 1, "blue", "gray50"),
      pch  = 1, cex = 0.5,
      ylim = c(-50, 250),
-     xlab = "Test Score (X)", ylab = "Outcome (Y)")
+     xlab = "Running Variable (X)", ylab = "Outcome (Y)")
 lines(x0, predict(fit0, newdata = data.frame(x = x0)), col = "red", lwd = 1.5)
 lines(x1, predict(fit1, newdata = data.frame(x = x1)), col = "red", lwd = 1.5)
 abline(v = c)
@@ -218,7 +218,7 @@ for (h in c(h_big, h_small)) {
        col  = ifelse(df$D == 1, "blue", "gray50"),
        pch  = 1, cex = 0.5,
        ylim = c(-50, 250),
-       xlab = "Test Score (X)", ylab = "Outcome (Y)")
+       xlab = "Running Variable (X)", ylab = "Outcome (Y)")
   lines(x0, predict(fit0, newdata = data.frame(x = x0)), col = "red", lwd = 1.5)
   lines(x1, predict(fit1, newdata = data.frame(x = x1)), col = "red", lwd = 1.5)
   abline(v = c)
