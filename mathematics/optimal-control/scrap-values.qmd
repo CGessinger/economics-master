@@ -1,3 +1,4 @@
 ---
 title: "Scrap Values"
+categories: ["Mathematics II (M.Sc. UB)"]
 ---

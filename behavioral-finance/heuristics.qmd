@@ -1,6 +1,7 @@
 ---
 title: "Heuristics"
 description: "Mental shortcuts that simplify decision-making and the systematic errors they can cause."
+categories: ["Behavioral Finance (B.Sc. Bonn)"]
 ---
 
 **Heuristics** are mental shortcuts or rules of thumb used to simplify decision-making.

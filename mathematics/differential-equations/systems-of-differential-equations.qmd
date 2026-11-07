@@ -1,3 +1,4 @@
 ---
 title: "Systems of Differential Equations"
+categories: ["Mathematics II (M.Sc. UB)"]
 ---

@@ -1,3 +1,4 @@
 ---
 title: "Variable Final Time"
+categories: ["Mathematics II (M.Sc. UB)"]
 ---

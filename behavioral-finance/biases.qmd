@@ -1,6 +1,7 @@
 ---
 title: "Biases"
 description: "Systematic deviations from rational judgment and how they show up in financial decisions."
+categories: ["Behavioral Finance (B.Sc. Bonn)"]
 ---
 
 A **bias** is a systematic and predictable deviation from rational judgment that comes from cognitive, emotional or social factors. It is **not** a theory of *why* people behave the way they do. It is just a systematic average error.

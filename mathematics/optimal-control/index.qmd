@@ -1,3 +1,4 @@
 ---
 title: "Optimal Control"
+categories: ["Mathematics II (M.Sc. UB)"]
 ---

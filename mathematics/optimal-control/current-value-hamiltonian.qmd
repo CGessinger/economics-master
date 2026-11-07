@@ -1,3 +1,4 @@
 ---
 title: "Current Value Hamiltonian"
+categories: ["Mathematics II (M.Sc. UB)"]
 ---

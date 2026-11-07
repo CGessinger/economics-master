@@ -1,3 +1,4 @@
 ---
 title: "Calculus of Variations"
+categories: ["Mathematics II (M.Sc. UB)"]
 ---

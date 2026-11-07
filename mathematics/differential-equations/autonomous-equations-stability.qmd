@@ -1,3 +1,4 @@
 ---
 title: "Autonomous Equations and Stability"
+categories: ["Mathematics II (M.Sc. UB)"]
 ---
