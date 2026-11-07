@@ -1,0 +1,7 @@
+---
+title: "Rational Bubbles"
+description: "Asset bubbles in an overlapping generations economy and why they can only exist when the economy is dynamically inefficient."
+categories: ["Economic Growth II (M.Sc. UB)"]
+---
+
+The model of rational asset bubbles in an overlapping generations economy was introduced by @tirole_asset_1985.

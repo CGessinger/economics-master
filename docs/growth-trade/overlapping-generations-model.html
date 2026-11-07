@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="The Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.">
 
-<title>The Overlapping Generations Model – Economics Master</title>
+<title>The Overlapping Generations Model (OLG) – Economics Master</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,7 +27,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -36,8 +56,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../macroeconomics/index.html" rel="next">
-<link href="../growth-trade/index.html" rel="prev">
+<link href="../growth-trade/rational-bubbles-tirole.html" rel="next">
+<link href="../growth-trade/bubbles-financial-frictions-martin-ventura.html" rel="prev">
 <link href="../images/econ-math-icon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -80,6 +100,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -294,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../growth-trade/index.html">Growth and Trade</a></li><li class="breadcrumb-item"><a href="../growth-trade/overlapping-generations-model.html">The Overlapping Generations Model</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../growth-trade/index.html">Growth and Trade</a></li><li class="breadcrumb-item"><a href="../growth-trade/overlapping-generations-model.html">The Overlapping Generations Model (OLG)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -640,8 +689,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../growth-trade/bubbles-financial-frictions-martin-ventura.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bubbles and Financial Frictions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../growth-trade/overlapping-generations-model.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">The Overlapping Generations Model</span></a>
+ <span class="menu-text">The Overlapping Generations Model (OLG)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../growth-trade/rational-bubbles-tirole.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rational Bubbles</span></a>
   </div>
 </li>
       </ul>
@@ -708,18 +769,45 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-benchmark-model" id="toc-the-benchmark-model" class="nav-link active" data-scroll-target="#the-benchmark-model">The Benchmark Model</a>
+  <ul class="collapse">
+  <li><a href="#household-problem" id="toc-household-problem" class="nav-link" data-scroll-target="#household-problem">Household Problem</a>
+  <ul class="collapse">
+  <li><a href="#preferences" id="toc-preferences" class="nav-link" data-scroll-target="#preferences">Preferences</a></li>
+  <li><a href="#budget-constraints" id="toc-budget-constraints" class="nav-link" data-scroll-target="#budget-constraints">Budget Constraints</a></li>
+  <li><a href="#optimization" id="toc-optimization" class="nav-link" data-scroll-target="#optimization">Optimization</a></li>
+  </ul></li>
+  <li><a href="#firms-problem" id="toc-firms-problem" class="nav-link" data-scroll-target="#firms-problem">Firms Problem</a>
+  <ul class="collapse">
+  <li><a href="#technology" id="toc-technology" class="nav-link" data-scroll-target="#technology">Technology</a></li>
+  <li><a href="#optimization-1" id="toc-optimization-1" class="nav-link" data-scroll-target="#optimization-1">Optimization</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../growth-trade/index.html">Growth and Trade</a></li><li class="breadcrumb-item"><a href="../growth-trade/overlapping-generations-model.html">The Overlapping Generations Model</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../growth-trade/index.html">Growth and Trade</a></li><li class="breadcrumb-item"><a href="../growth-trade/overlapping-generations-model.html">The Overlapping Generations Model (OLG)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Overlapping Generations Model</h1>
-</div>
+<h1 class="title">The Overlapping Generations Model (OLG)</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Economic Growth II (M.Sc. UB)</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    The Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -734,10 +822,128 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>The basic overlapping generations model with capital accumulation was introduced by <span class="citation" data-cites="diamond_national_1965">Diamond (<a href="#ref-diamond_national_1965" role="doc-biblioref">1965</a>)</span>, however this summary is mostly based on <span class="citation" data-cites="de_la_croix_theory_2002">De la Croix and Michel (<a href="#ref-de_la_croix_theory_2002" role="doc-biblioref">2002</a>)</span>.</p>
+<p>In the benchmark Diamond economy each household lives for two periods. When young, it works, earns a wage, consumes part of this income and saves the rest. When old, it is retired and consumes the gross return on the savings it made when young. Through these individual saving decisions, the young generation builds the capital stock that firms use in the next period.</p>
+<section id="the-benchmark-model" class="level1">
+<h1>The Benchmark Model</h1>
+<ul>
+<li>Time is discrete: <span class="math inline">\(t = 0, 1, 2, 3, \dots\)</span></li>
+<li>Each individual lives for two periods. At every date <span class="math inline">\(t\)</span> two generations coexist:
+<ul>
+<li><strong>Young</strong> (born at <span class="math inline">\(t\)</span>), size <span class="math inline">\(N_t\)</span></li>
+<li><strong>Old</strong> (born at <span class="math inline">\(t-1\)</span>), size <span class="math inline">\(N_{t-1}\)</span></li>
+</ul></li>
+<li>Population grows at the constant rate <span class="math inline">\(n\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+n = \frac{N_t}{N_{t-1}} - 1 \iff \frac{N_t}{N_{t-1}} = 1+n
+\]</span></p>
+<ul>
+<li>Only the young work. Each young individual supplies one unit of labor inelastically, so labor equals the size of the young generation:</li>
+</ul>
+<p><span class="math display">\[
+L_t = N_t
+\]</span></p>
+<ul>
+<li>The young earn the wage <span class="math inline">\(w_t\)</span>, consume <span class="math inline">\(c_t\)</span> and save <span class="math inline">\(s_t\)</span>. When old, they consume <span class="math inline">\(d_{t+1}\)</span> out of their savings.</li>
+</ul>
+<section id="household-problem" class="level2">
+<h2 class="anchored" data-anchor-id="household-problem">Household Problem</h2>
+<section id="preferences" class="level3">
+<h3 class="anchored" data-anchor-id="preferences">Preferences</h3>
+<p>The lifetime utility of an individual born at <span class="math inline">\(t\)</span> depends on consumption when young and when old:</p>
+<p><span class="math display">\[
+U_t = u(c_t, d_{t+1})
+\]</span></p>
+</section>
+<section id="budget-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="budget-constraints">Budget Constraints</h3>
+<p><span class="math display">\[
+\text{Young:}\quad c_t + s_t = w_t
+\]</span></p>
+<p><span class="math display">\[
+\text{Old:}\quad d_{t+1} = R_{t+1}\, s_t \;\Rightarrow\; s_t = \frac{d_{t+1}}{R_{t+1}}
+\]</span></p>
+<p><span class="math inline">\(R_{t+1}\)</span> is the gross return on savings. Substituting <span class="math inline">\(s_t\)</span> gives the <strong>lifetime budget constraint</strong>:</p>
+<p><span class="math display">\[
+c_t + \frac{d_{t+1}}{R_{t+1}} = w_t
+\]</span></p>
+</section>
+<section id="optimization" class="level3">
+<h3 class="anchored" data-anchor-id="optimization">Optimization</h3>
+<p>The household takes <span class="math inline">\(w_t\)</span> and <span class="math inline">\(R_{t+1}\)</span> as given and solves</p>
+<p><span class="math display">\[
+\max_{c_t,\, d_{t+1} \ge 0} \; u(c_t, d_{t+1}) \quad \text{s.t.} \quad w_t = c_t + \frac{d_{t+1}}{R_{t+1}}
+\]</span></p>
+<p><span class="math display">\[
+\mathcal{L} = u(c_t, d_{t+1}) + \lambda_t \left( w_t - c_t - \frac{d_{t+1}}{R_{t+1}} \right)
+\]</span></p>
+<p><strong>F.O.C.:</strong></p>
+<p><span class="math display">\[
+\frac{\partial \mathcal{L}}{\partial c_t} = u_{c_t} - \lambda_t = 0 \qquad (1)
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial \mathcal{L}}{\partial d_{t+1}} = u_{d_{t+1}} - \frac{\lambda_t}{R_{t+1}} = 0 \qquad (2)
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial \mathcal{L}}{\partial \lambda_t} = w_t - c_t - \frac{d_{t+1}}{R_{t+1}} = 0 \qquad (3)
+\]</span></p>
+<p>From (1), <span class="math inline">\(\lambda_t = u_{c_t}\)</span>. Replacing in (2):</p>
+<p><span class="math display">\[
+u_{d_{t+1}} = \frac{u_{c_t}}{R_{t+1}}
+\]</span></p>
+<p>The marginal utility of one unit consumed when old equals the marginal utility of the <span class="math inline">\(1/R_{t+1}\)</span> units given up when young.</p>
+</section>
+</section>
+<section id="firms-problem" class="level2">
+<h2 class="anchored" data-anchor-id="firms-problem">Firms Problem</h2>
+<section id="technology" class="level3">
+<h3 class="anchored" data-anchor-id="technology">Technology</h3>
+<p>Firms produce output with capital <span class="math inline">\(K_t\)</span> and labor <span class="math inline">\(L_t\)</span> using a production function <span class="math inline">\(F(K_t, L_t)\)</span> with constant returns to scale. For <span class="math inline">\(\lambda &gt; 0\)</span>:</p>
+<p><span class="math display">\[
+F(\lambda K_t, \lambda L_t) = \lambda F(K_t, L_t)
+\]</span></p>
+<p>Setting <span class="math inline">\(\lambda = \frac{1}{L_t}\)</span> gives the intensive form with capital per worker <span class="math inline">\(k_t = \frac{K_t}{L_t}\)</span>:</p>
+<p><span class="math display">\[
+f(k_t) = F(k_t, 1) = \frac{F(K_t, L_t)}{L_t} \iff F(K_t, L_t) = L_t f(k_t)
+\]</span></p>
+<p>The marginal products then only depend on <span class="math inline">\(k_t\)</span>:</p>
+<p><span class="math display">\[
+\frac{\partial F(K_t, L_t)}{\partial K_t} = f'(k_t), \qquad \frac{\partial F(K_t, L_t)}{\partial L_t} = f(k_t) - k_t f'(k_t)
+\]</span></p>
+</section>
+<section id="optimization-1" class="level3">
+<h3 class="anchored" data-anchor-id="optimization-1">Optimization</h3>
+<p>Firms rent capital at the rental rate <span class="math inline">\(q_t\)</span> and hire labor at the wage <span class="math inline">\(w_t\)</span>. They take both prices as given and maximize profits:</p>
+<p><span class="math display">\[
+\max_{K_t, L_t} \; \pi_t = F(K_t, L_t) - w_t L_t - q_t K_t
+\]</span></p>
+<p><strong>F.O.C.:</strong></p>
+<p><span class="math display">\[
+\frac{\partial \pi_t}{\partial K_t} = 0 \;\Rightarrow\; f'(k_t) = q_t
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial \pi_t}{\partial L_t} = 0 \;\Rightarrow\; f(k_t) - k_t f'(k_t) = w_t
+\]</span></p>
+<p>Each factor is paid its marginal product. Capital depreciates at rate <span class="math inline">\(\delta\)</span>, so the gross return on savings is the rental rate plus the undepreciated capital:</p>
+<p><span class="math display">\[
+R_t = 1 + r_t = q_t + 1 - \delta \;\Rightarrow\; q_t = r_t + \delta
+\]</span></p>
 
 
 
-</main> <!-- /main -->
+</section>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-de_la_croix_theory_2002" class="csl-entry" role="listitem">
+De la Croix, David, and Philippe Michel. 2002. <em>A Theory of Economic Growth: Dynamics and Policy in Overlapping Generations</em>. Cambridge University Press.
+</div>
+<div id="ref-diamond_national_1965" class="csl-entry" role="listitem">
+Diamond, Peter A. 1965. <span>“National Debt in a Neoclassical Growth Model.”</span> <em>The American Economic Review</em> 55 (5): 1126–50. <a href="https://www.jstor.org/stable/1809231">https://www.jstor.org/stable/1809231</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1153,13 +1359,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../growth-trade/index.html" class="pagination-link" aria-label="Growth and Trade">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Growth and Trade</span>
+      <a href="../growth-trade/bubbles-financial-frictions-martin-ventura.html" class="pagination-link" aria-label="Bubbles and Financial Frictions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bubbles and Financial Frictions</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../macroeconomics/index.html" class="pagination-link" aria-label="Macroeconomics">
-        <span class="nav-page-text">Macroeconomics</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../growth-trade/rational-bubbles-tirole.html" class="pagination-link" aria-label="Rational Bubbles">
+        <span class="nav-page-text">Rational Bubbles</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

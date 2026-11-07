@@ -1,0 +1,7 @@
+---
+title: "Bubbles and Financial Frictions"
+description: "How bubbles can crowd in investment and raise output when financial frictions keep savings away from productive investors."
+categories: ["Economic Growth II (M.Sc. UB)"]
+---
+
+The model of bubbles with financial frictions was introduced by @martin_economic_2012.
