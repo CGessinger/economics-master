@@ -46,6 +46,30 @@
     ]
   },
   {
+    "objectID": "growth-trade/rational-bubbles-tirole.html",
+    "href": "growth-trade/rational-bubbles-tirole.html",
+    "title": "Rational Bubbles",
+    "section": "",
+    "text": "The model of rational asset bubbles in an overlapping generations economy was introduced by Tirole (1985).\n\n\n\n\nReferences\n\nTirole, Jean. 1985. “Asset Bubbles and Overlapping Generations.” Econometrica 53 (6): 1499–528.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "Rational Bubbles"
+    ]
+  },
+  {
+    "objectID": "growth-trade/bubbles-financial-frictions-martin-ventura.html",
+    "href": "growth-trade/bubbles-financial-frictions-martin-ventura.html",
+    "title": "Bubbles and Financial Frictions",
+    "section": "",
+    "text": "The model of bubbles with financial frictions was introduced by Martin and Ventura (2012).\n\n\n\n\nReferences\n\nMartin, Alberto, and Jaume Ventura. 2012. “Economic Growth with Bubbles.” American Economic Review 102 (6): 3033–58. https://doi.org/10.1257/aer.102.6.3033.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "Bubbles and Financial Frictions"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Economics Master",
@@ -94,6 +118,58 @@
     "crumbs": [
       "Home",
       "Econometrics"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html",
+    "href": "econometrics/identification-strategies/regression-discontinuity-design.html",
+    "title": "Regression Discontinuity Design (RDD)",
+    "section": "",
+    "text": "A regression discontinuity design (RDD) uses one or more jumps in how a policy is assigned to estimate a causal effect (Wooldridge 2025). It cannot answer every causal question, but where it applies, its results are almost as convincing as those of a randomized trial (Angrist and Pischke 2015, 166–67).",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Regression Discontinuity Design (RDD)"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#sharp-rdd",
+    "href": "econometrics/identification-strategies/regression-discontinuity-design.html#sharp-rdd",
+    "title": "Regression Discontinuity Design (RDD)",
+    "section": "Sharp RDD",
+    "text": "Sharp RDD\nTreatment is fully determined by \\(X_i\\) and \\(c\\), so the probability of treatment jumps from 0 to 1 at the cutoff: \\[\nD_i = \\begin{cases} 1 & \\text{if } X_i \\geq c \\\\ 0 & \\text{if } X_i &lt; c \\end{cases}\n\\] The treatment effect is the ATE at the cutoff, \\(E[Y_i(1) - Y_i(0) \\mid X_i = c]\\).",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Regression Discontinuity Design (RDD)"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#fuzzy-rdd",
+    "href": "econometrics/identification-strategies/regression-discontinuity-design.html#fuzzy-rdd",
+    "title": "Regression Discontinuity Design (RDD)",
+    "section": "Fuzzy RDD",
+    "text": "Fuzzy RDD\nCrossing the cutoff only changes the probability of treatment, so some units below \\(c\\) are treated or some units above \\(c\\) are not: \\[\n\\lim_{x \\downarrow c} P(D_i = 1 \\mid X_i = x) \\neq \\lim_{x \\uparrow c} P(D_i = 1 \\mid X_i = x)\n\\] The treatment effect is the jump in the outcome divided by the jump in the treatment probability at \\(c\\). This ratio is the LATE for compliers at the cutoff.",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Regression Discontinuity Design (RDD)"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/randomized-controlled-trial.html",
+    "href": "econometrics/identification-strategies/randomized-controlled-trial.html",
+    "title": "Randomized Controlled Trial (RCT)",
+    "section": "",
+    "text": "In a randomized controlled trial (RCT), treatment is assigned at random, and this design has long been seen as the gold standard for testing whether medical interventions have causal effects (Wooldridge 2025, 54).\n\n\n\n\nReferences\n\nWooldridge, Jeffrey M. 2025. Introductory Econometrics: A Modern Approach. 8th edition. Cengage.",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Randomized Controlled Trial (RCT)"
     ]
   },
   {
@@ -166,8 +242,8 @@
     ]
   },
   {
-    "objectID": "econometrics/potential-outcomes-framework.html#average-treatment-effect-ate",
-    "href": "econometrics/potential-outcomes-framework.html#average-treatment-effect-ate",
+    "objectID": "econometrics/potential-outcomes-framework.html#ate",
+    "href": "econometrics/potential-outcomes-framework.html#ate",
     "title": "Potential Outcomes Framework",
     "section": "Average Treatment Effect (ATE)",
     "text": "Average Treatment Effect (ATE)\nA treatment, or policy, effect averaged across the population (Wooldridge 2025).",
@@ -202,8 +278,8 @@
     ]
   },
   {
-    "objectID": "econometrics/potential-outcomes-framework.html#local-average-treatment-effect-late",
-    "href": "econometrics/potential-outcomes-framework.html#local-average-treatment-effect-late",
+    "objectID": "econometrics/potential-outcomes-framework.html#late",
+    "href": "econometrics/potential-outcomes-framework.html#late",
     "title": "Potential Outcomes Framework",
     "section": "Local Average Treatment Effect (LATE)",
     "text": "Local Average Treatment Effect (LATE)\n“The LATE parameter is of interest mainly because of its connection with the simple instrumental variables estimator” (Wooldridge 2025).",
@@ -225,6 +301,42 @@
     ]
   },
   {
+    "objectID": "growth-trade/overlapping-generations-model.html",
+    "href": "growth-trade/overlapping-generations-model.html",
+    "title": "The Overlapping Generations Model (OLG)",
+    "section": "",
+    "text": "The basic overlapping generations model with capital accumulation was introduced by Diamond (1965), however this summary is mostly based on De la Croix and Michel (2002).\nIn the benchmark Diamond economy each household lives for two periods. When young, it works, earns a wage, consumes part of this income and saves the rest. When old, it is retired and consumes the gross return on the savings it made when young. Through these individual saving decisions, the young generation builds the capital stock that firms use in the next period.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model.html#household-problem",
+    "href": "growth-trade/overlapping-generations-model.html#household-problem",
+    "title": "The Overlapping Generations Model (OLG)",
+    "section": "Household Problem",
+    "text": "Household Problem\n\nPreferences\nThe lifetime utility of an individual born at \\(t\\) depends on consumption when young and when old:\n\\[\nU_t = u(c_t, d_{t+1})\n\\]\n\n\nBudget Constraints\n\\[\n\\text{Young:}\\quad c_t + s_t = w_t\n\\]\n\\[\n\\text{Old:}\\quad d_{t+1} = R_{t+1}\\, s_t \\;\\Rightarrow\\; s_t = \\frac{d_{t+1}}{R_{t+1}}\n\\]\n\\(R_{t+1}\\) is the gross return on savings. Substituting \\(s_t\\) gives the lifetime budget constraint:\n\\[\nc_t + \\frac{d_{t+1}}{R_{t+1}} = w_t\n\\]\n\n\nOptimization\nThe household takes \\(w_t\\) and \\(R_{t+1}\\) as given and solves\n\\[\n\\max_{c_t,\\, d_{t+1} \\ge 0} \\; u(c_t, d_{t+1}) \\quad \\text{s.t.} \\quad w_t = c_t + \\frac{d_{t+1}}{R_{t+1}}\n\\]\n\\[\n\\mathcal{L} = u(c_t, d_{t+1}) + \\lambda_t \\left( w_t - c_t - \\frac{d_{t+1}}{R_{t+1}} \\right)\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial c_t} = u_{c_t} - \\lambda_t = 0 \\qquad (1)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial d_{t+1}} = u_{d_{t+1}} - \\frac{\\lambda_t}{R_{t+1}} = 0 \\qquad (2)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda_t} = w_t - c_t - \\frac{d_{t+1}}{R_{t+1}} = 0 \\qquad (3)\n\\]\nFrom (1), \\(\\lambda_t = u_{c_t}\\). Replacing in (2):\n\\[\nu_{d_{t+1}} = \\frac{u_{c_t}}{R_{t+1}}\n\\]\nThe marginal utility of one unit consumed when old equals the marginal utility of the \\(1/R_{t+1}\\) units given up when young.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model.html#firms-problem",
+    "href": "growth-trade/overlapping-generations-model.html#firms-problem",
+    "title": "The Overlapping Generations Model (OLG)",
+    "section": "Firms Problem",
+    "text": "Firms Problem\n\nTechnology\nFirms produce output with capital \\(K_t\\) and labor \\(L_t\\) using a production function \\(F(K_t, L_t)\\) with constant returns to scale. For \\(\\lambda &gt; 0\\):\n\\[\nF(\\lambda K_t, \\lambda L_t) = \\lambda F(K_t, L_t)\n\\]\nSetting \\(\\lambda = \\frac{1}{L_t}\\) gives the intensive form with capital per worker \\(k_t = \\frac{K_t}{L_t}\\):\n\\[\nf(k_t) = F(k_t, 1) = \\frac{F(K_t, L_t)}{L_t} \\iff F(K_t, L_t) = L_t f(k_t)\n\\]\nThe marginal products then only depend on \\(k_t\\):\n\\[\n\\frac{\\partial F(K_t, L_t)}{\\partial K_t} = f'(k_t), \\qquad \\frac{\\partial F(K_t, L_t)}{\\partial L_t} = f(k_t) - k_t f'(k_t)\n\\]\n\n\nOptimization\nFirms rent capital at the rental rate \\(q_t\\) and hire labor at the wage \\(w_t\\). They take both prices as given and maximize profits:\n\\[\n\\max_{K_t, L_t} \\; \\pi_t = F(K_t, L_t) - w_t L_t - q_t K_t\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\pi_t}{\\partial K_t} = 0 \\;\\Rightarrow\\; f'(k_t) = q_t\n\\]\n\\[\n\\frac{\\partial \\pi_t}{\\partial L_t} = 0 \\;\\Rightarrow\\; f(k_t) - k_t f'(k_t) = w_t\n\\]\nEach factor is paid its marginal product. Capital depreciates at rate \\(\\delta\\), so the gross return on savings is the rental rate plus the undepreciated capital:\n\\[\nR_t = 1 + r_t = q_t + 1 - \\delta \\;\\Rightarrow\\; q_t = r_t + \\delta\n\\]",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)"
+    ]
+  },
+  {
     "objectID": "growth-trade/index.html",
     "href": "growth-trade/index.html",
     "title": "Growth and Trade",
@@ -233,6 +345,18 @@
     "crumbs": [
       "Home",
       "Growth and Trade"
+    ]
+  },
+  {
+    "objectID": "growth-trade/learning-resources.html",
+    "href": "growth-trade/learning-resources.html",
+    "title": "Learning Resources",
+    "section": "",
+    "text": "A Theory of Economic Growth: Dynamics and Policy in Overlapping Generations (2002)\nDavid de la Croix, Philippe Michel\nBook\n\n\nA graduate textbook that develops the overlapping generations model with capital accumulation in a rigorous way. It covers the dynamics and stability of the Diamond model, optimality and dynamic efficiency, public debt, pensions and altruism.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "Learning Resources"
     ]
   },
   {
@@ -279,179 +403,6 @@
       "Home",
       "Behavioral Finance",
       "Heuristics"
-    ]
-  },
-  {
-    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html",
-    "href": "econometrics/identification-strategies/regression-discontinuity-design.html",
-    "title": "Regression Discontinuity Design (RDD)",
-    "section": "",
-    "text": "A regression discontinuity design (RDD) uses one or more jumps in how a policy is assigned to estimate a causal effect (Wooldridge 2025). It cannot answer every causal question, but where it applies, its results are almost as convincing as those of a randomized trial (Angrist and Pischke 2015, 166–67).",
-    "crumbs": [
-      "Home",
-      "Econometrics",
-      "Identification Strategies",
-      "Regression Discontinuity Design (RDD)"
-    ]
-  },
-  {
-    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#learning-resources",
-    "href": "econometrics/identification-strategies/regression-discontinuity-design.html#learning-resources",
-    "title": "Regression Discontinuity Design (RDD)",
-    "section": "",
-    "text": "Causal Inference: The Mixtape, Chapter 6: Regression Discontinuity (Scott Cunningham)\nThe Effect, Chapter 20: Regression Discontinuity (Nick Huntington-Klein)",
-    "crumbs": [
-      "Home",
-      "Econometrics",
-      "Identification Strategies",
-      "Regression Discontinuity Design (RDD)"
-    ]
-  },
-  {
-    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#sharp-rdd",
-    "href": "econometrics/identification-strategies/regression-discontinuity-design.html#sharp-rdd",
-    "title": "Regression Discontinuity Design (RDD)",
-    "section": "Sharp RDD",
-    "text": "Sharp RDD\nTreatment is fully determined by \\(X_i\\) and \\(c\\), so the probability of treatment jumps from 0 to 1 at the cutoff: \\[\nD_i = \\begin{cases} 1 & \\text{if } X_i \\geq c \\\\ 0 & \\text{if } X_i &lt; c \\end{cases}\n\\] The treatment effect is the ATE at the cutoff, \\(E[Y_i(1) - Y_i(0) \\mid X_i = c]\\).",
-    "crumbs": [
-      "Home",
-      "Econometrics",
-      "Identification Strategies",
-      "Regression Discontinuity Design (RDD)"
-    ]
-  },
-  {
-    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#fuzzy-rdd",
-    "href": "econometrics/identification-strategies/regression-discontinuity-design.html#fuzzy-rdd",
-    "title": "Regression Discontinuity Design (RDD)",
-    "section": "Fuzzy RDD",
-    "text": "Fuzzy RDD\nCrossing the cutoff only changes the probability of treatment, so some units below \\(c\\) are treated or some units above \\(c\\) are not: \\[\n\\lim_{x \\downarrow c} P(D_i = 1 \\mid X_i = x) \\neq \\lim_{x \\uparrow c} P(D_i = 1 \\mid X_i = x)\n\\] The treatment effect is the jump in the outcome divided by the jump in the treatment probability at \\(c\\). This ratio is the LATE for compliers at the cutoff.",
-    "crumbs": [
-      "Home",
-      "Econometrics",
-      "Identification Strategies",
-      "Regression Discontinuity Design (RDD)"
-    ]
-  },
-  {
-    "objectID": "econometrics/potential-outcomes-framework.html#ate",
-    "href": "econometrics/potential-outcomes-framework.html#ate",
-    "title": "Potential Outcomes Framework",
-    "section": "Average Treatment Effect (ATE)",
-    "text": "Average Treatment Effect (ATE)\nA treatment, or policy, effect averaged across the population (Wooldridge 2025).",
-    "crumbs": [
-      "Home",
-      "Econometrics",
-      "Potential Outcomes Framework"
-    ]
-  },
-  {
-    "objectID": "econometrics/potential-outcomes-framework.html#late",
-    "href": "econometrics/potential-outcomes-framework.html#late",
-    "title": "Potential Outcomes Framework",
-    "section": "Local Average Treatment Effect (LATE)",
-    "text": "Local Average Treatment Effect (LATE)\n“The LATE parameter is of interest mainly because of its connection with the simple instrumental variables estimator” (Wooldridge 2025).",
-    "crumbs": [
-      "Home",
-      "Econometrics",
-      "Potential Outcomes Framework"
-    ]
-  },
-  {
-    "objectID": "econometrics/identification-strategies/randomized-controlled-trial.html",
-    "href": "econometrics/identification-strategies/randomized-controlled-trial.html",
-    "title": "Randomized Controlled Trial (RCT)",
-    "section": "",
-    "text": "In a randomized controlled trial (RCT), treatment is assigned at random, and this design has long been seen as the gold standard for testing whether medical interventions have causal effects (Wooldridge 2025, 54).\n\n\n\n\nReferences\n\nWooldridge, Jeffrey M. 2025. Introductory Econometrics: A Modern Approach. 8th edition. Cengage.",
-    "crumbs": [
-      "Home",
-      "Econometrics",
-      "Identification Strategies",
-      "Randomized Controlled Trial (RCT)"
-    ]
-  },
-  {
-    "objectID": "growth-trade/overlapping-generations-model.html",
-    "href": "growth-trade/overlapping-generations-model.html",
-    "title": "The Overlapping Generations Model (OLG)",
-    "section": "",
-    "text": "The basic overlapping generations model with capital accumulation was introduced by Diamond (1965), however this summary is mostly based on De la Croix and Michel (2002).\nIn the benchmark Diamond economy each household lives for two periods. When young, it works, earns a wage, consumes part of this income and saves the rest. When old, it is retired and consumes the gross return on the savings it made when young. Through these individual saving decisions, the young generation builds the capital stock that firms use in the next period.",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "The Overlapping Generations Model (OLG)"
-    ]
-  },
-  {
-    "objectID": "growth-trade/overlapping-generations-model.html#demography-and-timing",
-    "href": "growth-trade/overlapping-generations-model.html#demography-and-timing",
-    "title": "The Overlapping Generations Model (OLG)",
-    "section": "Demography and Timing",
-    "text": "Demography and Timing\n\nTime is discrete: \\(t = 0, 1, 2, 3, \\dots\\)\nEach individual lives for two periods. At every date \\(t\\) two generations coexist:\n\nYoung (born at \\(t\\)), size \\(N_t\\)\nOld (born at \\(t-1\\)), size \\(N_{t-1}\\)\n\nPopulation grows at the constant rate \\(n\\):\n\n\\[\nn = \\frac{N_t}{N_{t-1}} - 1 \\iff \\frac{N_t}{N_{t-1}} = 1+n\n\\]\n\nOnly the young work. Each young individual supplies one unit of labor inelastically, so labor equals the size of the young generation:\n\n\\[\nL_t = N_t\n\\]\n\nThe young earn the wage \\(w_t\\), consume \\(c_t\\) and save \\(s_t\\). When old, they consume \\(d_{t+1}\\) out of their savings.",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "The Overlapping Generations Model (OLG)"
-    ]
-  },
-  {
-    "objectID": "growth-trade/overlapping-generations-model.html#household-problem",
-    "href": "growth-trade/overlapping-generations-model.html#household-problem",
-    "title": "The Overlapping Generations Model (OLG)",
-    "section": "Household Problem",
-    "text": "Household Problem\n\nPreferences\nThe lifetime utility of an individual born at \\(t\\) depends on consumption when young and when old:\n\\[\nU_t = u(c_t, d_{t+1})\n\\]\n\n\nBudget Constraints\n\\[\n\\text{Young:}\\quad c_t + s_t = w_t\n\\]\n\\[\n\\text{Old:}\\quad d_{t+1} = R_{t+1}\\, s_t \\;\\Rightarrow\\; s_t = \\frac{d_{t+1}}{R_{t+1}}\n\\]\n\\(R_{t+1}\\) is the gross return on savings. Substituting \\(s_t\\) gives the lifetime budget constraint:\n\\[\nc_t + \\frac{d_{t+1}}{R_{t+1}} = w_t\n\\]\n\n\nOptimization\nThe household takes \\(w_t\\) and \\(R_{t+1}\\) as given and solves\n\\[\n\\max_{c_t,\\, d_{t+1} \\ge 0} \\; u(c_t, d_{t+1}) \\quad \\text{s.t.} \\quad w_t = c_t + \\frac{d_{t+1}}{R_{t+1}}\n\\]\n\\[\n\\mathcal{L} = u(c_t, d_{t+1}) + \\lambda_t \\left( w_t - c_t - \\frac{d_{t+1}}{R_{t+1}} \\right)\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial c_t} = u_{c_t} - \\lambda_t = 0 \\qquad (1)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial d_{t+1}} = u_{d_{t+1}} - \\frac{\\lambda_t}{R_{t+1}} = 0 \\qquad (2)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda_t} = w_t - c_t - \\frac{d_{t+1}}{R_{t+1}} = 0 \\qquad (3)\n\\]\nFrom (1), \\(\\lambda_t = u_{c_t}\\). Replacing in (2):\n\\[\nu_{d_{t+1}} = \\frac{u_{c_t}}{R_{t+1}}\n\\]\nThe marginal utility of one unit consumed when old equals the marginal utility of the \\(1/R_{t+1}\\) units given up when young.",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "The Overlapping Generations Model (OLG)"
-    ]
-  },
-  {
-    "objectID": "growth-trade/overlapping-generations-model.html#firms-problem",
-    "href": "growth-trade/overlapping-generations-model.html#firms-problem",
-    "title": "The Overlapping Generations Model (OLG)",
-    "section": "Firms Problem",
-    "text": "Firms Problem\n\nTechnology\nFirms produce output with capital \\(K_t\\) and labor \\(L_t\\) using a production function \\(F(K_t, L_t)\\) with constant returns to scale. For \\(\\lambda &gt; 0\\):\n\\[\nF(\\lambda K_t, \\lambda L_t) = \\lambda F(K_t, L_t)\n\\]\nSetting \\(\\lambda = \\frac{1}{L_t}\\) gives the intensive form with capital per worker \\(k_t = \\frac{K_t}{L_t}\\):\n\\[\nf(k_t) = F(k_t, 1) = \\frac{F(K_t, L_t)}{L_t} \\iff F(K_t, L_t) = L_t f(k_t)\n\\]\nThe marginal products then only depend on \\(k_t\\):\n\\[\n\\frac{\\partial F(K_t, L_t)}{\\partial K_t} = f'(k_t), \\qquad \\frac{\\partial F(K_t, L_t)}{\\partial L_t} = f(k_t) - k_t f'(k_t)\n\\]\n\n\nOptimization\nFirms rent capital at the rental rate \\(q_t\\) and hire labor at the wage \\(w_t\\). They take both prices as given and maximize profits:\n\\[\n\\max_{K_t, L_t} \\; \\pi_t = F(K_t, L_t) - w_t L_t - q_t K_t\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\pi_t}{\\partial K_t} = 0 \\;\\Rightarrow\\; f'(k_t) = q_t\n\\]\n\\[\n\\frac{\\partial \\pi_t}{\\partial L_t} = 0 \\;\\Rightarrow\\; f(k_t) - k_t f'(k_t) = w_t\n\\]\nEach factor is paid its marginal product. Capital depreciates at rate \\(\\delta\\), so the gross return on savings is the rental rate plus the undepreciated capital:\n\\[\nR_t = 1 + r_t = q_t + 1 - \\delta \\;\\Rightarrow\\; q_t = r_t + \\delta\n\\]",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "The Overlapping Generations Model (OLG)"
-    ]
-  },
-  {
-    "objectID": "growth-trade/bubbles-financial-frictions-martin-ventura.html",
-    "href": "growth-trade/bubbles-financial-frictions-martin-ventura.html",
-    "title": "Bubbles and Financial Frictions",
-    "section": "",
-    "text": "The model of bubbles with financial frictions was introduced by Martin and Ventura (2012).\n\n\n\n\nReferences\n\nMartin, Alberto, and Jaume Ventura. 2012. “Economic Growth with Bubbles.” American Economic Review 102 (6): 3033–58. https://doi.org/10.1257/aer.102.6.3033.",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "Bubbles and Financial Frictions"
-    ]
-  },
-  {
-    "objectID": "growth-trade/rational-bubbles-tirole.html",
-    "href": "growth-trade/rational-bubbles-tirole.html",
-    "title": "Rational Bubbles",
-    "section": "",
-    "text": "The model of rational asset bubbles in an overlapping generations economy was introduced by Tirole (1985).\n\n\n\n\nReferences\n\nTirole, Jean. 1985. “Asset Bubbles and Overlapping Generations.” Econometrica 53 (6): 1499–528.",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "Rational Bubbles"
-    ]
-  },
-  {
-    "objectID": "growth-trade/learning-resources.html",
-    "href": "growth-trade/learning-resources.html",
-    "title": "Learning Resources",
-    "section": "",
-    "text": "A Theory of Economic Growth: Dynamics and Policy in Overlapping Generations (2002)\nDavid de la Croix, Philippe Michel\nBook\n\n\nA graduate textbook that develops the overlapping generations model with capital accumulation in a rigorous way. It covers the dynamics and stability of the Diamond model, optimality and dynamic efficiency, public debt, pensions and altruism.",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "Learning Resources"
     ]
   }
 ]
