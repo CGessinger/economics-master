@@ -229,7 +229,7 @@
     "href": "growth-trade/index.html",
     "title": "Growth and Trade",
     "section": "",
-    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nBubbles and Financial Frictions\n\n\nHow bubbles can crowd in investment and raise output when financial frictions keep savings away from productive investors.\n\n\n\n\n\n\nRational Bubbles\n\n\nAsset bubbles in an overlapping generations economy and why they can only exist when the economy is dynamically inefficient.\n\n\n\n\n\n\nThe Overlapping Generations Model (OLG)\n\n\nThe Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.\n\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nBubbles and Financial Frictions\n\n\nHow bubbles can crowd in investment and raise output when financial frictions keep savings away from productive investors.\n\n\n\n\n\n\nLearning Resources\n\n\nLearning material on economic growth and overlapping generations models.\n\n\n\n\n\n\nRational Bubbles\n\n\nAsset bubbles in an overlapping generations economy and why they can only exist when the economy is dynamically inefficient.\n\n\n\n\n\n\nThe Overlapping Generations Model (OLG)\n\n\nThe Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Growth and Trade"
@@ -440,6 +440,18 @@
       "Home",
       "Growth and Trade",
       "Rational Bubbles"
+    ]
+  },
+  {
+    "objectID": "growth-trade/learning-resources.html",
+    "href": "growth-trade/learning-resources.html",
+    "title": "Learning Resources",
+    "section": "",
+    "text": "A Theory of Economic Growth: Dynamics and Policy in Overlapping Generations (2002)\nDavid de la Croix, Philippe Michel\nBook\n\n\nA graduate textbook that develops the overlapping generations model with capital accumulation in a rigorous way. It covers the dynamics and stability of the Diamond model, optimality and dynamic efficiency, public debt, pensions and altruism.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "Learning Resources"
     ]
   }
 ]

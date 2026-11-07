@@ -1,0 +1,14 @@
+---
+title: "Learning Resources"
+description: "Learning material on economic growth and overlapping generations models."
+---
+
++------------------------------------------+------------------------------------------+----------------------------------+
+| **A Theory of Economic Growth: Dynamics  | David de la Croix, Philippe Michel       | Book                             |
+| and Policy in Overlapping Generations**  |                                          |                                  |
+| (2002)                                   |                                          |                                  |
++------------------------------------------+------------------------------------------+----------------------------------+
+| A graduate textbook that develops the overlapping generations model with capital accumulation in a rigorous way. It    |
+| covers the dynamics and stability of the Diamond model, optimality and dynamic efficiency, public debt, pensions and   |
+| altruism.                                                                                                              |
++------------------------------------------------------------------------------------------------------------------------+
