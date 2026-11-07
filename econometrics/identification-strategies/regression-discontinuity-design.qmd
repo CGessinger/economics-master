@@ -14,18 +14,22 @@ A regression discontinuity design (RDD) uses one or more jumps in how a policy i
 
 ## Sharp RDD
 
-Treatment is fully determined by $X_i$ and $c$, so the probability of treatment jumps from 0 to 1 at the cutoff:
+The treatment status is deterministic and discontinuous function of a covariate $X_i$:
 $$
 D_i = \begin{cases} 1 & \text{if } X_i \geq c \\ 0 & \text{if } X_i < c \end{cases}
 $$
+It is deterministic, because knowing $X_i$ means knowing $D_i$ and it is discontinuous, because $D_i$ does not change until $X_i$ reaches $c$, no matter how close $X_i$ gets to it. As a result, there is no value of $X_i$ at which we observe both treated and untreated units [@angrist_mostly_2009, pp. 251-252]. 
+
 The treatment effect is the [ATE](../potential-outcomes-framework.qmd#ate) at the cutoff, $E[Y_i(1) - Y_i(0) \mid X_i = c]$.
 
 ## Fuzzy RDD
 
-Crossing the cutoff only changes the probability of treatment, so some units below $c$ are treated or some units above $c$ are not:
+Crossing the cutoff only changes the probability or expected value of treatment conditional on the running variable. So some units below $c$ are treated or some units above $c$ are not. The discontinuity becomes an instrumental variable for treatment status [@angrist_mostly_2009, p. 259].
 $$
-\lim_{x \downarrow c} P(D_i = 1 \mid X_i = x) \neq \lim_{x \uparrow c} P(D_i = 1 \mid X_i = x)
+P(D_i = 1 \mid X_i) = \begin{cases} g_1(X_i) & \text{if } X_i \geq c \\ g_0(X_i) & \text{if } X_i < c \end{cases}, \quad \text{where } g_1(c) \neq g_0(c)
 $$
+The functions $g_0(X_i)$ and $g_1(X_i)$ can take any form as long as they differ at $c$, and a bigger difference is better because it gives a stronger first stage. We assume $g_1(c) > g_0(c)$, so crossing the cutoff makes treatment more likely [@angrist_mostly_2009, p. 260].
+
 The treatment effect is the jump in the outcome divided by the jump in the treatment probability at $c$. This ratio is the [LATE](../potential-outcomes-framework.qmd#late) for compliers at the cutoff.
 
 # Continuity Assumption (CA)

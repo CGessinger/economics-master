@@ -864,15 +864,17 @@ window.Quarto = {
 </ul>
 <section id="sharp-rdd" class="level2">
 <h2 class="anchored" data-anchor-id="sharp-rdd">Sharp RDD</h2>
-<p>Treatment is fully determined by <span class="math inline">\(X_i\)</span> and <span class="math inline">\(c\)</span>, so the probability of treatment jumps from 0 to 1 at the cutoff: <span class="math display">\[
+<p>The treatment status is deterministic and discontinuous function of a covariate <span class="math inline">\(X_i\)</span>: <span class="math display">\[
 D_i = \begin{cases} 1 &amp; \text{if } X_i \geq c \\ 0 &amp; \text{if } X_i &lt; c \end{cases}
-\]</span> The treatment effect is the <a href="../../econometrics/potential-outcomes-framework.html#ate">ATE</a> at the cutoff, <span class="math inline">\(E[Y_i(1) - Y_i(0) \mid X_i = c]\)</span>.</p>
+\]</span> It is deterministic, because knowing <span class="math inline">\(X_i\)</span> means knowing <span class="math inline">\(D_i\)</span> and it is discontinuous, because <span class="math inline">\(D_i\)</span> does not change until <span class="math inline">\(X_i\)</span> reaches <span class="math inline">\(c\)</span>, no matter how close <span class="math inline">\(X_i\)</span> gets to it. As a result, there is no value of <span class="math inline">\(X_i\)</span> at which we observe both treated and untreated units <span class="citation" data-cites="angrist_mostly_2009">(<a href="#ref-angrist_mostly_2009" role="doc-biblioref">Angrist and Pischke 2009, 251–52</a>)</span>.</p>
+<p>The treatment effect is the <a href="../../econometrics/potential-outcomes-framework.html#ate">ATE</a> at the cutoff, <span class="math inline">\(E[Y_i(1) - Y_i(0) \mid X_i = c]\)</span>.</p>
 </section>
 <section id="fuzzy-rdd" class="level2">
 <h2 class="anchored" data-anchor-id="fuzzy-rdd">Fuzzy RDD</h2>
-<p>Crossing the cutoff only changes the probability of treatment, so some units below <span class="math inline">\(c\)</span> are treated or some units above <span class="math inline">\(c\)</span> are not: <span class="math display">\[
-\lim_{x \downarrow c} P(D_i = 1 \mid X_i = x) \neq \lim_{x \uparrow c} P(D_i = 1 \mid X_i = x)
-\]</span> The treatment effect is the jump in the outcome divided by the jump in the treatment probability at <span class="math inline">\(c\)</span>. This ratio is the <a href="../../econometrics/potential-outcomes-framework.html#late">LATE</a> for compliers at the cutoff.</p>
+<p>Crossing the cutoff only changes the probability or expected value of treatment conditional on the running variable. So some units below <span class="math inline">\(c\)</span> are treated or some units above <span class="math inline">\(c\)</span> are not. The discontinuity becomes an instrumental variable for treatment status <span class="citation" data-cites="angrist_mostly_2009">(<a href="#ref-angrist_mostly_2009" role="doc-biblioref">Angrist and Pischke 2009, 259</a>)</span>. <span class="math display">\[
+P(D_i = 1 \mid X_i) = \begin{cases} g_1(X_i) &amp; \text{if } X_i \geq c \\ g_0(X_i) &amp; \text{if } X_i &lt; c \end{cases}, \quad \text{where } g_1(c) \neq g_0(c)
+\]</span> The functions <span class="math inline">\(g_0(X_i)\)</span> and <span class="math inline">\(g_1(X_i)\)</span> can take any form as long as they differ at <span class="math inline">\(c\)</span>, and a bigger difference is better because it gives a stronger first stage. We assume <span class="math inline">\(g_1(c) &gt; g_0(c)\)</span>, so crossing the cutoff makes treatment more likely <span class="citation" data-cites="angrist_mostly_2009">(<a href="#ref-angrist_mostly_2009" role="doc-biblioref">Angrist and Pischke 2009, 260</a>)</span>.</p>
+<p>The treatment effect is the jump in the outcome divided by the jump in the treatment probability at <span class="math inline">\(c\)</span>. This ratio is the <a href="../../econometrics/potential-outcomes-framework.html#late">LATE</a> for compliers at the cutoff.</p>
 </section>
 </section>
 <section id="continuity-assumption-ca" class="level1">
@@ -1210,6 +1212,9 @@ Table&nbsp;3: With h = 30 the estimate of D (29.80) is below the true effect of 
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-angrist_mostly_2009" class="csl-entry" role="listitem">
+Angrist, Joshua David, and Jörn-Steffen Pischke. 2009. <em>Mostly Harmless Econometrics: An Empiricist’s Companion</em>. Princeton University Press.
+</div>
 <div id="ref-angrist_mastering_2015" class="csl-entry" role="listitem">
 Angrist, Joshua D., and Jörn-Steffen Pischke. 2015. <em>Mastering ’Metrics: The Path from Cause to Effect</em>. Princeton University Press.
 </div>
