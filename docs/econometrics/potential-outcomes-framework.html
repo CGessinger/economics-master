@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -328,12 +347,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../growth-trade/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Growth and Trade</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../political-economy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Political Economy</span></a>
   </div>
@@ -549,6 +562,18 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Randomized Controlled Trial (RCT)</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../econometrics/identification-strategies/regression-discontinuity-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regression Discontinuity Design (RDD)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../econometrics/identification-strategies/synthetic-control-method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synthetic Control Method (SCM)</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -625,22 +650,39 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../macroeconomics/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Macroeconomics</span></a>
+            <a href="../growth-trade/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Growth and Trade</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../growth-trade/overlapping-generations-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Overlapping Generations Model</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Dynamic Optimization</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a href="../macroeconomics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Macroeconomics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">Dynamic Optimization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../macroeconomics/dynamic-optimization/bellman-equation.html" class="sidebar-item-text sidebar-link">
@@ -661,11 +703,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../behavioral-finance/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral Finance</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../behavioral-finance/biases.html" class="sidebar-item-text sidebar-link">
@@ -691,10 +733,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#stable-unit-treatment-value-assumption-sutva" id="toc-stable-unit-treatment-value-assumption-sutva" class="nav-link active" data-scroll-target="#stable-unit-treatment-value-assumption-sutva">Stable Unit Treatment Value Assumption (SUTVA)</a></li>
-  <li><a href="#average-treatment-effect-ate" id="toc-average-treatment-effect-ate" class="nav-link" data-scroll-target="#average-treatment-effect-ate">Average Treatment Effect (ATE)</a></li>
+  <li><a href="#ate" id="toc-ate" class="nav-link" data-scroll-target="#ate">Average Treatment Effect (ATE)</a></li>
   <li><a href="#average-treatment-effect-on-the-treated-att-atet" id="toc-average-treatment-effect-on-the-treated-att-atet" class="nav-link" data-scroll-target="#average-treatment-effect-on-the-treated-att-atet">Average Treatment Effect on the Treated (ATT, ATET)</a></li>
   <li><a href="#simple-difference-in-outcomes-sdo" id="toc-simple-difference-in-outcomes-sdo" class="nav-link" data-scroll-target="#simple-difference-in-outcomes-sdo">Simple Difference in Outcomes (SDO)</a></li>
-  <li><a href="#local-average-treatment-effect-late" id="toc-local-average-treatment-effect-late" class="nav-link" data-scroll-target="#local-average-treatment-effect-late">Local Average Treatment Effect (LATE)</a></li>
+  <li><a href="#late" id="toc-late" class="nav-link" data-scroll-target="#late">Local Average Treatment Effect (LATE)</a></li>
   </ul>
 </nav>
     </div>
@@ -705,7 +747,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../econometrics/index.html">Econometrics</a></li><li class="breadcrumb-item"><a href="../econometrics/potential-outcomes-framework.html">Potential Outcomes Framework</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Potential Outcomes Framework</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Public Policy Analysis (M.Sc. UB)</div>
+  </div>
+  </div>
 
 
 
@@ -724,8 +769,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="stable-unit-treatment-value-assumption-sutva" class="level2">
 <h2 class="anchored" data-anchor-id="stable-unit-treatment-value-assumption-sutva">Stable Unit Treatment Value Assumption (SUTVA)</h2>
 </section>
-<section id="average-treatment-effect-ate" class="level2">
-<h2 class="anchored" data-anchor-id="average-treatment-effect-ate">Average Treatment Effect (ATE)</h2>
+<section id="ate" class="level2">
+<h2 class="anchored" data-anchor-id="ate">Average Treatment Effect (ATE)</h2>
+<p>A treatment, or policy, effect averaged across the population <span class="citation" data-cites="wooldridge_introductory_2025">(<a href="#ref-wooldridge_introductory_2025" role="doc-biblioref">Wooldridge 2025</a>)</span>.</p>
 </section>
 <section id="average-treatment-effect-on-the-treated-att-atet" class="level2">
 <h2 class="anchored" data-anchor-id="average-treatment-effect-on-the-treated-att-atet">Average Treatment Effect on the Treated (ATT, ATET)</h2>
@@ -733,13 +779,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="simple-difference-in-outcomes-sdo" class="level2">
 <h2 class="anchored" data-anchor-id="simple-difference-in-outcomes-sdo">Simple Difference in Outcomes (SDO)</h2>
 </section>
-<section id="local-average-treatment-effect-late" class="level2">
-<h2 class="anchored" data-anchor-id="local-average-treatment-effect-late">Local Average Treatment Effect (LATE)</h2>
+<section id="late" class="level2">
+<h2 class="anchored" data-anchor-id="late">Local Average Treatment Effect (LATE)</h2>
+<p>“The LATE parameter is of interest mainly because of its connection with the simple instrumental variables estimator” <span class="citation" data-cites="wooldridge_introductory_2025">(<a href="#ref-wooldridge_introductory_2025" role="doc-biblioref">Wooldridge 2025</a>)</span>.</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-wooldridge_introductory_2025" class="csl-entry" role="listitem">
+Wooldridge, Jeffrey M. 2025. <em>Introductory Econometrics: A Modern Approach</em>. 8th edition. Cengage.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

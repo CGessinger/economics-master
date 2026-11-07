@@ -1,3 +1,4 @@
 ---
 title: "Difference-in-Differences (DiD)"
+categories: ["Public Policy Analysis (M.Sc. UB)", "Econometrics (B.Sc. Bonn)"]
 ---

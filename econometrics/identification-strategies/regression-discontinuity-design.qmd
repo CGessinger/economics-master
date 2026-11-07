@@ -1,3 +1,249 @@
 ---
 title: "Regression Discontinuity Design (RDD)"
+categories: ["Public Policy Analysis (M.Sc. UB)"]
 ---
+
+# Concept
+
+- **Running Variable ($X_i$):** The variable that determines treatment [@angrist_mastering_2015]. Also called the forcing or assignment variable.
+- **Cutoff ($c$):** the known value of $X_i$ at which treatment switches on. Units just below and just above $c$ are assumed to be similar, so comparing them works like a local experiment.
+- **Treatment ($D_i$):** a binary indicator that equals 1 if unit $i$ is treated and 0 otherwise.
+- **Bandwidth ($h$):** the range of the running variable around the cutoff used to estimate the local treatment effect (see the [non-parametric example](#non-parametric)).
+
+## Sharp RDD
+
+Treatment is fully determined by $X_i$ and $c$, so the probability of treatment jumps from 0 to 1 at the cutoff:
+$$
+D_i = \begin{cases} 1 & \text{if } X_i \geq c \\ 0 & \text{if } X_i < c \end{cases}
+$$
+The treatment effect is the [ATE](../potential-outcomes-framework.qmd#ate) at the cutoff, $E[Y_i(1) - Y_i(0) \mid X_i = c]$.
+
+## Fuzzy RDD
+
+Crossing the cutoff only changes the probability of treatment, so some units below $c$ are treated or some units above $c$ are not:
+$$
+\lim_{x \downarrow c} P(D_i = 1 \mid X_i = x) \neq \lim_{x \uparrow c} P(D_i = 1 \mid X_i = x)
+$$
+The treatment effect is the jump in the outcome divided by the jump in the treatment probability at $c$. This ratio is the [LATE](../potential-outcomes-framework.qmd#late) for compliers at the cutoff.
+
+# Continuity Assumption (CA)
+
+The key assumption is that the relationship between the potential outcomes and the running variable has no jump. Formally, the conditional mean functions of $Y_i(0)$ and $Y_i(1)$ given $X_i$ must be continuous at $x = c$. Because the cutoff is usually set arbitrarily, one often assumes that both functions are continuous over the whole range of $X_i$, but continuity at $c$ is all the formal assumption needs [@wooldridge_introductory_2025]. Under this assumption, any jump in the observed outcome at $c$ is caused by the treatment.
+
+
+# Linear Parametric Approach
+
+The parametric approach (also called regression based approach) assumes that the relationship between $X$ and $Y$ on each side of the cutoff can be described well by a linear function. If the relationship is curved, see the [polynomial parametric approach](#polynomial-parametric). If we do not want to assume a functional form for the whole range of $X$, we can use the [non-parametric approach](#non-parametric).
+
+The running variable is drawn as $X_i \sim N(50, 25^2)$ and kept between 0 and 100, the cutoff is $c = 50$, and units with $X_i > c$ are treated ($D_i = 1$) while all others are untreated ($D_i = 0$).
+We estimate a linear regression with a separate slope on each side of the cutoff:
+$$
+Y_i = \beta_0 + \beta_1 X_i + {\color{red}\beta_2} D_i + \beta_3 X_i \times D_i + \varepsilon_i
+$$
+
+```{r}
+#| code-fold: true
+#| code-summary: "Outcome without and with a jump at the cutoff"
+#| label: fig-rdd-sim
+#| fig-cap: "Simulated RDD data with cutoff at X = 50."
+#| fig-subcap:
+#|   - "No treatment effect: the outcome is continuous at the cutoff (effect = 0)."
+#|   - "Treatment effect of 40: the outcome jumps at the cutoff (effect = 40)."
+#| layout-ncol: 2
+# Setup: simulate the data
+set.seed(1234)
+n <- 1000
+x <- rnorm(n, mean = 50, sd = 25)
+
+x[x < 0] <- 0
+x <- x[x <= 100]
+
+# Set the cutoff at c = 50. Treated if X > c
+c <- 50
+D <- ifelse(x > c, 1, 0)
+
+# Panel (a): potential outcome Y1 not jumping at cutoff
+effect <- 0
+y1 <- 25 + effect * D + 1.5 * x + rnorm(length(x), mean = 0, sd = 10)
+df <- data.frame(x, D, y1)
+
+# Linear fits: control group only and full sample
+fit0   <- lm(y1 ~ x, data = df[df$D == 0, ])
+fitall <- lm(y1 ~ x, data = df)
+x0   <- range(df$x[df$D == 0])
+xall <- range(df$x)
+
+plot(df$x, df$y1,
+     col  = ifelse(df$D == 1, "blue", "gray50"),
+     pch  = 1, cex = 0.5,
+     ylim = c(-50, 250),
+     xlab = "Test Score (X)", ylab = "Outcome (Y)")
+lines(x0,   predict(fit0,   newdata = data.frame(x = x0)),   col = "red",     lwd = 1.5)
+lines(xall, predict(fitall, newdata = data.frame(x = xall)), col = "black", lwd = 1.5)
+abline(v = c)
+
+# Panel (b): treatment at the cutoff
+effect <- 40
+y1 <- 25 + effect * D + 1.5 * x + rnorm(length(x), mean = 0, sd = 10)
+df <- data.frame(x, D, y1)
+
+# Linear fits: control group only and full sample
+fit0   <- lm(y1 ~ x, data = df[df$D == 0, ])
+x0   <- range(df$x[df$D == 0])
+
+fit1   <- lm(y1 ~ x, data = df[df$D == 1, ])
+x1   <- range(df$x[df$D == 1])
+
+plot(df$x, df$y1,
+     col  = ifelse(df$D == 1, "blue", "gray50"),
+     pch  = 1, cex = 0.5,
+     ylim = c(-50, 250),
+     xlab = "Test Score (X)", ylab = "Outcome (Y)")
+lines(x0,   predict(fit0,   newdata = data.frame(x = x0)),   col = "red",     lwd = 1.5)
+lines(x1,   predict(fit1,   newdata = data.frame(x = x1)),   col = "red",     lwd = 1.5)
+
+# Dotted: each side's fit extended across the cutoff
+x0_ext <- c(c, max(df$x))
+x1_ext <- c(min(df$x), c)
+lines(x0_ext, predict(fit0, newdata = data.frame(x = x0_ext)), col = "gray50", lwd = 1.5, lty = 3)
+lines(x1_ext, predict(fit1, newdata = data.frame(x = x1_ext)), col = "gray50", lwd = 1.5, lty = 3)
+abline(v = c)
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Regression"
+#| label: tbl-rdd-reg
+#| tbl-cap: "The coefficient on D (44.31) estimates the treatment effect we want to measure, which we set to 40."
+#| tbl-cap-location: bottom
+reg <- lm(y1 ~ x * D, data = df)
+summary(reg)$coefficients
+```
+
+# Polynomial Parametric Approach {#polynomial-parametric}
+
+The running variable, cutoff and treatment are the same as before, but now each side of the cutoff follows its own quadratic curve. The outcome is concave below the cutoff and convex above it, with a treatment effect of 40 at $c$:
+$$
+Y_i = \begin{cases} 120 + 0.5 (X_i - c) - 0.03 (X_i - c)^2 + \varepsilon_i & \text{if } X_i \leq c \\ 160 - 1.5 (X_i - c) + 0.04 (X_i - c)^2 + \varepsilon_i & \text{if } X_i > c \end{cases}
+$$
+We estimate each side by a quadratic regression in the centered running variable:
+$$
+Y_i = \beta_0 + \beta_1 (X_i - c) + \beta_2 (X_i - c)^2 + {\color{red}\beta_3} D_i + \beta_4 (X_i - c) \times D_i + \beta_5 (X_i - c)^2 \times D_i + \varepsilon_i
+$$
+
+```{r}
+#| code-fold: true
+#| code-summary: "Different quadratic curve on each side of the cutoff"
+#| label: fig-rdd-sim-np
+#| fig-cap: "Simulated RDD data with a different quadratic curve on each side of the cutoff at X = 50."
+#| fig-subcap:
+#|   - "Simulated data (effect = 40)."
+#|   - "Quadratic regression on each side of the cutoff."
+#| layout-ncol: 2
+# Uses x, D and c from the linear simulation
+effect <- 40
+x_c <- x - c
+y1 <- 120 + effect * D + 0.5 * x_c - 0.03 * x_c^2 - 2 * x_c * D + 0.07 * x_c^2 * D +
+  rnorm(length(x), mean = 0, sd = 10)
+df <- data.frame(x, x_c, D, y1)
+
+# Panel (a): simulated data
+plot(df$x, df$y1,
+     col  = ifelse(df$D == 1, "blue", "gray50"),
+     pch  = 1, cex = 0.5,
+     ylim = c(-50, 250),
+     xlab = "Test Score (X)", ylab = "Outcome (Y)")
+abline(v = c)
+
+# Panel (b): quadratic fits on each side of the cutoff
+fit0 <- lm(y1 ~ x + I(x^2), data = df[df$D == 0, ])
+x0   <- seq(min(df$x[df$D == 0]), max(df$x[df$D == 0]), length.out = 100)
+
+fit1 <- lm(y1 ~ x + I(x^2), data = df[df$D == 1, ])
+x1   <- seq(min(df$x[df$D == 1]), max(df$x[df$D == 1]), length.out = 100)
+
+plot(df$x, df$y1,
+     col  = ifelse(df$D == 1, "blue", "gray50"),
+     pch  = 1, cex = 0.5,
+     ylim = c(-50, 250),
+     xlab = "Test Score (X)", ylab = "Outcome (Y)")
+lines(x0, predict(fit0, newdata = data.frame(x = x0)), col = "red", lwd = 1.5)
+lines(x1, predict(fit1, newdata = data.frame(x = x1)), col = "red", lwd = 1.5)
+abline(v = c)
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Regression"
+#| label: tbl-rdd-reg-np
+#| tbl-cap: "The coefficient on D (39.07) estimates the treatment effect we want to measure, which we set to 40."
+#| tbl-cap-location: bottom
+reg <- lm(y1 ~ (x_c + I(x_c^2)) * D, data = df)
+summary(reg)$coefficients
+```
+
+# Polynomial Non-parametric Approach {#non-parametric}
+
+In case never observe the control outcome to the left or right of $c$, we cannot check whether the fitted lines have the right functional form there. For this reason, the sharp RDD literature recommends local linear regression (LLR), which only uses observations close to the cutoff on both sides. The bandwidth $h > 0$ sets how close is close enough, and all observations outside the window are dropped [@wooldridge_introductory_2025]:
+$$
+Y_i = \beta_0 + \beta_1 (X_i - c) + {\color{red}\beta_2} D_i + \beta_3 (X_i - c) \times D_i + \varepsilon_i \quad \text{for } c - h \leq X_i \leq c + h
+$$
+
+```{r}
+#| code-fold: true
+#| code-summary: "Local linear fits with a bigger and a smaller bandwidth"
+#| label: fig-rdd-np
+#| fig-cap: "Local linear regression on each side of the cutoff at X = 50, using the data from the quadratic simulation."
+#| fig-subcap:
+#|   - "Bigger bandwidth (h = 30)."
+#|   - "Smaller bandwidth (h = 10)."
+#| layout-ncol: 2
+# Uses df and c from the quadratic simulation
+# Set the two bandwidths
+h_big   <- 30
+h_small <- 10
+
+for (h in c(h_big, h_small)) {
+  # Observations within the bandwidth on each side
+  left  <- df[df$D == 0 & df$x >= c - h, ]
+  right <- df[df$D == 1 & df$x <= c + h, ]
+
+  # Linear fit on each side
+  fit0 <- lm(y1 ~ x, data = left)
+  fit1 <- lm(y1 ~ x, data = right)
+  x0   <- range(left$x)
+  x1   <- range(right$x)
+
+  plot(df$x, df$y1,
+       col  = ifelse(df$D == 1, "blue", "gray50"),
+       pch  = 1, cex = 0.5,
+       ylim = c(-50, 250),
+       xlab = "Test Score (X)", ylab = "Outcome (Y)")
+  lines(x0, predict(fit0, newdata = data.frame(x = x0)), col = "red", lwd = 1.5)
+  lines(x1, predict(fit1, newdata = data.frame(x = x1)), col = "red", lwd = 1.5)
+  abline(v = c)
+  abline(v = c(c - h, c + h), lty = 2, col = "gray50")
+}
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Regression"
+#| label: tbl-rdd-np
+#| tbl-cap: "With h = 30 the estimate of D (29.80) is below the true effect of 40 because the lines miss the curvature. With h = 10 the estimate (40.11) is close to 40 but has a larger standard error."
+#| tbl-cap-location: bottom
+local_rdd <- function(h) {
+  sub <- df[abs(df$x_c) <= h, ]
+  reg <- lm(y1 ~ x_c * D, data = sub)
+  c(h          = h,
+    n          = nrow(sub),
+    estimate   = unname(coef(reg)["D"]),
+    std.error  = summary(reg)$coefficients["D", "Std. Error"])
+}
+rbind(local_rdd(h_big), local_rdd(h_small))
+```
+
+# Learning Resources
+
+- [Causal Inference: The Mixtape, Chapter 6: Regression Discontinuity](https://mixtape.scunning.com/06-regression_discontinuity){target="_blank"} (Scott Cunningham)
+- [The Effect, Chapter 20: Regression Discontinuity](https://theeffectbook.net/ch-RegressionDiscontinuity.html){target="_blank"} (Nick Huntington-Klein)

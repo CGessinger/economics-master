@@ -2,6 +2,8 @@ project:
   type: website
   output-dir: docs
 
+bibliography: bibliography.bib
+
 website:
   title: "Economics Master"
   description: "A compact reference of economic theory and empirical methods from the M.Sc. Economics."

@@ -26,7 +26,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -80,6 +134,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -552,7 +635,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../econometrics/identification-strategies/synthetic-control-method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Synthetic Control Method</span></a>
+ <span class="menu-text">Synthetic Control Method (SCM)</span></a>
   </div>
 </li>
       </ul>
@@ -708,8 +791,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#concept" id="toc-concept" class="nav-link active" data-scroll-target="#concept">Concept</a>
+  <ul class="collapse">
+  <li><a href="#sharp-rdd" id="toc-sharp-rdd" class="nav-link" data-scroll-target="#sharp-rdd">Sharp RDD</a></li>
+  <li><a href="#fuzzy-rdd" id="toc-fuzzy-rdd" class="nav-link" data-scroll-target="#fuzzy-rdd">Fuzzy RDD</a></li>
+  </ul></li>
+  <li><a href="#continuity-assumption-ca" id="toc-continuity-assumption-ca" class="nav-link" data-scroll-target="#continuity-assumption-ca">Continuity Assumption (CA)</a></li>
+  <li><a href="#linear-parametric-approach" id="toc-linear-parametric-approach" class="nav-link" data-scroll-target="#linear-parametric-approach">Linear Parametric Approach</a></li>
+  <li><a href="#polynomial-parametric" id="toc-polynomial-parametric" class="nav-link" data-scroll-target="#polynomial-parametric">Polynomial Parametric Approach</a></li>
+  <li><a href="#non-parametric" id="toc-non-parametric" class="nav-link" data-scroll-target="#non-parametric">Polynomial Non-parametric Approach</a></li>
+  <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources">Learning Resources</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -718,7 +816,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../econometrics/index.html">Econometrics</a></li><li class="breadcrumb-item"><a href="../../econometrics/identification-strategies/difference-in-differences.html">Identification Strategies</a></li><li class="breadcrumb-item"><a href="../../econometrics/identification-strategies/regression-discontinuity-design.html">Regression Discontinuity Design (RDD)</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Regression Discontinuity Design (RDD)</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Public Policy Analysis (M.Sc. UB)</div>
+  </div>
+  </div>
 
 
 
@@ -734,10 +835,369 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="concept" class="level1">
+<h1>Concept</h1>
+<ul>
+<li><strong>Running Variable (<span class="math inline">\(X_i\)</span>):</strong> The variable that determines treatment <span class="citation" data-cites="angrist_mastering_2015">(<a href="#ref-angrist_mastering_2015" role="doc-biblioref">Angrist and Pischke 2015</a>)</span>. Also called the forcing or assignment variable.</li>
+<li><strong>Cutoff (<span class="math inline">\(c\)</span>):</strong> the known value of <span class="math inline">\(X_i\)</span> at which treatment switches on. Units just below and just above <span class="math inline">\(c\)</span> are assumed to be similar, so comparing them works like a local experiment.</li>
+<li><strong>Treatment (<span class="math inline">\(D_i\)</span>):</strong> a binary indicator that equals 1 if unit <span class="math inline">\(i\)</span> is treated and 0 otherwise.</li>
+<li><strong>Bandwidth (<span class="math inline">\(h\)</span>):</strong> the range of the running variable around the cutoff used to estimate the local treatment effect (see the <a href="#non-parametric">non-parametric example</a>).</li>
+</ul>
+<section id="sharp-rdd" class="level2">
+<h2 class="anchored" data-anchor-id="sharp-rdd">Sharp RDD</h2>
+<p>Treatment is fully determined by <span class="math inline">\(X_i\)</span> and <span class="math inline">\(c\)</span>, so the probability of treatment jumps from 0 to 1 at the cutoff: <span class="math display">\[
+D_i = \begin{cases} 1 &amp; \text{if } X_i \geq c \\ 0 &amp; \text{if } X_i &lt; c \end{cases}
+\]</span> The treatment effect is the <a href="../../econometrics/potential-outcomes-framework.html#ate">ATE</a> at the cutoff, <span class="math inline">\(E[Y_i(1) - Y_i(0) \mid X_i = c]\)</span>.</p>
+</section>
+<section id="fuzzy-rdd" class="level2">
+<h2 class="anchored" data-anchor-id="fuzzy-rdd">Fuzzy RDD</h2>
+<p>Crossing the cutoff only changes the probability of treatment, so some units below <span class="math inline">\(c\)</span> are treated or some units above <span class="math inline">\(c\)</span> are not: <span class="math display">\[
+\lim_{x \downarrow c} P(D_i = 1 \mid X_i = x) \neq \lim_{x \uparrow c} P(D_i = 1 \mid X_i = x)
+\]</span> The treatment effect is the jump in the outcome divided by the jump in the treatment probability at <span class="math inline">\(c\)</span>. This ratio is the <a href="../../econometrics/potential-outcomes-framework.html#late">LATE</a> for compliers at the cutoff.</p>
+</section>
+</section>
+<section id="continuity-assumption-ca" class="level1">
+<h1>Continuity Assumption (CA)</h1>
+<p>The key assumption is that the relationship between the potential outcomes and the running variable has no jump. Formally, the conditional mean functions of <span class="math inline">\(Y_i(0)\)</span> and <span class="math inline">\(Y_i(1)\)</span> given <span class="math inline">\(X_i\)</span> must be continuous at <span class="math inline">\(x = c\)</span>. Because the cutoff is usually set arbitrarily, one often assumes that both functions are continuous over the whole range of <span class="math inline">\(X_i\)</span>, but continuity at <span class="math inline">\(c\)</span> is all the formal assumption needs <span class="citation" data-cites="wooldridge_introductory_2025">(<a href="#ref-wooldridge_introductory_2025" role="doc-biblioref">Wooldridge 2025</a>)</span>. Under this assumption, any jump in the observed outcome at <span class="math inline">\(c\)</span> is caused by the treatment.</p>
+</section>
+<section id="linear-parametric-approach" class="level1">
+<h1>Linear Parametric Approach</h1>
+<p>The parametric approach (also called regression based approach) assumes that the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> on each side of the cutoff can be described well by a linear function. If the relationship is curved, see the <a href="#polynomial-parametric">polynomial parametric approach</a>. If we do not want to assume a functional form for the whole range of <span class="math inline">\(X\)</span>, we can use the <a href="#non-parametric">non-parametric approach</a>.</p>
+<p>The running variable is drawn as <span class="math inline">\(X_i \sim N(50, 25^2)\)</span> and kept between 0 and 100, the cutoff is <span class="math inline">\(c = 50\)</span>, and units with <span class="math inline">\(X_i &gt; c\)</span> are treated (<span class="math inline">\(D_i = 1\)</span>) while all others are untreated (<span class="math inline">\(D_i = 0\)</span>). We estimate a linear regression with a separate slope on each side of the cutoff: <span class="math display">\[
+Y_i = \beta_0 + \beta_1 X_i + {\color{red}\beta_2} D_i + \beta_3 X_i \times D_i + \varepsilon_i
+\]</span></p>
+<details class="code-fold">
+<summary>Outcome without and with a jump at the cutoff</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup: simulate the data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">25</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x[x <span class="sc">&lt;</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> x[x <span class="sc">&lt;=</span> <span class="dv">100</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the cutoff at c = 50. Treated if X &gt; c</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>D <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(x <span class="sc">&gt;</span> c, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Panel (a): potential outcome Y1 not jumping at cutoff</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>effect <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>y1 <span class="ot">&lt;-</span> <span class="dv">25</span> <span class="sc">+</span> effect <span class="sc">*</span> D <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(x), <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(x, D, y1)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear fits: control group only and full sample</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>fit0   <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x, <span class="at">data =</span> df[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">0</span>, ])</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>fitall <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x, <span class="at">data =</span> df)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>x0   <span class="ot">&lt;-</span> <span class="fu">range</span>(df<span class="sc">$</span>x[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">0</span>])</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>xall <span class="ot">&lt;-</span> <span class="fu">range</span>(df<span class="sc">$</span>x)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y1,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>     <span class="at">col  =</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"blue"</span>, <span class="st">"gray50"</span>),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch  =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">0.5</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">50</span>, <span class="dv">250</span>),</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Test Score (X)"</span>, <span class="at">ylab =</span> <span class="st">"Outcome (Y)"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x0,   <span class="fu">predict</span>(fit0,   <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x0)),   <span class="at">col =</span> <span class="st">"red"</span>,     <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(xall, <span class="fu">predict</span>(fitall, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> xall)), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> c)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Panel (b): treatment at the cutoff</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>effect <span class="ot">&lt;-</span> <span class="dv">40</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>y1 <span class="ot">&lt;-</span> <span class="dv">25</span> <span class="sc">+</span> effect <span class="sc">*</span> D <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(x), <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(x, D, y1)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear fits: control group only and full sample</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>fit0   <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x, <span class="at">data =</span> df[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">0</span>, ])</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>x0   <span class="ot">&lt;-</span> <span class="fu">range</span>(df<span class="sc">$</span>x[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">0</span>])</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>fit1   <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x, <span class="at">data =</span> df[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>, ])</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>x1   <span class="ot">&lt;-</span> <span class="fu">range</span>(df<span class="sc">$</span>x[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>])</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y1,</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>     <span class="at">col  =</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"blue"</span>, <span class="st">"gray50"</span>),</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch  =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">0.5</span>,</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">50</span>, <span class="dv">250</span>),</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Test Score (X)"</span>, <span class="at">ylab =</span> <span class="st">"Outcome (Y)"</span>)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x0,   <span class="fu">predict</span>(fit0,   <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x0)),   <span class="at">col =</span> <span class="st">"red"</span>,     <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x1,   <span class="fu">predict</span>(fit1,   <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x1)),   <span class="at">col =</span> <span class="st">"red"</span>,     <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Dotted: each side's fit extended across the cutoff</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>x0_ext <span class="ot">&lt;-</span> <span class="fu">c</span>(c, <span class="fu">max</span>(df<span class="sc">$</span>x))</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>x1_ext <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">min</span>(df<span class="sc">$</span>x), c)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x0_ext, <span class="fu">predict</span>(fit0, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x0_ext)), <span class="at">col =</span> <span class="st">"gray50"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x1_ext, <span class="fu">predict</span>(fit1, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x1_ext)), <span class="at">col =</span> <span class="st">"gray50"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="fig-rdd-sim" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rdd-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rdd-sim" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rdd-sim-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rdd-sim-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="regression-discontinuity-design_files/figure-html/fig-rdd-sim-1.png" class="img-fluid figure-img" data-ref-parent="fig-rdd-sim" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rdd-sim-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) No treatment effect: the outcome is continuous at the cutoff (effect = 0).
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rdd-sim" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rdd-sim-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rdd-sim-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="regression-discontinuity-design_files/figure-html/fig-rdd-sim-2.png" class="img-fluid figure-img" data-ref-parent="fig-rdd-sim" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rdd-sim-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Treatment effect of 40: the outcome jumps at the cutoff (effect = 40).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rdd-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Simulated RDD data with cutoff at X = 50.
+</figcaption>
+</figure>
+</div>
+<details class="code-fold">
+<summary>Regression</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>reg <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x <span class="sc">*</span> D, <span class="at">data =</span> df)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg)<span class="sc">$</span>coefficients</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-rdd-reg" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="bottom">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-rdd-reg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-stdout">
+<pre><code>               Estimate Std. Error  t value      Pr(&gt;|t|)
+(Intercept) 24.22259284 1.10595877 21.90190  9.264013e-87
+x            1.52707216 0.03268169 46.72561 7.168476e-251
+D           44.31376202 2.76292525 16.03871  1.523066e-51
+x:D         -0.07199799 0.04918533 -1.46381  1.435687e-01</code></pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-rdd-reg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The coefficient on D (44.31) estimates the treatment effect we want to measure, which we set to 40.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="polynomial-parametric" class="level1">
+<h1>Polynomial Parametric Approach</h1>
+<p>The running variable, cutoff and treatment are the same as before, but now each side of the cutoff follows its own quadratic curve. The outcome is concave below the cutoff and convex above it, with a treatment effect of 40 at <span class="math inline">\(c\)</span>: <span class="math display">\[
+Y_i = \begin{cases} 120 + 0.5 (X_i - c) - 0.03 (X_i - c)^2 + \varepsilon_i &amp; \text{if } X_i \leq c \\ 160 - 1.5 (X_i - c) + 0.04 (X_i - c)^2 + \varepsilon_i &amp; \text{if } X_i &gt; c \end{cases}
+\]</span> We estimate each side by a quadratic regression in the centered running variable: <span class="math display">\[
+Y_i = \beta_0 + \beta_1 (X_i - c) + \beta_2 (X_i - c)^2 + {\color{red}\beta_3} D_i + \beta_4 (X_i - c) \times D_i + \beta_5 (X_i - c)^2 \times D_i + \varepsilon_i
+\]</span></p>
+<details class="code-fold">
+<summary>Different quadratic curve on each side of the cutoff</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uses x, D and c from the linear simulation</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>effect <span class="ot">&lt;-</span> <span class="dv">40</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>x_c <span class="ot">&lt;-</span> x <span class="sc">-</span> c</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>y1 <span class="ot">&lt;-</span> <span class="dv">120</span> <span class="sc">+</span> effect <span class="sc">*</span> D <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">*</span> x_c <span class="sc">-</span> <span class="fl">0.03</span> <span class="sc">*</span> x_c<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> x_c <span class="sc">*</span> D <span class="sc">+</span> <span class="fl">0.07</span> <span class="sc">*</span> x_c<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> D <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rnorm</span>(<span class="fu">length</span>(x), <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(x, x_c, D, y1)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Panel (a): simulated data</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y1,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">col  =</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"blue"</span>, <span class="st">"gray50"</span>),</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch  =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">0.5</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">50</span>, <span class="dv">250</span>),</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Test Score (X)"</span>, <span class="at">ylab =</span> <span class="st">"Outcome (Y)"</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> c)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Panel (b): quadratic fits on each side of the cutoff</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>fit0 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x <span class="sc">+</span> <span class="fu">I</span>(x<span class="sc">^</span><span class="dv">2</span>), <span class="at">data =</span> df[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">0</span>, ])</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>x0   <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>x[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">0</span>]), <span class="fu">max</span>(df<span class="sc">$</span>x[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">0</span>]), <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x <span class="sc">+</span> <span class="fu">I</span>(x<span class="sc">^</span><span class="dv">2</span>), <span class="at">data =</span> df[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>, ])</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>x1   <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>x[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>]), <span class="fu">max</span>(df<span class="sc">$</span>x[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>]), <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y1,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>     <span class="at">col  =</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"blue"</span>, <span class="st">"gray50"</span>),</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch  =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">0.5</span>,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">50</span>, <span class="dv">250</span>),</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Test Score (X)"</span>, <span class="at">ylab =</span> <span class="st">"Outcome (Y)"</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x0, <span class="fu">predict</span>(fit0, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x0)), <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x1, <span class="fu">predict</span>(fit1, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x1)), <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="fig-rdd-sim-np" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rdd-sim-np-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rdd-sim-np" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rdd-sim-np-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rdd-sim-np-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="regression-discontinuity-design_files/figure-html/fig-rdd-sim-np-1.png" class="img-fluid figure-img" data-ref-parent="fig-rdd-sim-np" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rdd-sim-np-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Simulated data (effect = 40).
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rdd-sim-np" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rdd-sim-np-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rdd-sim-np-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="regression-discontinuity-design_files/figure-html/fig-rdd-sim-np-2.png" class="img-fluid figure-img" data-ref-parent="fig-rdd-sim-np" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rdd-sim-np-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Quadratic regression on each side of the cutoff.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rdd-sim-np-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Simulated RDD data with a different quadratic curve on each side of the cutoff at X = 50.
+</figcaption>
+</figure>
+</div>
+<details class="code-fold">
+<summary>Regression</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>reg <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> (x_c <span class="sc">+</span> <span class="fu">I</span>(x_c<span class="sc">^</span><span class="dv">2</span>)) <span class="sc">*</span> D, <span class="at">data =</span> df)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg)<span class="sc">$</span>coefficients</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-rdd-reg-np" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="bottom">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-rdd-reg-np-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-stdout">
+<pre><code>                Estimate  Std. Error    t value      Pr(&gt;|t|)
+(Intercept) 120.96007584 1.082500142 111.741395  0.000000e+00
+x_c           0.56454743 0.109110151   5.174106  2.782031e-07
+I(x_c^2)     -0.02921792 0.002206442 -13.242095  6.446680e-37
+D            39.06603274 1.578454002  24.749554 3.081358e-105
+x_c:D        -2.09810863 0.168824873 -12.427722  5.165508e-33
+I(x_c^2):D    0.07009969 0.003596315  19.492086  1.130981e-71</code></pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-rdd-reg-np-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: The coefficient on D (39.07) estimates the treatment effect we want to measure, which we set to 40.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="non-parametric" class="level1">
+<h1>Polynomial Non-parametric Approach</h1>
+<p>In case never observe the control outcome to the left or right of <span class="math inline">\(c\)</span>, we cannot check whether the fitted lines have the right functional form there. For this reason, the sharp RDD literature recommends local linear regression (LLR), which only uses observations close to the cutoff on both sides. The bandwidth <span class="math inline">\(h &gt; 0\)</span> sets how close is close enough, and all observations outside the window are dropped <span class="citation" data-cites="wooldridge_introductory_2025">(<a href="#ref-wooldridge_introductory_2025" role="doc-biblioref">Wooldridge 2025</a>)</span>: <span class="math display">\[
+Y_i = \beta_0 + \beta_1 (X_i - c) + {\color{red}\beta_2} D_i + \beta_3 (X_i - c) \times D_i + \varepsilon_i \quad \text{for } c - h \leq X_i \leq c + h
+\]</span></p>
+<details class="code-fold">
+<summary>Local linear fits with a bigger and a smaller bandwidth</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uses df and c from the quadratic simulation</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the two bandwidths</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>h_big   <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>h_small <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (h <span class="cf">in</span> <span class="fu">c</span>(h_big, h_small)) {</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Observations within the bandwidth on each side</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  left  <span class="ot">&lt;-</span> df[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> df<span class="sc">$</span>x <span class="sc">&gt;=</span> c <span class="sc">-</span> h, ]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  right <span class="ot">&lt;-</span> df[df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> df<span class="sc">$</span>x <span class="sc">&lt;=</span> c <span class="sc">+</span> h, ]</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Linear fit on each side</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  fit0 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x, <span class="at">data =</span> left)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  fit1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x, <span class="at">data =</span> right)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  x0   <span class="ot">&lt;-</span> <span class="fu">range</span>(left<span class="sc">$</span>x)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  x1   <span class="ot">&lt;-</span> <span class="fu">range</span>(right<span class="sc">$</span>x)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y1,</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">col  =</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>D <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"blue"</span>, <span class="st">"gray50"</span>),</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch  =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">0.5</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">50</span>, <span class="dv">250</span>),</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="st">"Test Score (X)"</span>, <span class="at">ylab =</span> <span class="st">"Outcome (Y)"</span>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(x0, <span class="fu">predict</span>(fit0, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x0)), <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(x1, <span class="fu">predict</span>(fit1, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x1)), <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">v =</span> c)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">c</span>(c <span class="sc">-</span> h, c <span class="sc">+</span> h), <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"gray50"</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="fig-rdd-np" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rdd-np-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rdd-np" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rdd-np-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rdd-np-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="regression-discontinuity-design_files/figure-html/fig-rdd-np-1.png" class="img-fluid figure-img" data-ref-parent="fig-rdd-np" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rdd-np-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Bigger bandwidth (h = 30).
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rdd-np" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rdd-np-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rdd-np-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="regression-discontinuity-design_files/figure-html/fig-rdd-np-2.png" class="img-fluid figure-img" data-ref-parent="fig-rdd-np" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rdd-np-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Smaller bandwidth (h = 10).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rdd-np-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Local linear regression on each side of the cutoff at X = 50, using the data from the quadratic simulation.
+</figcaption>
+</figure>
+</div>
+<details class="code-fold">
+<summary>Regression</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>local_rdd <span class="ot">&lt;-</span> <span class="cf">function</span>(h) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  sub <span class="ot">&lt;-</span> df[<span class="fu">abs</span>(df<span class="sc">$</span>x_c) <span class="sc">&lt;=</span> h, ]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  reg <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x_c <span class="sc">*</span> D, <span class="at">data =</span> sub)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">h          =</span> h,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n          =</span> <span class="fu">nrow</span>(sub),</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">estimate   =</span> <span class="fu">unname</span>(<span class="fu">coef</span>(reg)[<span class="st">"D"</span>]),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">std.error  =</span> <span class="fu">summary</span>(reg)<span class="sc">$</span>coefficients[<span class="st">"D"</span>, <span class="st">"Std. Error"</span>])</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(<span class="fu">local_rdd</span>(h_big), <span class="fu">local_rdd</span>(h_small))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-rdd-np" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="bottom">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-rdd-np-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-stdout">
+<pre><code>      h   n estimate std.error
+[1,] 30 785 29.79645  1.354437
+[2,] 10 317 40.11377  2.084766</code></pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-rdd-np-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: With h = 30 the estimate of D (29.80) is below the true effect of 40 because the lines miss the curvature. With h = 10 the estimate (40.11) is close to 40 but has a larger standard error.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="learning-resources" class="level1">
+<h1>Learning Resources</h1>
+<ul>
+<li><a href="https://mixtape.scunning.com/06-regression_discontinuity" target="_blank">Causal Inference: The Mixtape, Chapter 6: Regression Discontinuity</a> (Scott Cunningham)</li>
+<li><a href="https://theeffectbook.net/ch-RegressionDiscontinuity.html" target="_blank">The Effect, Chapter 20: Regression Discontinuity</a> (Nick Huntington-Klein)</li>
+</ul>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-angrist_mastering_2015" class="csl-entry" role="listitem">
+Angrist, Joshua D., and Jörn-Steffen Pischke. 2015. <em>Mastering ’Metrics: The Path from Cause to Effect</em>. Princeton University Press.
+</div>
+<div id="ref-wooldridge_introductory_2025" class="csl-entry" role="listitem">
+Wooldridge, Jeffrey M. 2025. <em>Introductory Econometrics: A Modern Approach</em>. 8th edition. Cengage.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1158,8 +1618,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../econometrics/identification-strategies/synthetic-control-method.html" class="pagination-link" aria-label="Synthetic Control Method">
-        <span class="nav-page-text">Synthetic Control Method</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../econometrics/identification-strategies/synthetic-control-method.html" class="pagination-link" aria-label="Synthetic Control Method (SCM)">
+        <span class="nav-page-text">Synthetic Control Method (SCM)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

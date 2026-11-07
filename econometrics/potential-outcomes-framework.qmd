@@ -1,13 +1,17 @@
 ---
 title: "Potential Outcomes Framework"
+categories: ["Public Policy Analysis (M.Sc. UB)"]
 ---
 
 ## Stable Unit Treatment Value Assumption (SUTVA)
 
-## Average Treatment Effect (ATE)
+## Average Treatment Effect (ATE) {#ate}
+A treatment, or policy, effect averaged across the population [@wooldridge_introductory_2025].
 
 ## Average Treatment Effect on the Treated (ATT, ATET)
 
 ## Simple Difference in Outcomes (SDO)
 
-## Local Average Treatment Effect (LATE)
+## Local Average Treatment Effect (LATE) {#late}
+
+"The LATE parameter is of interest mainly because of its connection with the simple instrumental variables estimator" [@wooldridge_introductory_2025].

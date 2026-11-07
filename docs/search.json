@@ -170,7 +170,7 @@
     "href": "econometrics/potential-outcomes-framework.html#average-treatment-effect-ate",
     "title": "Potential Outcomes Framework",
     "section": "Average Treatment Effect (ATE)",
-    "text": "Average Treatment Effect (ATE)",
+    "text": "Average Treatment Effect (ATE)\nA treatment, or policy, effect averaged across the population (Wooldridge 2025).",
     "crumbs": [
       "Home",
       "Econometrics",
@@ -206,7 +206,7 @@
     "href": "econometrics/potential-outcomes-framework.html#local-average-treatment-effect-late",
     "title": "Potential Outcomes Framework",
     "section": "Local Average Treatment Effect (LATE)",
-    "text": "Local Average Treatment Effect (LATE)",
+    "text": "Local Average Treatment Effect (LATE)\n“The LATE parameter is of interest mainly because of its connection with the simple instrumental variables estimator” (Wooldridge 2025).",
     "crumbs": [
       "Home",
       "Econometrics",
@@ -279,6 +279,82 @@
       "Home",
       "Behavioral Finance",
       "Heuristics"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html",
+    "href": "econometrics/identification-strategies/regression-discontinuity-design.html",
+    "title": "Regression Discontinuity Design (RDD)",
+    "section": "",
+    "text": "Running Variable (\\(X_i\\)): The variable that determines treatment (Angrist and Pischke 2015). Also called the forcing or assignment variable.\nCutoff (\\(c\\)): the known value of \\(X_i\\) at which treatment switches on. Units just below and just above \\(c\\) are assumed to be similar, so comparing them works like a local experiment.\nTreatment (\\(D_i\\)): a binary indicator that equals 1 if unit \\(i\\) is treated and 0 otherwise.\nBandwidth (\\(h\\)): the range of the running variable around the cutoff used to estimate the local treatment effect (see the non-parametric example).\n\n\n\nTreatment is fully determined by \\(X_i\\) and \\(c\\), so the probability of treatment jumps from 0 to 1 at the cutoff: \\[\nD_i = \\begin{cases} 1 & \\text{if } X_i \\geq c \\\\ 0 & \\text{if } X_i &lt; c \\end{cases}\n\\] The treatment effect is the ATE at the cutoff, \\(E[Y_i(1) - Y_i(0) \\mid X_i = c]\\).\n\n\n\nCrossing the cutoff only changes the probability of treatment, so some units below \\(c\\) are treated or some units above \\(c\\) are not: \\[\n\\lim_{x \\downarrow c} P(D_i = 1 \\mid X_i = x) \\neq \\lim_{x \\uparrow c} P(D_i = 1 \\mid X_i = x)\n\\] The treatment effect is the jump in the outcome divided by the jump in the treatment probability at \\(c\\). This ratio is the LATE for compliers at the cutoff.",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Regression Discontinuity Design (RDD)"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#learning-resources",
+    "href": "econometrics/identification-strategies/regression-discontinuity-design.html#learning-resources",
+    "title": "Regression Discontinuity Design (RDD)",
+    "section": "",
+    "text": "Causal Inference: The Mixtape, Chapter 6: Regression Discontinuity (Scott Cunningham)\nThe Effect, Chapter 20: Regression Discontinuity (Nick Huntington-Klein)",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Regression Discontinuity Design (RDD)"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#sharp-rdd",
+    "href": "econometrics/identification-strategies/regression-discontinuity-design.html#sharp-rdd",
+    "title": "Regression Discontinuity Design (RDD)",
+    "section": "",
+    "text": "Treatment is fully determined by \\(X_i\\) and \\(c\\), so the probability of treatment jumps from 0 to 1 at the cutoff: \\[\nD_i = \\begin{cases} 1 & \\text{if } X_i \\geq c \\\\ 0 & \\text{if } X_i &lt; c \\end{cases}\n\\] The treatment effect is the ATE at the cutoff, \\(E[Y_i(1) - Y_i(0) \\mid X_i = c]\\).",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Regression Discontinuity Design (RDD)"
+    ]
+  },
+  {
+    "objectID": "econometrics/identification-strategies/regression-discontinuity-design.html#fuzzy-rdd",
+    "href": "econometrics/identification-strategies/regression-discontinuity-design.html#fuzzy-rdd",
+    "title": "Regression Discontinuity Design (RDD)",
+    "section": "",
+    "text": "Crossing the cutoff only changes the probability of treatment, so some units below \\(c\\) are treated or some units above \\(c\\) are not: \\[\n\\lim_{x \\downarrow c} P(D_i = 1 \\mid X_i = x) \\neq \\lim_{x \\uparrow c} P(D_i = 1 \\mid X_i = x)\n\\] The treatment effect is the jump in the outcome divided by the jump in the treatment probability at \\(c\\). This ratio is the LATE for compliers at the cutoff.",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Regression Discontinuity Design (RDD)"
+    ]
+  },
+  {
+    "objectID": "econometrics/potential-outcomes-framework.html#ate",
+    "href": "econometrics/potential-outcomes-framework.html#ate",
+    "title": "Potential Outcomes Framework",
+    "section": "Average Treatment Effect (ATE)",
+    "text": "Average Treatment Effect (ATE)\nA treatment, or policy, effect averaged across the population (Wooldridge 2025).",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Potential Outcomes Framework"
+    ]
+  },
+  {
+    "objectID": "econometrics/potential-outcomes-framework.html#late",
+    "href": "econometrics/potential-outcomes-framework.html#late",
+    "title": "Potential Outcomes Framework",
+    "section": "Local Average Treatment Effect (LATE)",
+    "text": "Local Average Treatment Effect (LATE)\n“The LATE parameter is of interest mainly because of its connection with the simple instrumental variables estimator” (Wooldridge 2025).",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Potential Outcomes Framework"
     ]
   }
 ]
