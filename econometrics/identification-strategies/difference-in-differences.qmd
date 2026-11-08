@@ -1,4 +1,7 @@
 ---
 title: "Difference-in-Differences (DiD)"
 categories: ["Public Policy Analysis (M.Sc. UB)", "Econometrics (B.Sc. Bonn)"]
+description: "Estimates a treatment effect by comparing the change in outcomes over time in a treated group with the change in a control group."
 ---
+
+In some settings, the outcomes of a treated and a control group would move in parallel without treatment. In that case, a post-treatment path of the treated group that departs from the trend of the control group may point to a treatment effect [@angrist_mastering_2015, p. 180].
