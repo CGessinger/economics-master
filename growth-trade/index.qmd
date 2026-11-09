@@ -1,7 +1,7 @@
 ---
 title: "Growth and Trade"
 listing:
-  contents: "*.qmd"
+  contents: ["*.qmd", "*/index.qmd"]
   type: table
   fields: [title, description]
   sort: title

@@ -46,27 +46,118 @@
     ]
   },
   {
-    "objectID": "growth-trade/rational-bubbles-tirole.html",
-    "href": "growth-trade/rational-bubbles-tirole.html",
-    "title": "Rational Bubbles",
+    "objectID": "growth-trade/overlapping-generations-model/benchmark-model-olg.html",
+    "href": "growth-trade/overlapping-generations-model/benchmark-model-olg.html",
+    "title": "The Benchmark OLG Model",
     "section": "",
-    "text": "The model of rational asset bubbles in an overlapping generations economy was introduced by Tirole (1985).\n\n\n\n\nReferences\n\nTirole, Jean. 1985. “Asset Bubbles and Overlapping Generations.” Econometrica 53 (6): 1499–528.",
+    "text": "The basic overlapping generations model with capital accumulation was introduced by Diamond (1965), however this summary is mostly based on De la Croix and Michel (2002).\nIn the benchmark Diamond economy each household lives for two periods. When young, it works, earns a wage, consumes part of this income and saves the rest. When old, it is retired and consumes the gross return on the savings it made when young. Through these individual saving decisions, the young generation builds the capital stock that firms use in the next period.",
     "crumbs": [
       "Home",
       "Growth and Trade",
-      "Rational Bubbles"
+      "The Overlapping Generations Model (OLG)",
+      "The Benchmark OLG Model"
     ]
   },
   {
-    "objectID": "growth-trade/bubbles-financial-frictions-martin-ventura.html",
-    "href": "growth-trade/bubbles-financial-frictions-martin-ventura.html",
-    "title": "Bubbles and Financial Frictions",
-    "section": "",
-    "text": "The model of bubbles with financial frictions was introduced by Martin and Ventura (2012).\n\n\n\n\nReferences\n\nMartin, Alberto, and Jaume Ventura. 2012. “Economic Growth with Bubbles.” American Economic Review 102 (6): 3033–58. https://doi.org/10.1257/aer.102.6.3033.",
+    "objectID": "growth-trade/overlapping-generations-model/benchmark-model-olg.html#household-problem",
+    "href": "growth-trade/overlapping-generations-model/benchmark-model-olg.html#household-problem",
+    "title": "The Benchmark OLG Model",
+    "section": "Household Problem",
+    "text": "Household Problem\n\nPreferences\nThe lifetime utility of an individual born at \\(t\\) depends on consumption when young and when old:\n\\[\nU_t = u(c_t, d_{t+1})\n\\]\n\n\nBudget Constraints\n\\[\n\\text{Young:}\\quad c_t + s_t = w_t\n\\]\n\\[\n\\text{Old:}\\quad d_{t+1} = R_{t+1}\\, s_t \\;\\Rightarrow\\; s_t = \\frac{d_{t+1}}{R_{t+1}}\n\\]\n\\(R_{t+1}\\) is the gross return on savings. Substituting \\(s_t\\) gives the lifetime budget constraint:\n\\[\nc_t + \\frac{d_{t+1}}{R_{t+1}} = w_t\n\\]\n\n\nOptimization\nThe household takes \\(w_t\\) and \\(R_{t+1}\\) as given and solves\n\\[\n\\max_{c_t,\\, d_{t+1} \\ge 0} \\; u(c_t, d_{t+1}) \\quad \\text{s.t.} \\quad w_t = c_t + \\frac{d_{t+1}}{R_{t+1}}\n\\]\n\\[\n\\mathcal{L} = u(c_t, d_{t+1}) + \\lambda_t \\left( w_t - c_t - \\frac{d_{t+1}}{R_{t+1}} \\right)\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial c_t} = u_{c_t} - \\lambda_t = 0 \\qquad (1)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial d_{t+1}} = u_{d_{t+1}} - \\frac{\\lambda_t}{R_{t+1}} = 0 \\qquad (2)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda_t} = w_t - c_t - \\frac{d_{t+1}}{R_{t+1}} = 0 \\qquad (3)\n\\]\nFrom (1), \\(\\lambda_t = u_{c_t}\\). Replacing in (2):\n\\[\nu_{d_{t+1}} = \\frac{u_{c_t}}{R_{t+1}}\n\\]\nThe marginal utility of one unit consumed when old equals the marginal utility of the \\(1/R_{t+1}\\) units given up when young.",
     "crumbs": [
       "Home",
       "Growth and Trade",
-      "Bubbles and Financial Frictions"
+      "The Overlapping Generations Model (OLG)",
+      "The Benchmark OLG Model"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model/benchmark-model-olg.html#firms-problem",
+    "href": "growth-trade/overlapping-generations-model/benchmark-model-olg.html#firms-problem",
+    "title": "The Benchmark OLG Model",
+    "section": "Firms Problem",
+    "text": "Firms Problem\n\nTechnology\nFirms produce output with capital \\(K_t\\) and labor \\(L_t\\) using a production function \\(F(K_t, L_t)\\) with constant returns to scale. For \\(\\lambda &gt; 0\\):\n\\[\nF(\\lambda K_t, \\lambda L_t) = \\lambda F(K_t, L_t)\n\\]\nSetting \\(\\lambda = \\frac{1}{L_t}\\) gives the intensive form with capital per worker \\(k_t = \\frac{K_t}{L_t}\\):\n\\[\nf(k_t) = F(k_t, 1) = \\frac{F(K_t, L_t)}{L_t} \\iff F(K_t, L_t) = L_t f(k_t)\n\\]\nThe marginal products then only depend on \\(k_t\\):\n\\[\n\\frac{\\partial F(K_t, L_t)}{\\partial K_t} = f'(k_t), \\qquad \\frac{\\partial F(K_t, L_t)}{\\partial L_t} = f(k_t) - k_t f'(k_t)\n\\]\n\n\nOptimization\nFirms rent capital at the rental rate \\(q_t\\) and hire labor at the wage \\(w_t\\). They take both prices as given and maximize profits:\n\\[\n\\max_{K_t, L_t} \\; \\pi_t = F(K_t, L_t) - w_t L_t - q_t K_t\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\pi_t}{\\partial K_t} = 0 \\;\\Rightarrow\\; f'(k_t) = q_t\n\\]\n\\[\n\\frac{\\partial \\pi_t}{\\partial L_t} = 0 \\;\\Rightarrow\\; f(k_t) - k_t f'(k_t) = w_t\n\\]\nEach factor is paid its marginal product. Capital depreciates at rate \\(\\delta\\), so the gross return on savings is the rental rate plus the undepreciated capital:\n\\[\nR_t = 1 + r_t = q_t + 1 - \\delta \\;\\Rightarrow\\; q_t = r_t + \\delta\n\\]",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)",
+      "The Benchmark OLG Model"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model/public-debt-olg.html",
+    "href": "growth-trade/overlapping-generations-model/public-debt-olg.html",
+    "title": "Public Debt in the OLG Model",
+    "section": "",
+    "text": "The analysis of public debt in the overlapping generations model goes back to Diamond (1965), however this summary is based on De la Croix and Michel (2002).\nThe economy is the benchmark model with a government added. The government pays for its spending in two ways. It collects lump-sum taxes from the young and the old, and it borrows by selling bonds to the young. Each period it must pay back what it borrowed in the previous period plus interest, and it never defaults. Because the young buy these bonds with their savings, public debt competes with capital for the same savings.\nDiamond shows that positive debt lowers long-run utility when the competitive equilibrium is efficient (under-accumulation). When the equilibrium is inefficient (over-accumulation), debt may instead raise utility (De la Croix and Michel 2002, 179).",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)",
+      "Public Debt in the OLG Model"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model/public-debt-olg.html#household-problem",
+    "href": "growth-trade/overlapping-generations-model/public-debt-olg.html#household-problem",
+    "title": "Public Debt in the OLG Model",
+    "section": "Household Problem",
+    "text": "Household Problem\n\nBudget Constraints\n\\[\n\\text{Young:}\\quad c_t + s_t = w_t - \\tau_t^y\n\\]\n\\[\n\\text{Old:}\\quad d_{t+1} = R_{t+1}\\, s_t - \\tau_{t+1}^o\n\\]\nSavings can be held as capital or as bonds. Both pay \\(R_{t+1}\\), so the household does not care about the split. Substituting \\(s_t\\) gives the lifetime budget constraint:\n\\[\nc_t + \\frac{d_{t+1}}{R_{t+1}} = w_t - \\tau_t^y - \\frac{\\tau_{t+1}^o}{R_{t+1}}\n\\]\nTaxes lower lifetime income by their present value.\n\n\nOptimization\nThe household takes \\(w_t\\), \\(R_{t+1}\\) and taxes as given and solves\n\\[\n\\max_{c_t,\\, d_{t+1} \\ge 0} \\; u(c_t, d_{t+1}) \\quad \\text{s.t.} \\quad c_t + \\frac{d_{t+1}}{R_{t+1}} = w_t - \\tau_t^y - \\frac{\\tau_{t+1}^o}{R_{t+1}}\n\\]\n\\[\n\\mathcal{L} = u(c_t, d_{t+1}) + \\lambda_t \\left( w_t - \\tau_t^y - \\frac{\\tau_{t+1}^o}{R_{t+1}} - c_t - \\frac{d_{t+1}}{R_{t+1}} \\right)\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial c_t} = u_{c_t} - \\lambda_t = 0 \\qquad (1)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial d_{t+1}} = u_{d_{t+1}} - \\frac{\\lambda_t}{R_{t+1}} = 0 \\qquad (2)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda_t} = w_t - \\tau_t^y - \\frac{\\tau_{t+1}^o}{R_{t+1}} - c_t - \\frac{d_{t+1}}{R_{t+1}} = 0 \\qquad (3)\n\\]\nFrom (1) and (2) the optimality condition is unchanged:\n\\[\nu_{d_{t+1}} = \\frac{u_{c_t}}{R_{t+1}}\n\\]\nTaxes only enter through income. Solving (1) to (3) gives savings as a function of income when young, income when old and the return:\n\\[\ns_t = \\tilde s\\left( w_t - \\tau_t^y,\\; -\\tau_{t+1}^o,\\; R_{t+1} \\right)\n\\]\nwith the partial derivatives\n\\[\n\\tilde s_1 = \\frac{\\partial \\tilde s}{\\partial (w_t - \\tau_t^y)} \\in (0, 1), \\qquad \\tilde s_2 = \\frac{\\partial \\tilde s}{\\partial (-\\tau_{t+1}^o)} &lt; 0, \\qquad \\tilde s_R = \\frac{\\partial \\tilde s}{\\partial R_{t+1}}\n\\]\nWith normal goods, more income when young is partly saved. More income when old means less need to save for retirement.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)",
+      "Public Debt in the OLG Model"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model/public-debt-olg.html#firms-problem",
+    "href": "growth-trade/overlapping-generations-model/public-debt-olg.html#firms-problem",
+    "title": "Public Debt in the OLG Model",
+    "section": "Firms Problem",
+    "text": "Firms Problem\nFirms solve the same problem as in the benchmark model. Factor prices only depend on capital per worker:\n\\[\nw_t = w(k_t) = f(k_t) - k_t f'(k_t), \\qquad R_t = R(k_t) = f'(k_t) + 1 - \\delta\n\\]",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)",
+      "Public Debt in the OLG Model"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model/public-debt-olg.html#government",
+    "href": "growth-trade/overlapping-generations-model/public-debt-olg.html#government",
+    "title": "Public Debt in the OLG Model",
+    "section": "Government",
+    "text": "Government\n\n\\(G_t\\): public spending in period \\(t\\)\n\\(\\tau_t^y\\): lump-sum tax per young, \\(\\tau_t^o\\): lump-sum tax per old\n\\(B_t\\): bonds issued in period \\(t\\), repaid with gross interest \\(R_{t+1}\\) in period \\(t+1\\)\n\nIn each period the government pays for its spending and the old debt with taxes and new debt:\n\\[\nN_t \\tau_t^y + N_{t-1} \\tau_t^o + B_t = G_t + R_t B_{t-1}\n\\]\nDefine spending per young \\(g_t = \\frac{G_t}{N_t}\\) and inherited debt per young \\(b_t = \\frac{B_{t-1}}{N_t}\\). Then \\(\\frac{B_t}{N_t} = \\frac{B_t}{N_{t+1}} \\frac{N_{t+1}}{N_t} = (1+n) b_{t+1}\\), and dividing by \\(N_t\\) gives the budget constraint per young:\n\\[\ng_t + R_t b_t = \\tau_t^y + \\frac{\\tau_t^o}{1+n} + (1+n) b_{t+1}\n\\]\nWithout debt (\\(b_t = b_{t+1} = 0\\)) spending must be fully paid by current taxes, \\(g_t = \\tau_t^y + \\frac{\\tau_t^o}{1+n}\\).",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)",
+      "Public Debt in the OLG Model"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model/public-debt-olg.html#capital-market",
+    "href": "growth-trade/overlapping-generations-model/public-debt-olg.html#capital-market",
+    "title": "Public Debt in the OLG Model",
+    "section": "Capital Market",
+    "text": "Capital Market\nThe young are the only savers. The old sell their capital and bonds to consume. So the savings of the young must finance both the capital stock of the next period and the new public debt:\n\\[\nK_{t+1} + B_t = N_t s_t\n\\]\nDividing by \\(N_t\\) and using \\(\\frac{K_{t+1}}{N_t} = (1+n) k_{t+1}\\) and \\(\\frac{B_t}{N_t} = (1+n) b_{t+1}\\):\n\\[\n(1+n)(k_{t+1} + b_{t+1}) = s_t\n\\]\nInserting the savings function and the factor prices gives the capital market equilibrium:\n\\[\n(1+n)(k_{t+1} + b_{t+1}) = \\tilde s\\left( w(k_t) - \\tau_t^y,\\; -\\tau_{t+1}^o,\\; R(k_{t+1}) \\right)\n\\]\nIn the benchmark \\((1+n) k_{t+1} = s_t\\). Now each unit of savings used to buy bonds is missing for capital, so for given savings public debt crowds out capital one for one.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "The Overlapping Generations Model (OLG)",
+      "Public Debt in the OLG Model"
+    ]
+  },
+  {
+    "objectID": "growth-trade/index.html",
+    "href": "growth-trade/index.html",
+    "title": "Growth and Trade",
+    "section": "",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nBubbles and Financial Frictions\n\n\nHow bubbles can crowd in investment and raise output when financial frictions keep savings away from productive investors.\n\n\n\n\n\n\nLearning Resources\n\n\nLearning material on economic growth and overlapping generations models.\n\n\n\n\n\n\nPublic Debt in the OLG Model\n\n\nHow public debt crowds out capital in the OLG model and when debt policy is neutral.\n\n\n\n\n\n\nRational Bubbles\n\n\nAsset bubbles in an overlapping generations economy and why they can only exist when the economy is dynamically inefficient.\n\n\n\n\n\n\nThe Benchmark OLG Model\n\n\nThe Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.\n\n\n\n\n\n\nThe Overlapping Generations Model (OLG)\n\n\nThe Diamond OLG model with capital accumulation and its policy extensions.\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Growth and Trade"
     ]
   },
   {
@@ -242,6 +333,19 @@
     ]
   },
   {
+    "objectID": "econometrics/identification-strategies/difference-in-differences.html",
+    "href": "econometrics/identification-strategies/difference-in-differences.html",
+    "title": "Difference-in-Differences (DiD)",
+    "section": "",
+    "text": "In some settings, the outcomes of a treated and a control group would move in parallel without treatment. In that case, a post-treatment path of the treated group that departs from the trend of the control group may point to a treatment effect (Angrist and Pischke 2015, 180).\n\n\n\n\nReferences\n\nAngrist, Joshua D., and Jörn-Steffen Pischke. 2015. Mastering ’Metrics: The Path from Cause to Effect. Princeton University Press.",
+    "crumbs": [
+      "Home",
+      "Econometrics",
+      "Identification Strategies",
+      "Difference-in-Differences (DiD)"
+    ]
+  },
+  {
     "objectID": "econometrics/potential-outcomes-framework.html#ate",
     "href": "econometrics/potential-outcomes-framework.html#ate",
     "title": "Potential Outcomes Framework",
@@ -301,50 +405,39 @@
     ]
   },
   {
-    "objectID": "growth-trade/overlapping-generations-model.html",
-    "href": "growth-trade/overlapping-generations-model.html",
+    "objectID": "growth-trade/bubbles-financial-frictions-martin-ventura.html",
+    "href": "growth-trade/bubbles-financial-frictions-martin-ventura.html",
+    "title": "Bubbles and Financial Frictions",
+    "section": "",
+    "text": "The model of bubbles with financial frictions was introduced by Martin and Ventura (2012).\n\n\n\n\nReferences\n\nMartin, Alberto, and Jaume Ventura. 2012. “Economic Growth with Bubbles.” The American Economic Review 102 (6): 3033–58. https://www.jstor.org/stable/41724680.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "Bubbles and Financial Frictions"
+    ]
+  },
+  {
+    "objectID": "growth-trade/rational-bubbles-tirole.html",
+    "href": "growth-trade/rational-bubbles-tirole.html",
+    "title": "Rational Bubbles",
+    "section": "",
+    "text": "The model of rational asset bubbles in an overlapping generations economy was introduced by Tirole (1985).\n\n\n\n\nReferences\n\nTirole, Jean. 1985. “Asset Bubbles and Overlapping Generations.” Econometrica 53 (6): 1499–528. https://doi.org/10.2307/1913232.",
+    "crumbs": [
+      "Home",
+      "Growth and Trade",
+      "Rational Bubbles"
+    ]
+  },
+  {
+    "objectID": "growth-trade/overlapping-generations-model/index.html",
+    "href": "growth-trade/overlapping-generations-model/index.html",
     "title": "The Overlapping Generations Model (OLG)",
     "section": "",
-    "text": "The basic overlapping generations model with capital accumulation was introduced by Diamond (1965), however this summary is mostly based on De la Croix and Michel (2002).\nIn the benchmark Diamond economy each household lives for two periods. When young, it works, earns a wage, consumes part of this income and saves the rest. When old, it is retired and consumes the gross return on the savings it made when young. Through these individual saving decisions, the young generation builds the capital stock that firms use in the next period.",
+    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nThe Benchmark OLG Model\n\n\nThe Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.\n\n\n\n\n\n\nPublic Debt in the OLG Model\n\n\nHow public debt crowds out capital in the OLG model and when debt policy is neutral.\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Growth and Trade",
       "The Overlapping Generations Model (OLG)"
-    ]
-  },
-  {
-    "objectID": "growth-trade/overlapping-generations-model.html#household-problem",
-    "href": "growth-trade/overlapping-generations-model.html#household-problem",
-    "title": "The Overlapping Generations Model (OLG)",
-    "section": "Household Problem",
-    "text": "Household Problem\n\nPreferences\nThe lifetime utility of an individual born at \\(t\\) depends on consumption when young and when old:\n\\[\nU_t = u(c_t, d_{t+1})\n\\]\n\n\nBudget Constraints\n\\[\n\\text{Young:}\\quad c_t + s_t = w_t\n\\]\n\\[\n\\text{Old:}\\quad d_{t+1} = R_{t+1}\\, s_t \\;\\Rightarrow\\; s_t = \\frac{d_{t+1}}{R_{t+1}}\n\\]\n\\(R_{t+1}\\) is the gross return on savings. Substituting \\(s_t\\) gives the lifetime budget constraint:\n\\[\nc_t + \\frac{d_{t+1}}{R_{t+1}} = w_t\n\\]\n\n\nOptimization\nThe household takes \\(w_t\\) and \\(R_{t+1}\\) as given and solves\n\\[\n\\max_{c_t,\\, d_{t+1} \\ge 0} \\; u(c_t, d_{t+1}) \\quad \\text{s.t.} \\quad w_t = c_t + \\frac{d_{t+1}}{R_{t+1}}\n\\]\n\\[\n\\mathcal{L} = u(c_t, d_{t+1}) + \\lambda_t \\left( w_t - c_t - \\frac{d_{t+1}}{R_{t+1}} \\right)\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial c_t} = u_{c_t} - \\lambda_t = 0 \\qquad (1)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial d_{t+1}} = u_{d_{t+1}} - \\frac{\\lambda_t}{R_{t+1}} = 0 \\qquad (2)\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda_t} = w_t - c_t - \\frac{d_{t+1}}{R_{t+1}} = 0 \\qquad (3)\n\\]\nFrom (1), \\(\\lambda_t = u_{c_t}\\). Replacing in (2):\n\\[\nu_{d_{t+1}} = \\frac{u_{c_t}}{R_{t+1}}\n\\]\nThe marginal utility of one unit consumed when old equals the marginal utility of the \\(1/R_{t+1}\\) units given up when young.",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "The Overlapping Generations Model (OLG)"
-    ]
-  },
-  {
-    "objectID": "growth-trade/overlapping-generations-model.html#firms-problem",
-    "href": "growth-trade/overlapping-generations-model.html#firms-problem",
-    "title": "The Overlapping Generations Model (OLG)",
-    "section": "Firms Problem",
-    "text": "Firms Problem\n\nTechnology\nFirms produce output with capital \\(K_t\\) and labor \\(L_t\\) using a production function \\(F(K_t, L_t)\\) with constant returns to scale. For \\(\\lambda &gt; 0\\):\n\\[\nF(\\lambda K_t, \\lambda L_t) = \\lambda F(K_t, L_t)\n\\]\nSetting \\(\\lambda = \\frac{1}{L_t}\\) gives the intensive form with capital per worker \\(k_t = \\frac{K_t}{L_t}\\):\n\\[\nf(k_t) = F(k_t, 1) = \\frac{F(K_t, L_t)}{L_t} \\iff F(K_t, L_t) = L_t f(k_t)\n\\]\nThe marginal products then only depend on \\(k_t\\):\n\\[\n\\frac{\\partial F(K_t, L_t)}{\\partial K_t} = f'(k_t), \\qquad \\frac{\\partial F(K_t, L_t)}{\\partial L_t} = f(k_t) - k_t f'(k_t)\n\\]\n\n\nOptimization\nFirms rent capital at the rental rate \\(q_t\\) and hire labor at the wage \\(w_t\\). They take both prices as given and maximize profits:\n\\[\n\\max_{K_t, L_t} \\; \\pi_t = F(K_t, L_t) - w_t L_t - q_t K_t\n\\]\nF.O.C.:\n\\[\n\\frac{\\partial \\pi_t}{\\partial K_t} = 0 \\;\\Rightarrow\\; f'(k_t) = q_t\n\\]\n\\[\n\\frac{\\partial \\pi_t}{\\partial L_t} = 0 \\;\\Rightarrow\\; f(k_t) - k_t f'(k_t) = w_t\n\\]\nEach factor is paid its marginal product. Capital depreciates at rate \\(\\delta\\), so the gross return on savings is the rental rate plus the undepreciated capital:\n\\[\nR_t = 1 + r_t = q_t + 1 - \\delta \\;\\Rightarrow\\; q_t = r_t + \\delta\n\\]",
-    "crumbs": [
-      "Home",
-      "Growth and Trade",
-      "The Overlapping Generations Model (OLG)"
-    ]
-  },
-  {
-    "objectID": "growth-trade/index.html",
-    "href": "growth-trade/index.html",
-    "title": "Growth and Trade",
-    "section": "",
-    "text": "Title\n\n\n\nDescription\n\n\n\n\n\n\n\n\nBubbles and Financial Frictions\n\n\nHow bubbles can crowd in investment and raise output when financial frictions keep savings away from productive investors.\n\n\n\n\n\n\nLearning Resources\n\n\nLearning material on economic growth and overlapping generations models.\n\n\n\n\n\n\nRational Bubbles\n\n\nAsset bubbles in an overlapping generations economy and why they can only exist when the economy is dynamically inefficient.\n\n\n\n\n\n\nThe Overlapping Generations Model (OLG)\n\n\nThe Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Home",
-      "Growth and Trade"
     ]
   },
   {
@@ -403,19 +496,6 @@
       "Home",
       "Behavioral Finance",
       "Heuristics"
-    ]
-  },
-  {
-    "objectID": "econometrics/identification-strategies/difference-in-differences.html",
-    "href": "econometrics/identification-strategies/difference-in-differences.html",
-    "title": "Difference-in-Differences (DiD)",
-    "section": "",
-    "text": "In some settings, the outcomes of a treated and a control group would move in parallel without treatment. In that case, a post-treatment path of the treated group that departs from the trend of the control group may point to a treatment effect (Angrist and Pischke 2015, 180).\n\n\n\n\nReferences\n\nAngrist, Joshua D., and Jörn-Steffen Pischke. 2015. Mastering ’Metrics: The Path from Cause to Effect. Princeton University Press.",
-    "crumbs": [
-      "Home",
-      "Econometrics",
-      "Identification Strategies",
-      "Difference-in-Differences (DiD)"
     ]
   }
 ]

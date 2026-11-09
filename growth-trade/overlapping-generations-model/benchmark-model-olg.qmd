@@ -1,7 +1,8 @@
 ---
-title: "The Overlapping Generations Model (OLG)"
+title: "The Benchmark OLG Model"
 description: "The Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period."
 categories: ["Economic Growth II (M.Sc. UB)"]
+order: 1
 ---
 
 The basic overlapping generations model with capital accumulation was introduced by @diamond_national_1965, however this summary is mostly based on @de_la_croix_theory_2002.

@@ -11,6 +11,17 @@
     "items": []
   },
   {
+    "listing": "/growth-trade/index.html",
+    "items": [
+      "/growth-trade/bubbles-financial-frictions-martin-ventura.html",
+      "/growth-trade/learning-resources.html",
+      "/growth-trade/overlapping-generations-model/public-debt-olg.html",
+      "/growth-trade/rational-bubbles-tirole.html",
+      "/growth-trade/overlapping-generations-model/benchmark-model-olg.html",
+      "/growth-trade/overlapping-generations-model/index.html"
+    ]
+  },
+  {
     "listing": "/econometrics/index.html",
     "items": [
       "/econometrics/identification-strategies/difference-in-differences.html",
@@ -72,12 +83,10 @@
     "items": []
   },
   {
-    "listing": "/growth-trade/index.html",
+    "listing": "/growth-trade/overlapping-generations-model/index.html",
     "items": [
-      "/growth-trade/bubbles-financial-frictions-martin-ventura.html",
-      "/growth-trade/learning-resources.html",
-      "/growth-trade/rational-bubbles-tirole.html",
-      "/growth-trade/overlapping-generations-model.html"
+      "/growth-trade/overlapping-generations-model/benchmark-model-olg.html",
+      "/growth-trade/overlapping-generations-model/public-debt-olg.html"
     ]
   },
   {

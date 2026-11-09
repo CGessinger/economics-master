@@ -1,0 +1,153 @@
+---
+title: "Public Debt in the OLG Model"
+description: "How public debt crowds out capital in the OLG model and when debt policy is neutral."
+categories: ["Economic Growth II (M.Sc. UB)"]
+order: 2
+---
+
+The analysis of public debt in the overlapping generations model goes back to @diamond_national_1965, however this summary is based on @de_la_croix_theory_2002.
+
+The economy is the [benchmark model](benchmark-model-olg.qmd) with a government added. The government pays for its spending in two ways. It collects lump-sum taxes from the young and the old, and it borrows by selling bonds to the young. Each period it must pay back what it borrowed in the previous period plus interest, and it never defaults. Because the young buy these bonds with their savings, public debt competes with capital for the same savings.
+
+Diamond shows that positive debt lowers long-run utility when the competitive equilibrium is efficient (under-accumulation). When the equilibrium is inefficient (over-accumulation), debt may instead raise utility [@de_la_croix_theory_2002, p. 179].
+
+# Setup
+
+Demography and timing are as in the benchmark: $N_t = (1+n) N_{t-1}$ and only the young work, so $L_t = N_t$.
+
+## Household Problem
+
+### Budget Constraints
+
+$$
+\text{Young:}\quad c_t + s_t = w_t - \tau_t^y
+$$
+
+$$
+\text{Old:}\quad d_{t+1} = R_{t+1}\, s_t - \tau_{t+1}^o
+$$
+
+Savings can be held as capital or as bonds. Both pay $R_{t+1}$, so the household does not care about the split. Substituting $s_t$ gives the **lifetime budget constraint**:
+
+$$
+c_t + \frac{d_{t+1}}{R_{t+1}} = w_t - \tau_t^y - \frac{\tau_{t+1}^o}{R_{t+1}}
+$$
+
+Taxes lower lifetime income by their present value.
+
+### Optimization
+
+The household takes $w_t$, $R_{t+1}$ and taxes as given and solves
+
+$$
+\max_{c_t,\, d_{t+1} \ge 0} \; u(c_t, d_{t+1}) \quad \text{s.t.} \quad c_t + \frac{d_{t+1}}{R_{t+1}} = w_t - \tau_t^y - \frac{\tau_{t+1}^o}{R_{t+1}}
+$$
+
+$$
+\mathcal{L} = u(c_t, d_{t+1}) + \lambda_t \left( w_t - \tau_t^y - \frac{\tau_{t+1}^o}{R_{t+1}} - c_t - \frac{d_{t+1}}{R_{t+1}} \right)
+$$
+
+**F.O.C.:**
+
+$$
+\frac{\partial \mathcal{L}}{\partial c_t} = u_{c_t} - \lambda_t = 0 \qquad (1)
+$$
+
+$$
+\frac{\partial \mathcal{L}}{\partial d_{t+1}} = u_{d_{t+1}} - \frac{\lambda_t}{R_{t+1}} = 0 \qquad (2)
+$$
+
+$$
+\frac{\partial \mathcal{L}}{\partial \lambda_t} = w_t - \tau_t^y - \frac{\tau_{t+1}^o}{R_{t+1}} - c_t - \frac{d_{t+1}}{R_{t+1}} = 0 \qquad (3)
+$$
+
+From (1) and (2) the optimality condition is unchanged:
+
+$$
+u_{d_{t+1}} = \frac{u_{c_t}}{R_{t+1}}
+$$
+
+Taxes only enter through income. Solving (1) to (3) gives savings as a function of income when young, income when old and the return:
+
+$$
+s_t = \tilde s\left( w_t - \tau_t^y,\; -\tau_{t+1}^o,\; R_{t+1} \right)
+$$
+
+with the partial derivatives
+
+$$
+\tilde s_1 = \frac{\partial \tilde s}{\partial (w_t - \tau_t^y)} \in (0, 1), \qquad \tilde s_2 = \frac{\partial \tilde s}{\partial (-\tau_{t+1}^o)} < 0, \qquad \tilde s_R = \frac{\partial \tilde s}{\partial R_{t+1}}
+$$
+
+With normal goods, more income when young is partly saved. More income when old means less need to save for retirement.
+
+## Firms Problem
+
+Firms solve the same problem as in the [benchmark model](benchmark-model-olg.qmd#firms-problem). Factor prices only depend on capital per worker:
+
+$$
+w_t = w(k_t) = f(k_t) - k_t f'(k_t), \qquad R_t = R(k_t) = f'(k_t) + 1 - \delta
+$$
+
+## Government
+
+- $G_t$: public spending in period $t$
+- $\tau_t^y$: lump-sum tax per young, $\tau_t^o$: lump-sum tax per old
+- $B_t$: bonds issued in period $t$, repaid with gross interest $R_{t+1}$ in period $t+1$
+
+In each period the government pays for its spending and the old debt with taxes and new debt:
+
+$$
+N_t \tau_t^y + N_{t-1} \tau_t^o + B_t = G_t + R_t B_{t-1}
+$$
+
+Define spending per young $g_t = \frac{G_t}{N_t}$ and inherited debt per young $b_t = \frac{B_{t-1}}{N_t}$. Then $\frac{B_t}{N_t} = \frac{B_t}{N_{t+1}} \frac{N_{t+1}}{N_t} = (1+n) b_{t+1}$, and dividing by $N_t$ gives the budget constraint per young:
+
+$$
+g_t + R_t b_t = \tau_t^y + \frac{\tau_t^o}{1+n} + (1+n) b_{t+1}
+$$
+
+Without debt ($b_t = b_{t+1} = 0$) spending must be fully paid by current taxes, $g_t = \tau_t^y + \frac{\tau_t^o}{1+n}$.
+
+## Capital Market
+
+The young are the only savers. The old sell their capital and bonds to consume. So the savings of the young must finance both the capital stock of the next period and the new public debt:
+
+$$
+K_{t+1} + B_t = N_t s_t
+$$
+
+Dividing by $N_t$ and using $\frac{K_{t+1}}{N_t} = (1+n) k_{t+1}$ and $\frac{B_t}{N_t} = (1+n) b_{t+1}$:
+
+$$
+(1+n)(k_{t+1} + b_{t+1}) = s_t
+$$
+
+Inserting the savings function and the factor prices gives the capital market equilibrium:
+
+$$
+(1+n)(k_{t+1} + b_{t+1}) = \tilde s\left( w(k_t) - \tau_t^y,\; -\tau_{t+1}^o,\; R(k_{t+1}) \right)
+$$
+
+In the benchmark $(1+n) k_{t+1} = s_t$. Now each unit of savings used to buy bonds is missing for capital, so for given savings public debt crowds out capital one for one.
+
+# Steady State
+
+In the steady state all per-capita variables are constant: $K_{t+1} = k_t = k$, $b_{t+1} = b_t = b$, $g_t = g$, $\tau_t^y = \tau^y$ and $\tau_t^o = \tau^o$.
+The equilibrium is described by the capital market and the government budget constraint:
+
+$$
+\begin{cases}
+(1+n)(k + b) = \tilde s\left( w(k) - \tau^y,\; -\tau^o,\; R(k) \right) & \text{(C.M.)} \\[1ex]
+\tau^y + \dfrac{\tau^o}{1+n} = g + (r - n)\, b & \text{(Gov. B.C.)}
+\end{cases}
+$$
+
+where the second line uses $R - (1+n) = r - n$.
+
+The government budget shows the cost of keeping debt per young constant. Each period the government pays interest $r b$ on the old debt, but population growth lets it issue $n b$ of new debt per young for free.
+
+- $r > n$: debt costs $(r - n) b$ in taxes every period.
+- $r < n$: debt can be rolled over and even raises $(n - r) b$ of revenue every period.
+
+Whether $r > n$ or $r < n$ is the dynamic efficiency condition of the benchmark. This is why the welfare effect of debt depends on whether the economy under- or over-accumulates capital.

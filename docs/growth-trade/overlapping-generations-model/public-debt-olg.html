@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="The Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.">
+<meta name="description" content="How public debt crowds out capital in the OLG model and when debt policy is neutral.">
 
-<title>The Overlapping Generations Model (OLG) – Economics Master</title>
+<title>Public Debt in the OLG Model – Economics Master</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -49,30 +49,30 @@ div.csl-indent {
 }</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../growth-trade/rational-bubbles-tirole.html" rel="next">
-<link href="../growth-trade/learning-resources.html" rel="prev">
-<link href="../images/econ-math-icon.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e00c98bbba659d91ab3844292f79dc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-86fc916b84669629367aabb2a24c5117.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e00c98bbba659d91ab3844292f79dc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6d505e7602ec91f5b16ea41f1e91a2fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-4dfbad9706f3b1e1e62782d5b10f5870.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-6d505e7602ec91f5b16ea41f1e91a2fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../macroeconomics/index.html" rel="next">
+<link href="../../growth-trade/overlapping-generations-model/benchmark-model-olg.html" rel="prev">
+<link href="../../images/econ-math-icon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-29e00c98bbba659d91ab3844292f79dc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-86fc916b84669629367aabb2a24c5117.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-29e00c98bbba659d91ab3844292f79dc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6d505e7602ec91f5b16ea41f1e91a2fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4dfbad9706f3b1e1e62782d5b10f5870.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6d505e7602ec91f5b16ea41f1e91a2fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -130,7 +130,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -302,11 +302,11 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/econ-math-icon.svg" alt="" class="navbar-logo light-content">
-    <img src="../images/econ-math-icon.svg" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/econ-math-icon.svg" alt="" class="navbar-logo light-content">
+    <img src="../../images/econ-math-icon.svg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Economics Master</span>
     </a>
   </div>
@@ -316,7 +316,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
@@ -343,7 +343,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../growth-trade/index.html">Growth and Trade</a></li><li class="breadcrumb-item"><a href="../growth-trade/overlapping-generations-model.html">The Overlapping Generations Model (OLG)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../growth-trade/index.html">Growth and Trade</a></li><li class="breadcrumb-item"><a href="../../growth-trade/overlapping-generations-model/index.html">The Overlapping Generations Model (OLG)</a></li><li class="breadcrumb-item"><a href="../../growth-trade/overlapping-generations-model/public-debt-olg.html">Public Debt in the OLG Model</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -365,31 +365,31 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../regional-urban/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../regional-urban/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Regional and Urban Economics</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../governments-markets/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../governments-markets/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Governments and Markets</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../political-economy/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../political-economy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Political Economy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../public-economics/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../public-economics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Public Economics</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../microeconomics/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../microeconomics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Microeconomics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -398,7 +398,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../microeconomics/perfect-vs-imperfect-markets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../microeconomics/perfect-vs-imperfect-markets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Perfect vs Imperfect Markets</span></a>
   </div>
 </li>
@@ -406,7 +406,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../mathematics/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../mathematics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mathematics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -415,25 +415,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/calculus-of-variations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/calculus-of-variations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calculus of Variations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/integration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/taylor-expansion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/taylor-expansion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Taylor Expansion</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../mathematics/optimal-control/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../mathematics/optimal-control/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optimal Control</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -442,31 +442,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/optimal-control/control-constraints.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/optimal-control/control-constraints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Constraints on the Control</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/optimal-control/current-value-hamiltonian.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/optimal-control/current-value-hamiltonian.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Current Value Hamiltonian</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/optimal-control/infinite-horizon.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/optimal-control/infinite-horizon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Infinite Horizon</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/optimal-control/scrap-values.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/optimal-control/scrap-values.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scrap Values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/optimal-control/variable-final-time.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/optimal-control/variable-final-time.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variable Final Time</span></a>
   </div>
 </li>
@@ -474,7 +474,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../mathematics/differential-equations/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../mathematics/differential-equations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Differential Equations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -483,25 +483,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/differential-equations/autonomous-equations-stability.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/differential-equations/autonomous-equations-stability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Autonomous Equations and Stability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/differential-equations/first-order-differential-equations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/differential-equations/first-order-differential-equations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">First-Order Differential Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/differential-equations/second-order-differential-equations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/differential-equations/second-order-differential-equations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Second-Order Differential Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mathematics/differential-equations/systems-of-differential-equations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mathematics/differential-equations/systems-of-differential-equations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Systems of Differential Equations</span></a>
   </div>
 </li>
@@ -511,7 +511,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../econometrics/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../econometrics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Econometrics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -520,19 +520,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/learning-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/learning-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Learning Resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/potential-outcomes-framework.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/potential-outcomes-framework.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Potential Outcomes Framework</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/regression-models.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/regression-models.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Regression Models</span></a>
   </div>
 </li>
@@ -547,19 +547,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/panel-data/first-difference-regression.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/panel-data/first-difference-regression.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">First-Difference Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/panel-data/fixed-effects.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/panel-data/fixed-effects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fixed Effects</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/panel-data/random-effects.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/panel-data/random-effects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Random Effects</span></a>
   </div>
 </li>
@@ -576,31 +576,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/identification-strategies/difference-in-differences.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/identification-strategies/difference-in-differences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Difference-in-Differences (DiD)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/identification-strategies/instrumental-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/identification-strategies/instrumental-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrumental Variables (IV)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/identification-strategies/randomized-controlled-trial.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/identification-strategies/randomized-controlled-trial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Randomized Controlled Trial (RCT)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/identification-strategies/regression-discontinuity-design.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/identification-strategies/regression-discontinuity-design.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Regression Discontinuity Design (RDD)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/identification-strategies/synthetic-control-method.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/identification-strategies/synthetic-control-method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Synthetic Control Method (SCM)</span></a>
   </div>
 </li>
@@ -617,31 +617,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/endogeneity/measurement-error.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/endogeneity/measurement-error.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Measurement Error</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/endogeneity/omitted-variable-bias.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/endogeneity/omitted-variable-bias.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Omitted Variable Bias (OVB)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/endogeneity/sample-selection-bias.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/endogeneity/sample-selection-bias.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sample Selection Bias</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/endogeneity/simultaneity-reverse-causality.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/endogeneity/simultaneity-reverse-causality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Simultaneity and Reverse Causality</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/endogeneity/treatment-selection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/endogeneity/treatment-selection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Treatment Selection</span></a>
   </div>
 </li>
@@ -658,19 +658,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/generalized-method-of-moments/nonlinear-least-squares.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/generalized-method-of-moments/nonlinear-least-squares.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nonlinear Least Squares (NLS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/generalized-method-of-moments/ordinary-least-squares.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/generalized-method-of-moments/ordinary-least-squares.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ordinary Least Squares (OLS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../econometrics/generalized-method-of-moments/two-stage-least-squares.html" class="sidebar-item-text sidebar-link">
+  <a href="../../econometrics/generalized-method-of-moments/two-stage-least-squares.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Two-Stage Least Squares (2SLS)</span></a>
   </div>
 </li>
@@ -680,7 +680,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../growth-trade/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../growth-trade/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Growth and Trade</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -689,57 +689,74 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../growth-trade/bubbles-financial-frictions-martin-ventura.html" class="sidebar-item-text sidebar-link">
+  <a href="../../growth-trade/bubbles-financial-frictions-martin-ventura.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bubbles and Financial Frictions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../growth-trade/learning-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../growth-trade/learning-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Learning Resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../growth-trade/overlapping-generations-model.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">The Overlapping Generations Model (OLG)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../growth-trade/rational-bubbles-tirole.html" class="sidebar-item-text sidebar-link">
+  <a href="../../growth-trade/rational-bubbles-tirole.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rational Bubbles</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../macroeconomics/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Macroeconomics</span></a>
+            <a href="../../growth-trade/overlapping-generations-model/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Overlapping Generations Model (OLG)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../growth-trade/overlapping-generations-model/benchmark-model-olg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Benchmark OLG Model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../growth-trade/overlapping-generations-model/public-debt-olg.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Public Debt in the OLG Model</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Dynamic Optimization</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a href="../../macroeconomics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Macroeconomics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">Dynamic Optimization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../macroeconomics/dynamic-optimization/bellman-equation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../macroeconomics/dynamic-optimization/bellman-equation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bellman Equation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../macroeconomics/dynamic-optimization/euler-equation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../macroeconomics/dynamic-optimization/euler-equation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Euler Equation</span></a>
   </div>
 </li>
@@ -749,22 +766,22 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../behavioral-finance/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../behavioral-finance/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral Finance</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../behavioral-finance/biases.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral-finance/biases.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Biases</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../behavioral-finance/heuristics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral-finance/heuristics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Heuristics</span></a>
   </div>
 </li>
@@ -780,20 +797,18 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-benchmark-model" id="toc-the-benchmark-model" class="nav-link active" data-scroll-target="#the-benchmark-model">The Benchmark Model</a>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a>
   <ul class="collapse">
   <li><a href="#household-problem" id="toc-household-problem" class="nav-link" data-scroll-target="#household-problem">Household Problem</a>
   <ul class="collapse">
-  <li><a href="#preferences" id="toc-preferences" class="nav-link" data-scroll-target="#preferences">Preferences</a></li>
   <li><a href="#budget-constraints" id="toc-budget-constraints" class="nav-link" data-scroll-target="#budget-constraints">Budget Constraints</a></li>
   <li><a href="#optimization" id="toc-optimization" class="nav-link" data-scroll-target="#optimization">Optimization</a></li>
   </ul></li>
-  <li><a href="#firms-problem" id="toc-firms-problem" class="nav-link" data-scroll-target="#firms-problem">Firms Problem</a>
-  <ul class="collapse">
-  <li><a href="#technology" id="toc-technology" class="nav-link" data-scroll-target="#technology">Technology</a></li>
-  <li><a href="#optimization-1" id="toc-optimization-1" class="nav-link" data-scroll-target="#optimization-1">Optimization</a></li>
+  <li><a href="#firms-problem" id="toc-firms-problem" class="nav-link" data-scroll-target="#firms-problem">Firms Problem</a></li>
+  <li><a href="#government" id="toc-government" class="nav-link" data-scroll-target="#government">Government</a></li>
+  <li><a href="#capital-market" id="toc-capital-market" class="nav-link" data-scroll-target="#capital-market">Capital Market</a></li>
   </ul></li>
-  </ul></li>
+  <li><a href="#steady-state" id="toc-steady-state" class="nav-link" data-scroll-target="#steady-state">Steady State</a></li>
   </ul>
 </nav>
     </div>
@@ -801,9 +816,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../growth-trade/index.html">Growth and Trade</a></li><li class="breadcrumb-item"><a href="../growth-trade/overlapping-generations-model.html">The Overlapping Generations Model (OLG)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../growth-trade/index.html">Growth and Trade</a></li><li class="breadcrumb-item"><a href="../../growth-trade/overlapping-generations-model/index.html">The Overlapping Generations Model (OLG)</a></li><li class="breadcrumb-item"><a href="../../growth-trade/overlapping-generations-model/public-debt-olg.html">Public Debt in the OLG Model</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Overlapping Generations Model (OLG)</h1>
+<h1 class="title">Public Debt in the OLG Model</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Economic Growth II (M.Sc. UB)</div>
   </div>
@@ -811,7 +826,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    The Diamond OLG model with two-period-lived households, where the savings of the young build the capital stock of the next period.
+    How public debt crowds out capital in the OLG model and when debt policy is neutral.
   </div>
 </div>
 
@@ -828,61 +843,36 @@ window.Quarto = {
 </header>
 
 
-<p>The basic overlapping generations model with capital accumulation was introduced by <span class="citation" data-cites="diamond_national_1965">Diamond (<a href="#ref-diamond_national_1965" role="doc-biblioref">1965</a>)</span>, however this summary is mostly based on <span class="citation" data-cites="de_la_croix_theory_2002">De la Croix and Michel (<a href="#ref-de_la_croix_theory_2002" role="doc-biblioref">2002</a>)</span>.</p>
-<p>In the benchmark Diamond economy each household lives for two periods. When young, it works, earns a wage, consumes part of this income and saves the rest. When old, it is retired and consumes the gross return on the savings it made when young. Through these individual saving decisions, the young generation builds the capital stock that firms use in the next period.</p>
-<section id="the-benchmark-model" class="level1">
-<h1>The Benchmark Model</h1>
-<ul>
-<li>Time is discrete: <span class="math inline">\(t = 0, 1, 2, 3, \dots\)</span></li>
-<li>Each individual lives for two periods. At every date <span class="math inline">\(t\)</span> two generations coexist:
-<ul>
-<li><strong>Young</strong> (born at <span class="math inline">\(t\)</span>), size <span class="math inline">\(N_t\)</span></li>
-<li><strong>Old</strong> (born at <span class="math inline">\(t-1\)</span>), size <span class="math inline">\(N_{t-1}\)</span></li>
-</ul></li>
-<li>Population grows at the constant rate <span class="math inline">\(n\)</span>:</li>
-</ul>
-<p><span class="math display">\[
-n = \frac{N_t}{N_{t-1}} - 1 \iff \frac{N_t}{N_{t-1}} = 1+n
-\]</span></p>
-<ul>
-<li>Only the young work. Each young individual supplies one unit of labor inelastically, so labor equals the size of the young generation:</li>
-</ul>
-<p><span class="math display">\[
-L_t = N_t
-\]</span></p>
-<ul>
-<li>The young earn the wage <span class="math inline">\(w_t\)</span>, consume <span class="math inline">\(c_t\)</span> and save <span class="math inline">\(s_t\)</span>. When old, they consume <span class="math inline">\(d_{t+1}\)</span> out of their savings.</li>
-</ul>
+<p>The analysis of public debt in the overlapping generations model goes back to <span class="citation" data-cites="diamond_national_1965">Diamond (<a href="#ref-diamond_national_1965" role="doc-biblioref">1965</a>)</span>, however this summary is based on <span class="citation" data-cites="de_la_croix_theory_2002">De la Croix and Michel (<a href="#ref-de_la_croix_theory_2002" role="doc-biblioref">2002</a>)</span>.</p>
+<p>The economy is the <a href="../../growth-trade/overlapping-generations-model/benchmark-model-olg.html">benchmark model</a> with a government added. The government pays for its spending in two ways. It collects lump-sum taxes from the young and the old, and it borrows by selling bonds to the young. Each period it must pay back what it borrowed in the previous period plus interest, and it never defaults. Because the young buy these bonds with their savings, public debt competes with capital for the same savings.</p>
+<p>Diamond shows that positive debt lowers long-run utility when the competitive equilibrium is efficient (under-accumulation). When the equilibrium is inefficient (over-accumulation), debt may instead raise utility <span class="citation" data-cites="de_la_croix_theory_2002">(<a href="#ref-de_la_croix_theory_2002" role="doc-biblioref">De la Croix and Michel 2002, 179</a>)</span>.</p>
+<section id="setup" class="level1">
+<h1>Setup</h1>
+<p>Demography and timing are as in the benchmark: <span class="math inline">\(N_t = (1+n) N_{t-1}\)</span> and only the young work, so <span class="math inline">\(L_t = N_t\)</span>.</p>
 <section id="household-problem" class="level2">
 <h2 class="anchored" data-anchor-id="household-problem">Household Problem</h2>
-<section id="preferences" class="level3">
-<h3 class="anchored" data-anchor-id="preferences">Preferences</h3>
-<p>The lifetime utility of an individual born at <span class="math inline">\(t\)</span> depends on consumption when young and when old:</p>
-<p><span class="math display">\[
-U_t = u(c_t, d_{t+1})
-\]</span></p>
-</section>
 <section id="budget-constraints" class="level3">
 <h3 class="anchored" data-anchor-id="budget-constraints">Budget Constraints</h3>
 <p><span class="math display">\[
-\text{Young:}\quad c_t + s_t = w_t
+\text{Young:}\quad c_t + s_t = w_t - \tau_t^y
 \]</span></p>
 <p><span class="math display">\[
-\text{Old:}\quad d_{t+1} = R_{t+1}\, s_t \;\Rightarrow\; s_t = \frac{d_{t+1}}{R_{t+1}}
+\text{Old:}\quad d_{t+1} = R_{t+1}\, s_t - \tau_{t+1}^o
 \]</span></p>
-<p><span class="math inline">\(R_{t+1}\)</span> is the gross return on savings. Substituting <span class="math inline">\(s_t\)</span> gives the <strong>lifetime budget constraint</strong>:</p>
+<p>Savings can be held as capital or as bonds. Both pay <span class="math inline">\(R_{t+1}\)</span>, so the household does not care about the split. Substituting <span class="math inline">\(s_t\)</span> gives the <strong>lifetime budget constraint</strong>:</p>
 <p><span class="math display">\[
-c_t + \frac{d_{t+1}}{R_{t+1}} = w_t
+c_t + \frac{d_{t+1}}{R_{t+1}} = w_t - \tau_t^y - \frac{\tau_{t+1}^o}{R_{t+1}}
 \]</span></p>
+<p>Taxes lower lifetime income by their present value.</p>
 </section>
 <section id="optimization" class="level3">
 <h3 class="anchored" data-anchor-id="optimization">Optimization</h3>
-<p>The household takes <span class="math inline">\(w_t\)</span> and <span class="math inline">\(R_{t+1}\)</span> as given and solves</p>
+<p>The household takes <span class="math inline">\(w_t\)</span>, <span class="math inline">\(R_{t+1}\)</span> and taxes as given and solves</p>
 <p><span class="math display">\[
-\max_{c_t,\, d_{t+1} \ge 0} \; u(c_t, d_{t+1}) \quad \text{s.t.} \quad w_t = c_t + \frac{d_{t+1}}{R_{t+1}}
+\max_{c_t,\, d_{t+1} \ge 0} \; u(c_t, d_{t+1}) \quad \text{s.t.} \quad c_t + \frac{d_{t+1}}{R_{t+1}} = w_t - \tau_t^y - \frac{\tau_{t+1}^o}{R_{t+1}}
 \]</span></p>
 <p><span class="math display">\[
-\mathcal{L} = u(c_t, d_{t+1}) + \lambda_t \left( w_t - c_t - \frac{d_{t+1}}{R_{t+1}} \right)
+\mathcal{L} = u(c_t, d_{t+1}) + \lambda_t \left( w_t - \tau_t^y - \frac{\tau_{t+1}^o}{R_{t+1}} - c_t - \frac{d_{t+1}}{R_{t+1}} \right)
 \]</span></p>
 <p><strong>F.O.C.:</strong></p>
 <p><span class="math display">\[
@@ -892,54 +882,83 @@ c_t + \frac{d_{t+1}}{R_{t+1}} = w_t
 \frac{\partial \mathcal{L}}{\partial d_{t+1}} = u_{d_{t+1}} - \frac{\lambda_t}{R_{t+1}} = 0 \qquad (2)
 \]</span></p>
 <p><span class="math display">\[
-\frac{\partial \mathcal{L}}{\partial \lambda_t} = w_t - c_t - \frac{d_{t+1}}{R_{t+1}} = 0 \qquad (3)
+\frac{\partial \mathcal{L}}{\partial \lambda_t} = w_t - \tau_t^y - \frac{\tau_{t+1}^o}{R_{t+1}} - c_t - \frac{d_{t+1}}{R_{t+1}} = 0 \qquad (3)
 \]</span></p>
-<p>From (1), <span class="math inline">\(\lambda_t = u_{c_t}\)</span>. Replacing in (2):</p>
+<p>From (1) and (2) the optimality condition is unchanged:</p>
 <p><span class="math display">\[
 u_{d_{t+1}} = \frac{u_{c_t}}{R_{t+1}}
 \]</span></p>
-<p>The marginal utility of one unit consumed when old equals the marginal utility of the <span class="math inline">\(1/R_{t+1}\)</span> units given up when young.</p>
+<p>Taxes only enter through income. Solving (1) to (3) gives savings as a function of income when young, income when old and the return:</p>
+<p><span class="math display">\[
+s_t = \tilde s\left( w_t - \tau_t^y,\; -\tau_{t+1}^o,\; R_{t+1} \right)
+\]</span></p>
+<p>with the partial derivatives</p>
+<p><span class="math display">\[
+\tilde s_1 = \frac{\partial \tilde s}{\partial (w_t - \tau_t^y)} \in (0, 1), \qquad \tilde s_2 = \frac{\partial \tilde s}{\partial (-\tau_{t+1}^o)} &lt; 0, \qquad \tilde s_R = \frac{\partial \tilde s}{\partial R_{t+1}}
+\]</span></p>
+<p>With normal goods, more income when young is partly saved. More income when old means less need to save for retirement.</p>
 </section>
 </section>
 <section id="firms-problem" class="level2">
 <h2 class="anchored" data-anchor-id="firms-problem">Firms Problem</h2>
-<section id="technology" class="level3">
-<h3 class="anchored" data-anchor-id="technology">Technology</h3>
-<p>Firms produce output with capital <span class="math inline">\(K_t\)</span> and labor <span class="math inline">\(L_t\)</span> using a production function <span class="math inline">\(F(K_t, L_t)\)</span> with constant returns to scale. For <span class="math inline">\(\lambda &gt; 0\)</span>:</p>
+<p>Firms solve the same problem as in the <a href="../../growth-trade/overlapping-generations-model/benchmark-model-olg.html#firms-problem">benchmark model</a>. Factor prices only depend on capital per worker:</p>
 <p><span class="math display">\[
-F(\lambda K_t, \lambda L_t) = \lambda F(K_t, L_t)
-\]</span></p>
-<p>Setting <span class="math inline">\(\lambda = \frac{1}{L_t}\)</span> gives the intensive form with capital per worker <span class="math inline">\(k_t = \frac{K_t}{L_t}\)</span>:</p>
-<p><span class="math display">\[
-f(k_t) = F(k_t, 1) = \frac{F(K_t, L_t)}{L_t} \iff F(K_t, L_t) = L_t f(k_t)
-\]</span></p>
-<p>The marginal products then only depend on <span class="math inline">\(k_t\)</span>:</p>
-<p><span class="math display">\[
-\frac{\partial F(K_t, L_t)}{\partial K_t} = f'(k_t), \qquad \frac{\partial F(K_t, L_t)}{\partial L_t} = f(k_t) - k_t f'(k_t)
+w_t = w(k_t) = f(k_t) - k_t f'(k_t), \qquad R_t = R(k_t) = f'(k_t) + 1 - \delta
 \]</span></p>
 </section>
-<section id="optimization-1" class="level3">
-<h3 class="anchored" data-anchor-id="optimization-1">Optimization</h3>
-<p>Firms rent capital at the rental rate <span class="math inline">\(q_t\)</span> and hire labor at the wage <span class="math inline">\(w_t\)</span>. They take both prices as given and maximize profits:</p>
+<section id="government" class="level2">
+<h2 class="anchored" data-anchor-id="government">Government</h2>
+<ul>
+<li><span class="math inline">\(G_t\)</span>: public spending in period <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(\tau_t^y\)</span>: lump-sum tax per young, <span class="math inline">\(\tau_t^o\)</span>: lump-sum tax per old</li>
+<li><span class="math inline">\(B_t\)</span>: bonds issued in period <span class="math inline">\(t\)</span>, repaid with gross interest <span class="math inline">\(R_{t+1}\)</span> in period <span class="math inline">\(t+1\)</span></li>
+</ul>
+<p>In each period the government pays for its spending and the old debt with taxes and new debt:</p>
 <p><span class="math display">\[
-\max_{K_t, L_t} \; \pi_t = F(K_t, L_t) - w_t L_t - q_t K_t
+N_t \tau_t^y + N_{t-1} \tau_t^o + B_t = G_t + R_t B_{t-1}
 \]</span></p>
-<p><strong>F.O.C.:</strong></p>
+<p>Define spending per young <span class="math inline">\(g_t = \frac{G_t}{N_t}\)</span> and inherited debt per young <span class="math inline">\(b_t = \frac{B_{t-1}}{N_t}\)</span>. Then <span class="math inline">\(\frac{B_t}{N_t} = \frac{B_t}{N_{t+1}} \frac{N_{t+1}}{N_t} = (1+n) b_{t+1}\)</span>, and dividing by <span class="math inline">\(N_t\)</span> gives the budget constraint per young:</p>
 <p><span class="math display">\[
-\frac{\partial \pi_t}{\partial K_t} = 0 \;\Rightarrow\; f'(k_t) = q_t
+g_t + R_t b_t = \tau_t^y + \frac{\tau_t^o}{1+n} + (1+n) b_{t+1}
 \]</span></p>
+<p>Without debt (<span class="math inline">\(b_t = b_{t+1} = 0\)</span>) spending must be fully paid by current taxes, <span class="math inline">\(g_t = \tau_t^y + \frac{\tau_t^o}{1+n}\)</span>.</p>
+</section>
+<section id="capital-market" class="level2">
+<h2 class="anchored" data-anchor-id="capital-market">Capital Market</h2>
+<p>The young are the only savers. The old sell their capital and bonds to consume. So the savings of the young must finance both the capital stock of the next period and the new public debt:</p>
 <p><span class="math display">\[
-\frac{\partial \pi_t}{\partial L_t} = 0 \;\Rightarrow\; f(k_t) - k_t f'(k_t) = w_t
+K_{t+1} + B_t = N_t s_t
 \]</span></p>
-<p>Each factor is paid its marginal product. Capital depreciates at rate <span class="math inline">\(\delta\)</span>, so the gross return on savings is the rental rate plus the undepreciated capital:</p>
+<p>Dividing by <span class="math inline">\(N_t\)</span> and using <span class="math inline">\(\frac{K_{t+1}}{N_t} = (1+n) k_{t+1}\)</span> and <span class="math inline">\(\frac{B_t}{N_t} = (1+n) b_{t+1}\)</span>:</p>
 <p><span class="math display">\[
-R_t = 1 + r_t = q_t + 1 - \delta \;\Rightarrow\; q_t = r_t + \delta
+(1+n)(k_{t+1} + b_{t+1}) = s_t
 \]</span></p>
+<p>Inserting the savings function and the factor prices gives the capital market equilibrium:</p>
+<p><span class="math display">\[
+(1+n)(k_{t+1} + b_{t+1}) = \tilde s\left( w(k_t) - \tau_t^y,\; -\tau_{t+1}^o,\; R(k_{t+1}) \right)
+\]</span></p>
+<p>In the benchmark <span class="math inline">\((1+n) k_{t+1} = s_t\)</span>. Now each unit of savings used to buy bonds is missing for capital, so for given savings public debt crowds out capital one for one.</p>
+</section>
+</section>
+<section id="steady-state" class="level1">
+<h1>Steady State</h1>
+<p>In the steady state all per-capita variables are constant: <span class="math inline">\(K_{t+1} = k_t = k\)</span>, <span class="math inline">\(b_{t+1} = b_t = b\)</span>, <span class="math inline">\(g_t = g\)</span>, <span class="math inline">\(\tau_t^y = \tau^y\)</span> and <span class="math inline">\(\tau_t^o = \tau^o\)</span>. The equilibrium is described by the capital market and the government budget constraint:</p>
+<p><span class="math display">\[
+\begin{cases}
+(1+n)(k + b) = \tilde s\left( w(k) - \tau^y,\; -\tau^o,\; R(k) \right) &amp; \text{(C.M.)} \\[1ex]
+\tau^y + \dfrac{\tau^o}{1+n} = g + (r - n)\, b &amp; \text{(Gov. B.C.)}
+\end{cases}
+\]</span></p>
+<p>where the second line uses <span class="math inline">\(R - (1+n) = r - n\)</span>.</p>
+<p>The government budget shows the cost of keeping debt per young constant. Each period the government pays interest <span class="math inline">\(r b\)</span> on the old debt, but population growth lets it issue <span class="math inline">\(n b\)</span> of new debt per young for free.</p>
+<ul>
+<li><span class="math inline">\(r &gt; n\)</span>: debt costs <span class="math inline">\((r - n) b\)</span> in taxes every period.</li>
+<li><span class="math inline">\(r &lt; n\)</span>: debt can be rolled over and even raises <span class="math inline">\((n - r) b\)</span> of revenue every period.</li>
+</ul>
+<p>Whether <span class="math inline">\(r &gt; n\)</span> or <span class="math inline">\(r &lt; n\)</span> is the dynamic efficiency condition of the benchmark. This is why the welfare effect of debt depends on whether the economy under- or over-accumulates capital.</p>
 
 
 
-</section>
-</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
@@ -1365,13 +1384,13 @@ Diamond, Peter A. 1965. <span>“National Debt in a Neoclassical Growth Model.�
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../growth-trade/learning-resources.html" class="pagination-link" aria-label="Learning Resources">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Learning Resources</span>
+      <a href="../../growth-trade/overlapping-generations-model/benchmark-model-olg.html" class="pagination-link" aria-label="The Benchmark OLG Model">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Benchmark OLG Model</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../growth-trade/rational-bubbles-tirole.html" class="pagination-link" aria-label="Rational Bubbles">
-        <span class="nav-page-text">Rational Bubbles</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../macroeconomics/index.html" class="pagination-link" aria-label="Macroeconomics">
+        <span class="nav-page-text">Macroeconomics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

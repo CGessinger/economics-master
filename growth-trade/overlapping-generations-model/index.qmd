@@ -1,0 +1,12 @@
+---
+title: "The Overlapping Generations Model (OLG)"
+description: "The Diamond OLG model with capital accumulation and its policy extensions."
+categories: ["Economic Growth II (M.Sc. UB)"]
+listing:
+  contents: "*.qmd"
+  type: table
+  fields: [title, description]
+  sort: order
+  sort-ui: false
+  filter-ui: false
+---
